@@ -1,0 +1,21 @@
+{
+    "header": {
+        "links": [
+            {
+                "name": "消息",
+                "url": "/#",
+                "newWindow": true
+            },
+            {
+                "name": "關於",
+                "url": "/#",
+                "newWindow": true
+            },
+            {
+                "name": "職業",
+                "url": "/#",
+                "newWindow": true
+            }
+        ]
+    }
+}

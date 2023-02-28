@@ -1,0 +1,21 @@
+{
+    "header": {
+        "links": [
+            {
+                "name": "Haberler",
+                "url": "/#",
+                "newWindow": true
+            },
+            {
+                "name": "Hakkımızda",
+                "url": "/#",
+                "newWindow": true
+            },
+            {
+                "name": "Kariyer",
+                "url": "/#",
+                "newWindow": true
+            }
+        ]
+    }
+}
