@@ -7,6 +7,8 @@ import { getContent } from '@/utils/helpers';
 import Link from '@/components/common/link';
 import LanguagePicker from '@/components/common/languagePicker';
 import dynamic from 'next/dynamic';
+import Hero, { IHero } from '@/components/sections/hero';
+import Carousel from '@/components/common/carousel';
 
 const Layout = dynamic(
   () => import('@/components/layout'),
@@ -25,14 +27,45 @@ interface IHeader {
   links: ILink[]
 }
 
+interface IContent {
+  [key: string]: any
+}
+
 export interface IPageContent {
   header: IHeader,
+  content: IContent
 }
 
 export default function Home() {
   const {
     header,
+    content
   } = getContent();
+
+  const renderContent = () => {
+    for (const [key, value] of Object.entries(content)) {
+      switch (key) {
+        case "hero": return (
+          value.slides.length > 1 ? (
+            <Carousel>
+              {value.slides?.map((item: IHero, index: number) => (
+                <Hero key={`hero__${index}`} {...item} />
+              ))}
+            </Carousel>
+          ) : <Hero {...value.slides[0]} />
+        )
+        // case "hero": return (
+        //   <Hero {...value} />
+        //   // <Carousel >
+        //   //   {value.slides?.map((item: IHero, index: number) => (
+        //   //     <Hero key={`hero__${index}`} {...item} />
+        //   //   ))}
+        //   // </Carousel>
+        // )
+        default: return null;
+      }
+    }
+  }
 
   return (
     <>
@@ -42,13 +75,12 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={clsxm("p-4")}>
-        <LanguagePicker />
+      {/* <LanguagePicker /> */}
 
-        <Layout>
-          {header.links?.map((link: ILink) => <Link {...link}>{link.name}</Link>)}
-        </Layout>
-      </main>
+      <Layout>
+        {renderContent()}
+        {/* {header.links?.map((link: ILink) => <Link {...link}>{link.name}</Link>)} */}
+      </Layout>
     </>
   )
 }

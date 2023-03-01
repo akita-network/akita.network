@@ -56,7 +56,7 @@ const LanguagePicker = () => {
                             className={clsxm(
                                 "absolute",
                                 "left-1/2",
-                                "z-10",
+                                "z-20",
                                 "mt-3",
                                 "-translate-x-1/2",
                                 "transform",

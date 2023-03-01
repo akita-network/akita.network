@@ -1,8 +1,8 @@
 import React from "react";
-import { Roboto } from 'next/font/google';
+import { Montserrat } from 'next/font/google';
 import clsxm from "@/utils/clsxm";
 
-const roboto = Roboto({
+const montserrat = Montserrat({
   weight: '400',
   subsets: ['latin'],
 })
@@ -16,12 +16,17 @@ const Layout = ({
 }: ILayoutProps) => (
   <div
     className={clsxm(
-      roboto.className,
+      montserrat.className,
       "flex",
-      "flex-col"
+      "flex-col",
+      "bg-dark",
+      "px-4",
+      "sm:px-0"
     )}
   >
-    {children}
+    <main>
+      {children}
+    </main>
   </div>
 );
 

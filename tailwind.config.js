@@ -9,6 +9,7 @@ module.exports = {
   ],
   theme: {
     colors: {
+      white: colors.white,
       blue: colors.blue,
       slate: colors.slate,
       gray: colors.gray,
@@ -31,5 +32,21 @@ module.exports = {
       stone: colors.stone,
       yellow: colors.yellow,
     },
+    backgroundPosition: {
+      "50-50": "50% 50%"
+    },
+    extend: {
+      colors: {
+        dark: "#181818",
+        "button-bg": "rgba(127, 146, 241, 0.25)",
+        "button-border": "rgba(127, 146, 241, 0.22)"
+      },
+      spacing: {
+        "full-negative": "-100%"
+      },
+      maxWidth: {
+        '3xl': '120rem',
+      }
+    }
   },
 };
