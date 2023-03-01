@@ -1,0 +1,21 @@
+{
+    "header": {
+        "links": [
+            {
+                "name": "News",
+                "url": "/#",
+                "newWindow": true
+            },
+            {
+                "name": "About",
+                "url": "/#",
+                "newWindow": true
+            },
+            {
+                "name": "Career",
+                "url": "/#",
+                "newWindow": true
+            }
+        ]
+    }
+}
