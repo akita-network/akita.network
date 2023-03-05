@@ -6,5 +6,6 @@ export const getContent = () => {
 
     return {
         header: t("header", { returnObjects: true }),
+        content: t("content", { returnObjects: true })
     } as IPageContent
 }

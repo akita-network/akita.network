@@ -17,5 +17,37 @@
                 "newWindow": true
             }
         ]
+    },
+    "content": {
+        "hero": {
+            "slides": [
+                {
+                    "desktop": {
+                        "title": "Harnessing the power of community",
+                        "preamble": "Join our Discourse Forum to participate and propose action for the DAO. Proposals will be voted on using Snapshot.",
+                        "video": "/assets/cube.mp4"
+                    },
+                    "mobile": {
+                        "title": "Akita Network",
+                        "preamble": "The power of community"
+                    },
+                    "buttons": [
+                        {
+                            "text": "Buy Akita",
+                            "link": "#howtobuy"
+                        },
+                        {
+                            "text": "Buy Hachi",
+                            "link": "#howtobuy"
+                        },
+                        {
+                            "text": "Claim Hachi",
+                            "link": "https://akitanetwork.link",
+                            "newWindow": true
+                        }
+                    ]
+                }
+            ]
+        }
     }
 }
