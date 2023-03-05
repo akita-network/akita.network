@@ -39,13 +39,20 @@ module.exports = {
       colors: {
         dark: "#181818",
         "button-bg": "rgba(127, 146, 241, 0.25)",
-        "button-border": "rgba(127, 146, 241, 0.22)"
+        "button-border": "rgba(127, 146, 241, 0.22)",
+        "language-border": "rgba(127, 146, 241, 0.4)",
       },
       spacing: {
         "full-negative": "-100%"
       },
       maxWidth: {
         '3xl': '120rem',
+      },
+      width: {
+        "4.6": "4.688rem",
+      },
+      transitionProperty: {
+        'max-height': "max-height"
       }
     }
   },

@@ -26,6 +26,7 @@ const Button = ({
                 "px-4",
                 "h-11",
                 "bg-button-bg",
+                "border",
                 "border-button-border",
                 "backdrop-blur-sm",
                 "rounded-tl-lg",
@@ -38,15 +39,6 @@ const Button = ({
                 "flex-1",
                 "text-white",
                 "whitespace-pre"
-                // display: flex;
-                // flex-direction: row;
-                // justify-content: center;
-                // align-items: center;
-                // padding: 13px 33px;
-                // background: rgba(127, 146, 241, 0.25);
-                // border: 1px solid rgba(127, 146, 241, 0.22);
-                // backdrop-filter: blur(3.5px);
-                // border-radius: 10px 2px;
             )}
         >
             {children}

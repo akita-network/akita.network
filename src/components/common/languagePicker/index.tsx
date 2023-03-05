@@ -8,7 +8,8 @@ import Link from '../link';
 const cn = clsxm(
     "max-h-6",
     "cursor-pointer",
-    "w-10"
+    "w-8",
+    "sm:w-10"
 )
 
 const LanguagePicker = () => {
@@ -31,13 +32,29 @@ const LanguagePicker = () => {
     return (
         <Fragment>
             {router.locale && (
-                <Popover className="relative">
+                <Popover
+                    className={clsxm(
+                        "relative",
+                        "flex",
+                        "items-center",
+                        "justify-center",
+                        "rounded",
+                        "border",
+                        "border-language-border",
+                        "bg-dark/30",
+                        "w-12",
+                        "sm:w-4.6",
+                    )}
+                >
                     <Popover.Button
                         className={clsxm(
                             "inline-flex",
                             "items-center",
-                            "px-3",
-                            "py-2",
+                            "px-1",
+                            "sm:px-3",
+                            "py-1",
+                            "sm:py-2",
+                            "h-full",
                             "focus:outline-none",
                         )}
                     >
@@ -57,7 +74,8 @@ const LanguagePicker = () => {
                                 "absolute",
                                 "left-1/2",
                                 "z-20",
-                                "mt-3",
+                                "mt-44",
+                                "sm:mt-48",
                                 "-translate-x-1/2",
                                 "transform",
                                 "px-4",
@@ -69,7 +87,7 @@ const LanguagePicker = () => {
                                 <div
                                     className={clsxm(
                                         "overflow-hidden",
-                                        "rounded-lg",
+                                        "rounded",
                                         "shadow-lg",
                                         "ring-1",
                                         "ring-black",
