@@ -28,7 +28,7 @@ const Hero = ({
     mobile,
     buttons
 }: IHero) => {
-    const isMobile = useMediaQuery({ query: '(max-width: 639px)' });
+    const isTabletOrDesktop = useMediaQuery({ query: '(min-width: 640px)' });
 
     const renderButtons = () => (
         <div className={clsxm(
@@ -41,7 +41,7 @@ const Hero = ({
                 <Button
                     key={`button__${btn.text}`}
                     href={btn.link}
-                    {...btn.newWindow && { target: "_blank" }}
+                    newWindow={btn.newWindow}
                 >{btn.text}</Button>
             ))}
         </div>
@@ -58,7 +58,7 @@ const Hero = ({
                 "xl:pl-40"
             )}
         >
-            {isMobile ? (
+            {!isTabletOrDesktop ? (
                 <React.Fragment>
                     <div className="z-20">
                         <h1 className="text-white">{mobile.title}</h1>
@@ -77,10 +77,6 @@ const Hero = ({
                             "text-white",
                             "font-bold",
                             "text-5xl"
-                            // font-size: 5ch;
-                            // line-height: 1;
-                            // font-weight: 700;
-                            // text-transform: uppercase;
                         )}>{desktop.title}</h1>
                         <p className={clsxm(
                             "text-white/80",

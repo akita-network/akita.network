@@ -1,31 +1,17 @@
+import React, { useEffect, useRef, useState } from "react";
 import Head from 'next/head'
-import { Inter } from 'next/font/google'
-import clsxm from '@/utils/clsxm'
 import { GetServerSideProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { getContent } from '@/utils/helpers';
-import Link from '@/components/common/link';
-import LanguagePicker from '@/components/common/languagePicker';
 import dynamic from 'next/dynamic';
 import Hero, { IHero } from '@/components/sections/hero';
 import Carousel from '@/components/common/carousel';
+import Header, { IHeader } from '@/components/header';
 
 const Layout = dynamic(
   () => import('@/components/layout'),
   { ssr: false }
 )
-
-const inter = Inter({ subsets: ['latin'] })
-
-interface ILink {
-  url: string;
-  name: string;
-  newWindow?: boolean;
-}
-
-interface IHeader {
-  links: ILink[]
-}
 
 interface IContent {
   [key: string]: any
@@ -37,6 +23,23 @@ export interface IPageContent {
 }
 
 export default function Home() {
+  const [isSticky, setSticky] = useState(false);
+  const ref = useRef<HTMLInputElement>(null);
+
+  const handleScroll = () => {
+    if (ref.current && ref.current) {
+      setSticky(ref.current.getBoundingClientRect().top < 0);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", () => handleScroll);
+    };
+  }, []);
+
   const {
     header,
     content
@@ -54,14 +57,6 @@ export default function Home() {
             </Carousel>
           ) : <Hero {...value.slides[0]} />
         )
-        // case "hero": return (
-        //   <Hero {...value} />
-        //   // <Carousel >
-        //   //   {value.slides?.map((item: IHero, index: number) => (
-        //   //     <Hero key={`hero__${index}`} {...item} />
-        //   //   ))}
-        //   // </Carousel>
-        // )
         default: return null;
       }
     }
@@ -75,11 +70,17 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <LanguagePicker /> */}
 
       <Layout>
-        {renderContent()}
-        {/* {header.links?.map((link: ILink) => <Link {...link}>{link.name}</Link>)} */}
+        {header && (
+          <div className="relative" ref={ref}>
+            <Header {...header} isSticky={isSticky} />
+          </div>
+        )}
+
+        <main>
+          {renderContent()}
+        </main>
       </Layout>
     </>
   )

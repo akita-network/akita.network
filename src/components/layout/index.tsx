@@ -13,21 +13,23 @@ export interface ILayoutProps {
 
 const Layout = ({
   children
-}: ILayoutProps) => (
-  <div
-    className={clsxm(
-      montserrat.className,
-      "flex",
-      "flex-col",
-      "bg-dark",
-      "px-4",
-      "sm:px-0"
-    )}
-  >
-    <main>
+}: ILayoutProps) => {
+
+
+  return (
+    <div
+      className={clsxm(
+        montserrat.className,
+        "flex",
+        "flex-col",
+        "bg-dark",
+        "px-4",
+        "sm:px-0"
+      )}
+    >
       {children}
-    </main>
-  </div>
-);
+    </div>
+  );
+}
 
 export default Layout;
