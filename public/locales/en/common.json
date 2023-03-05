@@ -61,6 +61,45 @@
                     ]
                 }
             ]
+        },
+        "about": {
+            "desktop": {
+                "items": [
+                    {
+                        "title": "$3.5 B",
+                        "text": "Peak Marketcap"
+                    },
+                    {
+                        "title": "62,000 +",
+                        "text": "holders"
+                    },
+                    {
+                        "title": "Funded",
+                        "text": "into 2027"
+                    },
+                    {
+                        "title": "Community",
+                        "text": "governance"
+                    }
+                ]
+            },
+            "mobile": {
+                "title": "This is AKITA Network",
+                "items": [
+                    {
+                        "text": "$3.5B marketcap at ATH"
+                    },
+                    {
+                        "text": "+60k investors"
+                    },
+                    {
+                        "text": "funded into 2027"
+                    },
+                    {
+                        "text": "community governance"
+                    }
+                ]
+            }
         }
     }
 }
