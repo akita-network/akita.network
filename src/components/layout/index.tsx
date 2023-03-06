@@ -24,7 +24,7 @@ const Layout = ({
         "flex-col",
         "bg-dark",
         "px-4",
-        "sm:px-0"
+        "md:px-0"
       )}
     >
       {children}

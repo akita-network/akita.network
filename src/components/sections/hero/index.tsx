@@ -28,7 +28,7 @@ const Hero = ({
     mobile,
     buttons
 }: IHero) => {
-    const isTabletOrDesktop = useMediaQuery({ query: '(min-width: 640px)' });
+    const isTabletOrDesktop = useMediaQuery({ query: '(min-width: 768px)' });
 
     const renderButtons = () => (
         <div className={clsxm(
@@ -52,9 +52,9 @@ const Hero = ({
             className={clsxm(
                 "h-screen",
                 "relative",
-                "sm:flex",
-                "sm:items-center",
-                "sm:pl-11",
+                "md:flex",
+                "md:items-center",
+                "md:pl-11",
                 "xl:pl-40"
             )}
         >

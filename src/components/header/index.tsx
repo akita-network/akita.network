@@ -25,7 +25,7 @@ const Header = ({
             "top-0",
             "left-0",
             "z-50",
-            "w-full",
+            "w-screen",
             "py-3.5",
             "transition-colors",
             "duration-1000",
@@ -40,9 +40,9 @@ const Header = ({
                 "w-full",
                 "flex",
                 "justify-center",
-                "sm:justify-end",
+                "md:justify-end",
                 "gap-2.5",
-                "sm:gap-3.5"
+                "md:gap-3.5"
             )}
         >
             {links.map((link) => (
@@ -52,7 +52,7 @@ const Header = ({
                             "transition-[max-height]",
                             "duration-300",
                             "max-h-12",
-                            "sm:max-h-24"
+                            isSticky ? "sm-max-h-12" : "md:max-h-16"
                         )}
                         src={`/assets/icons/${link.iconName}.svg`}
                         alt={link.iconName}
@@ -60,7 +60,7 @@ const Header = ({
                 </a>
             ))}
 
-            <LanguagePicker />
+            <LanguagePicker isSticky={isSticky} />
         </div>
     </header>
 )

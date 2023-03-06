@@ -8,11 +8,17 @@ import Link from '../link';
 const cn = clsxm(
     "max-h-6",
     "cursor-pointer",
-    "w-8",
-    "sm:w-10"
+    "w-5",
+    "md:w-10"
 )
 
-const LanguagePicker = () => {
+interface ILanguagePickerProps {
+    isSticky?: boolean;
+}
+
+const LanguagePicker = ({
+    isSticky
+}: ILanguagePickerProps) => {
     const router = useRouter();
 
     const renderFlag = (locale?: string) => {
@@ -42,8 +48,8 @@ const LanguagePicker = () => {
                         "border",
                         "border-language-border",
                         "bg-dark/30",
-                        "w-12",
-                        "sm:w-4.6",
+                        "w-8",
+                        isSticky ? "md:w-12" : "md:w-16"
                     )}
                 >
                     <Popover.Button
@@ -51,9 +57,9 @@ const LanguagePicker = () => {
                             "inline-flex",
                             "items-center",
                             "px-1",
-                            "sm:px-3",
+                            "md:px-3",
                             "py-1",
-                            "sm:py-2",
+                            "md:py-2",
                             "h-full",
                             "focus:outline-none",
                         )}
@@ -74,13 +80,14 @@ const LanguagePicker = () => {
                                 "absolute",
                                 "left-1/2",
                                 "z-20",
-                                "mt-44",
-                                "sm:mt-48",
+                                "mt-32",
+                                "md:mt-48",
                                 "-translate-x-1/2",
                                 "transform",
-                                "px-4",
-                                "sm:px-0",
-                                "lg:max-w-3xl"
+                                "md:px-4",
+                                "md:px-0",
+                                "lg:max-w-3xl",
+                                "w-full"
                             )}
                         >
                             {({ close }) => (
@@ -97,7 +104,9 @@ const LanguagePicker = () => {
                                     <div
                                         className={clsxm(
                                             "relative",
-                                            "grid",
+                                            "flex",
+                                            "flex-col",
+                                            "items-center",
                                             "bg-white",
                                             "p-2",
                                             "gap-2",

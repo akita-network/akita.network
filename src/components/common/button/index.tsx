@@ -22,7 +22,7 @@ const Button = ({
                 "justify-center",
                 "items-center",
                 "py-3.5",
-                "sm:px-8",
+                "md:px-8",
                 "px-4",
                 "h-11",
                 "bg-button-bg",

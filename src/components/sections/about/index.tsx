@@ -17,14 +17,16 @@ const About = ({
     desktop,
     mobile,
 }: IAbout) => {
-    const isTabletOrDesktop = useMediaQuery({ query: '(min-width: 640px)' });
+    const isTabletOrDesktop = useMediaQuery({ query: '(min-width: 768px)' });
 
     return (
         <section
             className={clsxm(
-                "sm:py-56",
-                "sm:flex",
-                "sm:justify-center"
+                "md:py-56",
+                "md:flex",
+                "md:justify-center",
+                "md:max-w-90vw",
+                "md:mx-auto",
             )}
         >
             {!isTabletOrDesktop ? (

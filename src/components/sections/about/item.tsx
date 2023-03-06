@@ -58,12 +58,15 @@ const Item = ({
                 )}>
                     <h2 className={clsxm(
                         "text-white",
-                        "text-4xl"
+                        "text-md", 
+                        "lg:text-3xl",
+                        "mb-2"
                     )}>{title}</h2>
                     <p className={clsxm(
                         "text-white/80",
                         "font-extralight",
-                        "text-xl"
+                        "text-sm",
+                        "lg:text-xl"
                     )}>{text}</p>
                 </div>
             </div>

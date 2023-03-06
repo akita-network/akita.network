@@ -47,9 +47,7 @@ module.exports = {
       },
       maxWidth: {
         '3xl': '120rem',
-      },
-      width: {
-        "4.6": "4.688rem",
+        "90vw": '90vw'
       },
       transitionProperty: {
         'max-height': "max-height"
