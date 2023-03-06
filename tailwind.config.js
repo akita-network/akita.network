@@ -53,6 +53,9 @@ module.exports = {
       },
       transitionProperty: {
         'max-height': "max-height"
+      },
+      fontSize: {
+        '4xl': '2.438rem'
       }
     }
   },

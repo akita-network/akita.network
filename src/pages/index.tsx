@@ -7,6 +7,7 @@ import dynamic from 'next/dynamic';
 import Hero, { IHero } from '@/components/sections/hero';
 import Carousel from '@/components/common/carousel';
 import Header, { IHeader } from '@/components/header';
+import About from "@/components/sections/about";
 
 const Layout = dynamic(
   () => import('@/components/layout'),
@@ -46,7 +47,8 @@ export default function Home() {
   } = getContent();
 
   const renderContent = () => {
-    for (const [key, value] of Object.entries(content)) {
+    return Object.entries(content).map(item => {
+      const [key, value] = item;
       switch (key) {
         case "hero": return (
           value.slides.length > 1 ? (
@@ -57,9 +59,29 @@ export default function Home() {
             </Carousel>
           ) : <Hero {...value.slides[0]} />
         )
+        case "about": return (
+          <About {...value} />
+        )
         default: return null;
       }
-    }
+    })
+    // for (const [key, value] of Object.entries(content)) {
+    //   switch (key) {
+    //     case "hero": return (
+    //       value.slides.length > 1 ? (
+    //         <Carousel>
+    //           {value.slides?.map((item: IHero, index: number) => (
+    //             <Hero key={`hero__${index}`} {...item} />
+    //           ))}
+    //         </Carousel>
+    //       ) : <Hero {...value.slides[0]} />
+    //     )
+    //     case "about": return (
+    //       <About {...value} />
+    //     )
+    //     default: return null;
+    //   }
+    // }
   }
 
   return (
