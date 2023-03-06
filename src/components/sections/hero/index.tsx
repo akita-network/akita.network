@@ -2,7 +2,6 @@ import Button from '@/components/common/button';
 import { Akita } from '@/static/images/logo';
 import clsxm from '@/utils/clsxm';
 import React from 'react';
-import { useMediaQuery } from 'react-responsive';
 
 interface IButton {
     text: string;
@@ -23,13 +22,20 @@ export interface IHero {
     buttons: IButton[]
 }
 
+export interface IHeroSlides {
+    slides: IHero[]
+}
+
+interface HeroProps extends IHero {
+    isTabletOrDesktop: boolean;
+}
+
 const Hero = ({
     desktop,
     mobile,
-    buttons
-}: IHero) => {
-    const isTabletOrDesktop = useMediaQuery({ query: '(min-width: 768px)' });
-
+    buttons,
+    isTabletOrDesktop
+}: HeroProps) => {
     const renderButtons = () => (
         <div className={clsxm(
             "relative",

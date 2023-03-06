@@ -8,6 +8,8 @@ import Hero, { IHero } from '@/components/sections/hero';
 import Carousel from '@/components/common/carousel';
 import Header, { IHeader } from '@/components/header';
 import About from "@/components/sections/about";
+import Tokenomics from "@/components/sections/tokenomics";
+import { useMediaQuery } from "react-responsive";
 
 const Layout = dynamic(
   () => import('@/components/layout'),
@@ -24,6 +26,7 @@ export interface IPageContent {
 }
 
 export default function Home() {
+  const isTabletOrDesktop = useMediaQuery({ query: '(min-width: 768px)' });
   const [isSticky, setSticky] = useState(false);
   const ref = useRef<HTMLInputElement>(null);
 
@@ -47,41 +50,27 @@ export default function Home() {
   } = getContent();
 
   const renderContent = () => {
-    return Object.entries(content).map(item => {
+    return Object.entries(content).map((item, index) => {
       const [key, value] = item;
       switch (key) {
         case "hero": return (
           value.slides.length > 1 ? (
-            <Carousel>
+            <Carousel key={`herosection__${index}`}>
               {value.slides?.map((item: IHero, index: number) => (
-                <Hero key={`hero__${index}`} {...item} />
+                <Hero isTabletOrDesktop={isTabletOrDesktop} key={`hero__${index}`} {...item} />
               ))}
             </Carousel>
-          ) : <Hero {...value.slides[0]} />
+          ) : <Hero key={`herosection__${index}`} isTabletOrDesktop={isTabletOrDesktop} {...value.slides[0]} />
         )
         case "about": return (
-          <About {...value} />
+          <About key={`aboutsection__${index}`} isTabletOrDesktop={isTabletOrDesktop} {...value} />
+        )
+        case "tokenomics": return (
+          <Tokenomics key={`tokenomicssection_${index}`} isTabletOrDesktop={isTabletOrDesktop} {...value} />
         )
         default: return null;
       }
     })
-    // for (const [key, value] of Object.entries(content)) {
-    //   switch (key) {
-    //     case "hero": return (
-    //       value.slides.length > 1 ? (
-    //         <Carousel>
-    //           {value.slides?.map((item: IHero, index: number) => (
-    //             <Hero key={`hero__${index}`} {...item} />
-    //           ))}
-    //         </Carousel>
-    //       ) : <Hero {...value.slides[0]} />
-    //     )
-    //     case "about": return (
-    //       <About {...value} />
-    //     )
-    //     default: return null;
-    //   }
-    // }
   }
 
   return (

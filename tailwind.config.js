@@ -41,6 +41,7 @@ module.exports = {
         "button-bg": "rgba(127, 146, 241, 0.25)",
         "button-border": "rgba(127, 146, 241, 0.22)",
         "language-border": "rgba(127, 146, 241, 0.4)",
+        "badge-bg": "hsla(0, 0%, 100%, 0.05)"
       },
       spacing: {
         "full-negative": "-100%"
@@ -49,11 +50,24 @@ module.exports = {
         '3xl': '120rem',
         "90vw": '90vw'
       },
+      width: {
+        "128": "30rem"
+      },
+      height: {
+        "18": "4.125rem"
+      },
       transitionProperty: {
         'max-height': "max-height"
       },
       fontSize: {
-        '4xl': '2.438rem'
+        '4xl': '2.438rem',
+        "1375xl": '1.375rem',
+        "preamble": ["1.375rem", "1.688rem"],
+        "h2": ["3.25rem", "3.938rem"],
+        "h3": ["2.375rem", "2.875rem"]
+      },
+      borderRadius: {
+        "rounded-md": "0.313rem"
       }
     }
   },
