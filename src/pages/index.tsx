@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import Head from 'next/head'
 import { GetServerSideProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import { getContent } from '@/utils/helpers';
 import dynamic from 'next/dynamic';
 import Hero, { IHero } from '@/components/sections/hero';
 import Carousel from '@/components/common/carousel';
@@ -10,6 +9,7 @@ import Header, { IHeader } from '@/components/header';
 import About from "@/components/sections/about";
 import Tokenomics from "@/components/sections/tokenomics";
 import { useMediaQuery } from "react-responsive";
+import { useTranslation } from "react-i18next";
 
 const Layout = dynamic(
   () => import('@/components/layout'),
@@ -20,15 +20,13 @@ interface IContent {
   [key: string]: any
 }
 
-export interface IPageContent {
-  header: IHeader,
-  content: IContent
-}
-
 export default function Home() {
   const isTabletOrDesktop = useMediaQuery({ query: '(min-width: 768px)' });
   const [isSticky, setSticky] = useState(false);
   const ref = useRef<HTMLInputElement>(null);
+  const { t } = useTranslation('common');
+  const header = t("header", { returnObjects: true }) as IHeader;
+  const content = t("content", { returnObjects: true }) as IContent;
 
   const handleScroll = () => {
     if (ref.current && ref.current) {
@@ -43,11 +41,6 @@ export default function Home() {
       window.removeEventListener("scroll", () => handleScroll);
     };
   }, []);
-
-  const {
-    header,
-    content
-  } = getContent();
 
   const renderContent = () => {
     return Object.entries(content).map((item, index) => {
