@@ -61,33 +61,35 @@ const Token = ({
             {titleright}
         </h3>
 
-        <div className="mb-3">
-            {Object.entries(links).map((link, index) => {
-                const [key, value] = link;
-                return (
-                    <div
-                        className={clsxm(
-                            "flex",
-                            "font-normal",
-                            "text-lg",
-                            "leading-5",
-                        )}
-                        key={`tokenomics_link_${index}`}
-                    >
-                        <p className={clsxm(
-                            "uppercase",
-                            "mr-2",
-                        )}>{key}:</p>
-                        <a className={clsxm(
-                            "underline",
-                            "whitespace-nowrap",
-                            "text-ellipsis",
-                            "overflow-hidden"
-                        )} href={value.url}>{value.text}</a>
-                    </div>
-                )
-            })}
-        </div>
+        {links && (
+            <div className="mb-3">
+                {Object.entries(links).map((link, index) => {
+                    const [key, value] = link;
+                    return (
+                        <div
+                            className={clsxm(
+                                "flex",
+                                "font-normal",
+                                "text-lg",
+                                "leading-5",
+                            )}
+                            key={`tokenomics_link_${index}`}
+                        >
+                            <p className={clsxm(
+                                "uppercase",
+                                "mr-2",
+                            )}>{key}:</p>
+                            <a className={clsxm(
+                                "underline",
+                                "whitespace-nowrap",
+                                "text-ellipsis",
+                                "overflow-hidden"
+                            )} href={value.url}>{value.text}</a>
+                        </div>
+                    )
+                })}
+            </div>
+        )}
 
         <p className={clsxm(
             "opacity-70",
@@ -106,7 +108,7 @@ const Token = ({
             "flex-col",
             "gap-6"
         )}>
-            {text.map((t, index) => (
+            {text?.map((t, index) => (
                 <Badge
                     key={`badge_${t.text}_${index}`}
                     color={t.color}

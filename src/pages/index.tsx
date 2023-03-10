@@ -83,7 +83,7 @@ export default function Home() {
         )}
 
         <main>
-          {renderContent()}
+          {content && renderContent()}
         </main>
       </Layout>
     </>

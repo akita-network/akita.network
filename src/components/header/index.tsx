@@ -45,7 +45,7 @@ const Header = ({
                 "md:gap-3.5"
             )}
         >
-            {links.map((link) => (
+            {links?.map((link) => (
                 <a key={link.iconName} href={link.url} target="_blank">
                     <img
                         className={clsxm(

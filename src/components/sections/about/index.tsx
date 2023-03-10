@@ -33,10 +33,10 @@ const About = ({
         {!isTabletOrDesktop ? (
             <div className="z-20">
                 <h2 className="text-white uppercase">{mobile.title}</h2>
-                {mobile.items.map(item => <p key={`about_text_${item.text}`} className="text-white uppercase">{item.text}</p>)}
+                {mobile.items?.map(item => <p key={`about_text_${item.text}`} className="text-white uppercase">{item.text}</p>)}
             </div>
         ) : (
-            desktop.items.map((item, index) => <Item paddingTop={index > 0 && index < desktop.items.length - 1} key={`about_text_${item.title}`} {...item} />)
+            desktop.items?.map((item, index) => <Item paddingTop={index > 0 && index < desktop.items.length - 1} key={`about_text_${item.title}`} {...item} />)
         )}
     </section>
 )

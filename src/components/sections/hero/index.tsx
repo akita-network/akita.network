@@ -43,7 +43,7 @@ const Hero = ({
             "gap-2.5",
             "justify-between"
         )}>
-            {buttons.map((btn: IButton) => (
+            {buttons?.map((btn: IButton) => (
                 <Button
                     key={`button__${btn.text}`}
                     href={btn.link}
