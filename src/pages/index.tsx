@@ -10,6 +10,7 @@ import About from "@/components/sections/about";
 import Tokenomics from "@/components/sections/tokenomics";
 import { useMediaQuery } from "react-responsive";
 import { useTranslation } from "react-i18next";
+import { i18n } from "../../next-i18next.config";
 
 const Layout = dynamic(
   () => import('@/components/layout'),
@@ -91,9 +92,10 @@ export default function Home() {
 }
 
 export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
+  const selectedLocale = locale || i18n.defaultLocale;
   return {
     props: {
-      ...(await serverSideTranslations(locale || "en", [
+      ...(await serverSideTranslations(selectedLocale, [
         'common',
       ])),
       // Will be passed to the page component as props
