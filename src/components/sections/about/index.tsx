@@ -27,6 +27,7 @@ const About = ({
             "md:flex",
             "md:justify-center",
             "md:max-w-90vw",
+            "xl:max-w-8xl",
             "md:mx-auto",
         )}
     >

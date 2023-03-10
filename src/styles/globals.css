@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    font-family: inherit;
+    scroll-behavior: smooth;
+}
+
 a {
     text-decoration: underline;
 }

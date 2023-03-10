@@ -11,6 +11,7 @@ import Tokenomics from "@/components/sections/tokenomics";
 import { useMediaQuery } from "react-responsive";
 import { useTranslation } from "react-i18next";
 import { i18n } from "../../next-i18next.config";
+import HowToBuy from "@/components/sections/howtobuy";
 
 const Layout = dynamic(
   () => import('@/components/layout'),
@@ -61,6 +62,9 @@ export default function Home() {
         )
         case "tokenomics": return (
           <Tokenomics key={`tokenomicssection_${index}`} isTabletOrDesktop={isTabletOrDesktop} {...value} />
+        )
+        case "howtobuy": return (
+          <HowToBuy key={`howtobuysection_${index}`} isTabletOrDesktop={isTabletOrDesktop} {...value} />
         )
         default: return null;
       }

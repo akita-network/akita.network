@@ -31,6 +31,7 @@ const Tokenomics = ({
     return (
         <section className={clsxm(
             "md:max-w-90vw",
+            "xl:max-w-8xl",
             "md:mx-auto",
         )}>
             {isTabletOrDesktop && (

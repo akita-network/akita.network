@@ -5,12 +5,14 @@ interface IButtonProps {
     children: React.ReactNode,
     href: string;
     newWindow?: boolean;
+    initialFlex?: boolean;
 }
 
 const Button = ({
     children,
     href,
-    newWindow
+    newWindow,
+    initialFlex
 }: IButtonProps) => {
     return (
         <a
@@ -25,9 +27,9 @@ const Button = ({
                 "md:px-8",
                 "px-4",
                 "h-11",
-                "bg-button-bg",
+                "bg-cta-bg",
                 "border",
-                "border-button-border",
+                "border-cta-border",
                 "backdrop-blur-sm",
                 "rounded-tl-lg",
                 "rounded-br-lg",
@@ -38,7 +40,18 @@ const Button = ({
                 "leading-5",
                 "flex-1",
                 "text-white",
-                "whitespace-pre"
+                "whitespace-pre",
+                "no-underline",
+                "transition-border-radius",
+                "duration-200",
+                "hover:shadow-cta",
+                "hover:rounded-tl-sm",
+                "hover:rounded-br-sm",
+                "hover:rounded-tr-lg",
+                "hover:rounded-bl-lg",
+                {
+                    "flex-initial": initialFlex
+                }
             )}
         >
             {children}

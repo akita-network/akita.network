@@ -256,6 +256,90 @@
                     ]
                 }
             }
+        },
+        "howtobuy": {
+            "title": "How to",
+            "titleright": " buy",
+            "preamble": "We recommend {0}, but our tokens can also be purchased on centralized exchanges.",
+            "preamblehighlighted": "decentralized exchanges",
+            "claimLink": {
+                "text": "Claim your",
+                "textright": " HACHI",
+                "smallText": "Click Here",
+                "url": "https://akitanetwork.link"
+            },
+            "exchanges": [
+                {
+                    "title": "Centralized Exchanges",
+                    "preamble": "Check out these market indexes for all CEX listings:",
+                    "links": [
+                        {
+                            "text": "Hachi",
+                            "url": "https://coinmarketcap.com/currencies/akita-dao/markets/"
+                        },
+                        {
+                            "text": "Akita",
+                            "url": "https://coinmarketcap.com/currencies/akita-inu/markets/"
+                        }
+                    ],
+                    "iconName": "ce.svg",
+                    "iconBackground": "rgba(147, 76, 228, 0.32)"
+                },
+                {
+                    "title": "Uniswap (Ethereum)",
+                    "preamble": "$AKITA and $HACHI have LPs on UniV2 and V3 (1%)",
+                    "links": [
+                        {
+                            "text": "Hachi",
+                            "url": "https://app.uniswap.org/#/tokens/ethereum/0x967B0c95295ead8fAef70d26A7846AeCD349AAFf"
+                        },
+                        {
+                            "text": "Akita",
+                            "url": "https://app.uniswap.org/#/tokens/ethereum/0x3301ee63fb29f863f2333bd4466acb46cd8323e6"
+                        }
+                    ],
+                    "iconName": "uniswap.svg",
+                    "iconBackground": "rgba(255, 0, 122, 0.24)"
+                },
+                {
+                    "title": "TraderJoe (Avalanche)",
+                    "preamble": "$AKITA <a href='https://app.multichain.org/#/router' target='_blank'>bridged</a> to the Avalanche Network in late 2021 via <a href='https://app.multichain.org/#/router' target='_blank'>Multichain</a>. LPs for trading $AKITA can be found on TraderJoe. Currently, $HACHI is not available on Avalanche.",
+                    "links": [
+                        {
+                            "text": "Akita",
+                            "url": "https://traderjoexyz.com/avalanche/trade"
+                        }
+                    ],
+                    "iconName": "traderjoe.svg",
+                    "iconBackground": "rgba(242, 113, 106, 0.27)"
+                }
+            ],
+            "images": [
+                "1653358289110777797_downlod_v_gate1.png",
+                "balancer-bal-logo.png",
+                "bitmart-logo-8D8ECBA012-seeklogo.com.png",
+                "bitmart-logo-freelogovectors.net_-400x400.png",
+                "cointiger-logo-55ECC3C55D-seeklogo.com.png",
+                "CoinW.png",
+                "EdGSwj0y_400x400.jpg",
+                "EN LOGO1.png",
+                "GIzrLC7D_400x400.jpg",
+                "hotbit-logo-freelogovectors.net_-400x400.png",
+                "latoken-la-logo.png",
+                "MEXC-Global.svg",
+                "OKX_Logo.svg.png",
+                "poloniex-logo-freelogovectors.net_-400x400.png",
+                "qtl1e0ww0poba9hyb05r.png",
+                "StealthEX logo horizontal yellow.png",
+                "StealthEX logo SVG transparent.svg",
+                "StealthEX logo SVG yellow.svg",
+                "StealthEX logo transparent.png",
+                "StealthEX logo yellow.png",
+                "StealthEX mini logo.png",
+                "uniswap-uni-logo.png",
+                "wMvN_bnT_400x400.jpg",
+                "xt-com-logo-freelogovectors.net_-400x400.png"
+            ]
         }
     }
 }
