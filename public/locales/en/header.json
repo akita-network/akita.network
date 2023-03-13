@@ -1,0 +1,32 @@
+{
+    "links": [
+        {
+            "url": "https://akita-dao.gitbook.io/",
+            "iconName": "whitepaper"
+        },
+        {
+            "url": "https://twitter.com/akita_network",
+            "iconName": "twitter"
+        },
+        {
+            "url": "https://t.me/akitatoken",
+            "iconName": "telegram"
+        },
+        {
+            "url": "https://www.facebook.com/AKITATOKEN",
+            "iconName": "facebook"
+        },
+        {
+            "url": "https://www.instagram.com/akita_network",
+            "iconName": "instagram"
+        },
+        {
+            "url": "https://snapshot.org/#/cryptopup.eth",
+            "iconName": "snapshot"
+        },
+        {
+            "url": "https://discourse.akita.network",
+            "iconName": "discourse"
+        }
+    ]
+}

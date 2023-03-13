@@ -2,9 +2,10 @@ import clsxm from '@/utils/clsxm';
 import React from 'react';
 import LanguagePicker from '../common/languagePicker';
 
-interface ILink {
+export interface ILink {
     url: string;
-    iconName: string;
+    text?: string;
+    iconName?: string;
 }
 
 export interface IHeader {

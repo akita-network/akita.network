@@ -3,7 +3,6 @@ import { Montserrat } from 'next/font/google';
 import clsxm from "@/utils/clsxm";
 
 const montserrat = Montserrat({
-  weight: '400',
   subsets: ['latin'],
 })
 

@@ -22,7 +22,7 @@ const Badge = ({
                 "bg-badge-bg",
                 "flex",
                 "items-center",
-                "h-18",
+                "h-17",
                 "cursor-pointer"
             )}
             onMouseEnter={() => onHover(index)}
