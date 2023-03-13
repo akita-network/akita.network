@@ -1,4 +1,5 @@
 const colors = require("tailwindcss/colors");
+const plugin = require('tailwindcss/plugin');
 
 module.exports = {
   mode: "jit",
@@ -42,8 +43,12 @@ module.exports = {
         "cta-border": "rgba(127, 146, 241, 0.22)",
         "language-border": "rgba(127, 146, 241, 0.4)",
         "badge-bg": "hsla(0, 0%, 100%, 0.05)",
+        "progress-bg": "rgba(255, 255, 255, 0.13)",
         "green": "#1B3337",
         "green-lighter": "#1C4A50"
+      },
+      borderWidth: {
+        "text": "0.024rem"
       },
       spacing: {
         "full-negative": "-100%"
@@ -59,32 +64,42 @@ module.exports = {
       },
       width: {
         "18": "4.75rem",
-        "128": "30rem"
+        "128": "30rem",
+        "98": "98%"
       },
       height: {
         "17": "4.125rem",
         "18": "4.75rem",
         "90": "22.5rem"
       },
+      minHeight: {
+        "48": "12rem"
+      },
       transitionProperty: {
         'max-height': "max-height"
       },
       fontSize: {
-        '4xl': '2.438rem',
+        "2378xl": ["2.378rem", "2.875rem"],
+        '4xl': ["2rem", "2.438rem"],
         "1375xl": '1.375rem',
         "preamble": ["1.375rem", "1.688rem"],
-        "h2": ["3.25rem", "3.938rem"],
-        "h3": ["2.375rem", "2.875rem"],
-        "h4": ["1.813rem", "2.188rem"]
+        "h2": ["4rem", "4.8rem"],
+        "h3": ["3.25rem", "3.938rem"],
+        "h4": ["2.375rem", "2.875rem"],
+        "h5": ["1.813rem", "2.188rem"]
       },
       borderRadius: {
-        "rounded-md": "0.313rem"
+        "rounded-md": "0.313rem",
       },
       opacity: {
         "3": "0.03"
       },
       boxShadow: {
-        "cta": "0 8px 40px -9px #7f92f1"
+        "cta": "0 8px 40px -9px #7f92f1",
+        "cta-secondary": "0 8px 40px -9px #1B3337"
+      },
+      textShadow: {
+        "white": "0 0px 2px #fff"
       },
       keyframes: {
         marquee: {
@@ -114,4 +129,16 @@ module.exports = {
       },
     }
   },
+  plugins: [
+    plugin(function ({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          'text-shadow': (value) => ({
+            textShadow: value,
+          }),
+        },
+        { values: theme('textShadow') }
+      )
+    }),
+  ],
 };

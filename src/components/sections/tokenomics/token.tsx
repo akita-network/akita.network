@@ -52,7 +52,7 @@ const Token = ({
         "p-8"
     )}>
         <h3 className={clsxm(
-            "text-h3",
+            "text-h4",
             "mb-3",
             "text-center"
         )}>
