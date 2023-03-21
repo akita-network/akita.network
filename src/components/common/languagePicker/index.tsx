@@ -86,7 +86,7 @@ const LanguagePicker = ({
                                 "transform",
                                 "md:px-4",
                                 "md:px-0",
-                                "lg:max-w-3xl",
+                                "lg:max-w-120r",
                                 "w-full"
                             )}
                         >

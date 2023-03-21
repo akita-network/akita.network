@@ -1,6 +1,7 @@
 import clsxm from '@/utils/clsxm';
 import { Fira_Sans } from 'next/font/google';
 import React from 'react';
+import Section from '../section';
 import Cex from './cex';
 import Exchange, { IExchanges } from './exchange';
 
@@ -41,26 +42,20 @@ const HowToBuy = ({
     isTabletOrDesktop
 }: HowToBuyProps) => {
     return (
-        <section
-            id="howtobuy"
-            className={clsxm(
-                "md:py-56",
-                "xl:px-8"
-            )}
-        >
+        <Section id="howtobuy">
             <div className={clsxm(
                 "md:flex",
                 "md:justify-between",
-                "md:items-center",
-                "md:max-w-80vw",
-                "xl:max-w-6xl",
+                "md:items-end",
+                "xl:max-w-100r",
                 "md:mx-auto",
                 "md:mb-28"
             )}>
                 <div className={clsxm(
                     "relative",
                     "md:flex",
-                    "md:items-center"
+                    "md:items-center",
+                    "md:ml-24",
                 )}>
                     {isTabletOrDesktop && <img className='absolute' src='/assets/howtobuy/buy.svg' alt="buy" />}
                     <div className={clsxm(
@@ -119,7 +114,7 @@ const HowToBuy = ({
 
             <div className={clsxm(
                 "md:max-w-90vw",
-                "xl:max-w-8xl",
+                "xl:max-w-100r",
                 "md:mx-auto",
                 "mb-20"
             )}>
@@ -134,12 +129,11 @@ const HowToBuy = ({
 
             <div className={clsxm(
                 "md:max-w-95vw",
-                "xl:max-w-9xl",
                 "md:mx-auto",
             )}>
                 <Cex images={images} />
             </div>
-        </section>
+        </Section>
     )
 }
 

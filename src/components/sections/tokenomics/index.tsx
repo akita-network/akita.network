@@ -1,5 +1,6 @@
 import clsxm from '@/utils/clsxm';
 import React, { useState } from 'react';
+import Section from '../section';
 import Images from './images';
 import Token, { IToken } from './token';
 
@@ -29,11 +30,7 @@ const Tokenomics = ({
     const [selectedHachi, setSelectedHachi] = useState<number>(-1);
 
     return (
-        <section className={clsxm(
-            "md:max-w-90vw",
-            "xl:max-w-8xl",
-            "md:mx-auto",
-        )}>
+        <Section id="tokenomics">
             {isTabletOrDesktop && (
                 <div className={clsxm(
                     "text-center",
@@ -61,7 +58,9 @@ const Tokenomics = ({
 
             <div className={clsxm(
                 "flex",
-                "mb-32"
+                "mb-32",
+                "xl:max-w-95%",
+                "md:mx-auto",
             )}>
                 {isTabletOrDesktop && <Images group='akita' selected={selectedAkita > -1 ? selectedAkita : -1} />}
 
@@ -74,7 +73,8 @@ const Tokenomics = ({
 
             <div className={clsxm(
                 "flex",
-                "mb-32"
+                "xl:max-w-95%",
+                "md:mx-auto",
             )}>
                 {isTabletOrDesktop && <Images noPadding group='hachi' selected={selectedHachi > -1 ? selectedHachi : -1} />}
 
@@ -84,7 +84,7 @@ const Tokenomics = ({
                     {...isTabletOrDesktop ? desktop.hachi : mobile.hachi}
                 />
             </div>
-        </section>
+        </Section>
     )
 }
 
