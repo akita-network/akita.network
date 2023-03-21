@@ -17,7 +17,7 @@ const Phase = ({
     phaseTitle,
     title,
     preamble,
-    index
+    index,
 }: PhaseProps) => {
     const [ref, inView] = useInView();
 
@@ -26,6 +26,7 @@ const Phase = ({
     const opacityAnimation = {
         hide: {
             opacity: 0.3,
+            transition: { delay: 0.3, duration: 1 },
         },
         show: {
             opacity: [0.1, 1],

@@ -1,6 +1,6 @@
 import clsxm from '@/utils/clsxm';
 import { Fira_Sans } from 'next/font/google';
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import Phase, { IPhase } from './phase';
 import { motion, useScroll, useSpring } from "framer-motion";
 
@@ -24,6 +24,7 @@ const Roadmap = ({
     phases,
     phaseTitle
 }: IRoadmap) => {
+    const [activePhase, setActivePhase] = useState<number>(-1)
     const sectionRef = useRef(null)
     const { scrollYProgress } = useScroll({
         target: sectionRef,
@@ -105,7 +106,14 @@ const Roadmap = ({
                     </div>
 
                     <div>
-                        {phases.map((phase, index) => <Phase key={`phase__${index}`} {...phase} index={index} phaseTitle={phaseTitle} />)}
+                        {phases.map((phase, index) => (
+                            <Phase
+                                key={`phase__${index}`}
+                                {...phase}
+                                index={index}
+                                phaseTitle={phaseTitle}
+                            />
+                        ))}
                     </div>
                 </div>
             </div>
