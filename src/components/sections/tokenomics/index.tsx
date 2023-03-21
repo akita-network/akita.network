@@ -45,7 +45,7 @@ const Tokenomics = ({
                     <h2 className={clsxm(
                         "uppercase",
                         "font-extrabold",
-                        "text-h2",
+                        "text-h3",
                         "mb-3"
                     )}>{desktop.title}</h2>
                     <p

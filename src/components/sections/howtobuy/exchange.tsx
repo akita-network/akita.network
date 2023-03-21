@@ -45,7 +45,7 @@ const Exchange = ({
         </div>
 
         <div className='mb-7'>
-            <h3 className="text-h4 text-white font-bold md:mb-5">{title}</h3>
+            <h3 className="text-h5 text-white font-bold md:mb-5">{title}</h3>
             <p className="text-base text-white/80 font-light" dangerouslySetInnerHTML={{ __html: preamble }} />
         </div>
 

@@ -45,6 +45,7 @@ const HowToBuy = ({
             id="howtobuy"
             className={clsxm(
                 "md:py-56",
+                "xl:px-8"
             )}
         >
             <div className={clsxm(
@@ -68,8 +69,8 @@ const HowToBuy = ({
                         "md:ml-16"
                     )}>
                         <h2 className={clsxm(
-                            "text-h2",
-                            "mb-3",
+                            "text-h3",
+                            "mb-5",
                             "text-center",
                             "uppercase",
                             "text-left",
@@ -98,6 +99,7 @@ const HowToBuy = ({
                         "items-center",
                         "justify-between",
                         "bg-green",
+                        "hover:shadow-cta-secondary",
                         "rounded-lg",
                         "p-4"
                     )}>
@@ -134,7 +136,6 @@ const HowToBuy = ({
                 "md:max-w-95vw",
                 "xl:max-w-9xl",
                 "md:mx-auto",
-                // "overflow-hidden"
             )}>
                 <Cex images={images} />
             </div>

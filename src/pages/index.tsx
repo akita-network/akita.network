@@ -12,6 +12,7 @@ import { useMediaQuery } from "react-responsive";
 import { useTranslation } from "react-i18next";
 import { i18n } from "../../next-i18next.config";
 import HowToBuy from "@/components/sections/howtobuy";
+import Roadmap from "@/components/sections/roadmap";
 
 const Layout = dynamic(
   () => import('@/components/layout'),
@@ -66,6 +67,7 @@ export default function Home() {
         case "howtobuy": return (
           <HowToBuy key={`howtobuysection_${index}`} isTabletOrDesktop={isTabletOrDesktop} {...value} />
         )
+        case "roadmap": return isTabletOrDesktop ? <Roadmap key={`roadmap_${index}`} {...value} /> : null;
         default: return null;
       }
     })

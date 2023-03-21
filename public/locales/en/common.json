@@ -340,6 +340,34 @@
                 "wMvN_bnT_400x400.jpg",
                 "xt-com-logo-freelogovectors.net_-400x400.png"
             ]
+        },
+        "roadmap": {
+            "title": "Akita Network",
+            "bottomtitle": "Road map",
+            "phaseTitle": "Phase",
+            "preamble": "This “roadmap” is a living document that lays out key milestones for the AKITA ecosystem. The AkitaDAO will help to steer development of this ecosystem, and milestones may require future adjustment.",
+            "phases": [
+                {
+                    "title": "Bridge to Avalanche",
+                    "preamble": "To reach new markets and utilize the speed and efficiency of the Avalanche Network, the $AKITA token bridged in Dec. 2021 using <a href='https://app.multichain.org/#/router' target='_blank'>Multichain</a>."
+                },
+                {
+                    "title": "AKITA Network establishes funding stream from Gitcoin",
+                    "preamble": "An interim team made of $AKITA holders discusses new solutions with Gitcoin and establishes a Sablier Finance stream of 10T AKITA tokens that extend into Q1 2027."
+                },
+                {
+                    "title": "$HACHI token launch and community claim",
+                    "preamble": "10% of the total HACHI supply is gifted to all AKITA holders who qualified during the snapshot in Nov 2022. Details found <a href='https://akita-dao.gitbook.io/akita-dao/hachi-erc-20/tokenomics/community-claim-allocation' target='_blank'>here</a>."
+                },
+                {
+                    "title": "AkitaDAO is established",
+                    "preamble": "Utilizing <a href='https://snapshot.org/#/cryptopup.eth' target='_blank'>Snapshot</a>, members of the Akita DAO can create and vote on proposals that have been sponsored by DAO Stewards. "
+                },
+                {
+                    "title": "AkitaDAO guided development",
+                    "preamble": "When a proposal has successfully passed through voting by DAO members, the Akita DAO will enact upon it to further develop the AKITA ecosystem and build alternative revenue streams for the DAO treasury."
+                }
+            ]
         }
     }
 }

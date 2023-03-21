@@ -29,6 +29,7 @@ const About = ({
             "md:max-w-90vw",
             "xl:max-w-8xl",
             "md:mx-auto",
+            "xl:px-8"
         )}
     >
         {!isTabletOrDesktop ? (
