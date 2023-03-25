@@ -400,6 +400,11 @@
                     "iconName": "community.svg"
                 }
             ]
+        },
+        "ecosystem": {
+            "title": "Akita",
+            "bottomTitle": "Ecosystem",
+            "preamble": "$AKITA is a token that was born as a meme of financial freedom and possesses limitless possibility in its future utility.\nAs the Akita Network continues to develop products with the guidance of the AkitaDAO, the ecosystem will continue to grow and be tailored to its user’s needs.\nSocial and financial freedom have already inspired the current community to seek products that fit the needs of entrepreneurs, gamers, artists, or anyone looking to take control over their own financial outcomes."
         }
     }
 }

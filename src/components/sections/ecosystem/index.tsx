@@ -2,34 +2,26 @@ import clsxm from '@/utils/clsxm';
 import { Fira_Sans } from 'next/font/google';
 import React from 'react';
 import Section from '../section';
-import Blob, { IBlob } from './blob';
 
 const firasans = Fira_Sans({
     weight: '400',
     subsets: ['latin'],
 })
 
-export interface IIntroduction {
+export interface IEcosystem {
     title: string;
     bottomTitle: string;
     preamble: string;
-    blobs: IBlob[];
 }
 
-interface IntroductionProps extends IIntroduction {
-    isTabletOrDesktop: boolean;
-}
-
-const Introduction = ({
+const Ecosystem = ({
     title,
-    blobs,
     bottomTitle,
     preamble,
-    isTabletOrDesktop
-}: IntroductionProps) => {
+}: IEcosystem) => {
     const preambles = preamble.split("\n");
     return (
-        <Section id="introduction">
+        <Section id="ecosystem">
             <div className={clsxm(
                 "md:max-w-80vw",
                 "xl:max-w-80r",
@@ -63,19 +55,8 @@ const Introduction = ({
                     </div>
                 </div>
             </div>
-            <div>
-                <div className={clsxm(
-                    "md:flex",
-                    "md:flex-wrap",
-                    "md:gap-8"
-                )}>
-                    {blobs
-                        .slice(0, isTabletOrDesktop ? blobs.length : 3)
-                        .map(blob => <Blob key={blob.title} {...blob} />)}
-                </div>
-            </div>
         </Section>
     )
 }
 
-export default Introduction;
+export default Ecosystem;
