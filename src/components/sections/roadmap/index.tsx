@@ -3,6 +3,7 @@ import { Fira_Sans } from 'next/font/google';
 import React, { useRef, useState } from 'react';
 import Phase, { IPhase } from './phase';
 import { motion, useScroll, useSpring } from "framer-motion";
+import Section from '../section';
 
 const firasans = Fira_Sans({
     weight: '400',
@@ -35,14 +36,12 @@ const Roadmap = ({
         restDelta: 0.001
     });
     return (
-        <section id="roadmap" className={clsxm(
-            "xl:px-8"
-        )}>
+        <Section id="roadmap">
             <div className={clsxm(
                 "md:flex",
                 "md:justify-between",
                 "md:max-w-80vw",
-                "xl:max-w-6xl",
+                "xl:max-w-80r",
                 "md:mx-auto",
                 "md:mb-28",
                 "md:gap-8",
@@ -81,7 +80,7 @@ const Roadmap = ({
                             "-translate-x-2/4"
                         )} src="/assets/roadmap/cubeshadow.svg" alt="roadmapcube" />
                         <img className={clsxm(
-                            "w-98",
+                            // "w-98",
                             "mx-auto"
                         )} src="/assets/roadmap/cube.svg" alt="roadmapcube" />
                     </div>
@@ -117,8 +116,7 @@ const Roadmap = ({
                     </div>
                 </div>
             </div>
-
-        </section>
+        </Section>
     )
 }
 

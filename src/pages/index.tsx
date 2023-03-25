@@ -13,6 +13,7 @@ import { useTranslation } from "react-i18next";
 import { i18n } from "../../next-i18next.config";
 import HowToBuy from "@/components/sections/howtobuy";
 import Roadmap from "@/components/sections/roadmap";
+import Introduction from "@/components/sections/introduction";
 
 const Layout = dynamic(
   () => import('@/components/layout'),
@@ -68,6 +69,7 @@ export default function Home() {
           <HowToBuy key={`howtobuysection_${index}`} isTabletOrDesktop={isTabletOrDesktop} {...value} />
         )
         case "roadmap": return isTabletOrDesktop ? <Roadmap key={`roadmap_${index}`} {...value} /> : null;
+        case "introduction": return <Introduction isTabletOrDesktop={isTabletOrDesktop} key={`introduction_${index}`} {...value} />;
         default: return null;
       }
     })

@@ -368,6 +368,38 @@
                     "preamble": "When a proposal has successfully passed through voting by DAO members, the Akita DAO will enact upon it to further develop the AKITA ecosystem and build alternative revenue streams for the DAO treasury."
                 }
             ]
+        },
+        "introduction": {
+            "title": "Introduction to",
+            "bottomTitle": "Akita DAO",
+            "preamble": "The Akita DAO guides the development of the $AKITA ecosystem.\nMembers of the DAO utilize the $HACHI token for governance voting. Through an announced, random <a href='https://akita-dao.gitbook.io/akita-dao/hachi-erc-20/tokenomics/community-claim-allocation/eligibility' target='_blank'>snapshot</a> of $AKITA holders on Ethereum and Avalanche networks, $HACHI was gifted with a six-month claim window in order to create incentive for leadership from within the active community of $AKITA holders.\nThe AkitaDAO will help steer the future of $AKITA by leveraging its network power to develop and grow the $AKITA ecosystem.",
+            "blobs": [
+                {
+                    "title": "Purpose of AKITA DAO",
+                    "preamble": "Akita DAO is a decentralized autonomous organization of the $AKITA community which helps guide the future of the ecosystem.",
+                    "iconName": "akita.svg"
+                },
+                {
+                    "title": "Craft proposals on the AKITA Discourse forum",
+                    "preamble": "Join our <a href='https://discourse.akita.network/' target='_blank'>Discourse</a> forum to stay up to date on all Akita DAO happenings, discuss current proposals, or recommend new proposals.",
+                    "iconName": "discourse.svg"
+                },
+                {
+                    "title": "Vote on Snapshot proposals with $HACHI",
+                    "preamble": "Utilizing quadratic voting, AkitaDAO members can vote on proposals. Join the AkitaDAO group on Snapshot <a href='https://snapshot.org/#/cryptopup.eth' target='_blank'>here</a>.",
+                    "iconName": "snapshot.svg"
+                },
+                {
+                    "title": "Successful proposals are executed",
+                    "preamble": "The core team will implement proposals that are successfully approved by the AkitaDAO.",
+                    "iconName": "champ.svg"
+                },
+                {
+                    "title": "Community controlled treasury",
+                    "preamble": "Community members who hold the governance token HACHI will be able to participate in all of the decisions for the AkitaDAO treasury.",
+                    "iconName": "community.svg"
+                }
+            ]
         }
     }
 }

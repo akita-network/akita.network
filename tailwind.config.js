@@ -45,9 +45,15 @@ module.exports = {
         "badge-bg": "hsla(0, 0%, 100%, 0.05)",
         "progress-bg": "rgba(255, 255, 255, 0.13)",
         "green": "#1B3337",
-        "green-lighter": "#1C4A50"
+        "green-lighter": "#1C4A50",
+        "blob-border": "rgba(38, 195, 214, 0.34)",
+        "blob-bg-start": "rgba(38, 195, 214, 0.05)",
+        "blob-bg-end": "rgba(38, 195, 214, 0.01)",
+        "blob-bg-hover-start": "rgba(38, 195, 214, 0.3)",
+        "blob-bg-hover-end": "rgba(38, 195, 214, 0.1)"
       },
       borderWidth: {
+        "0056": "0.056rem",
         "text": "0.024rem"
       },
       spacing: {
@@ -55,14 +61,19 @@ module.exports = {
       },
       maxWidth: {
         '1xl': '38.438rem',
-        '3xl': '120rem',
+        "2xl": "108rem",
         "8xl": "90rem",
         "9xl": "95rem",
+        "80r": "80rem",
+        "100r": "100rem",
+        "120r": "120rem",
+        "95%": "95%",
         '80vw': '80vw',
         "90vw": '90vw',
         "95vw": '95vw',
       },
       width: {
+        "3575": "3.575rem",
         "18": "4.75rem",
         "128": "30rem",
         "98": "98%"
@@ -100,6 +111,9 @@ module.exports = {
       },
       textShadow: {
         "white": "0 0px 2px #fff"
+      },
+      lineHeight: {
+        "6.5": "1.625rem"
       },
       keyframes: {
         marquee: {
