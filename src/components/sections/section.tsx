@@ -13,8 +13,8 @@ const Section = ({
     <section
         id={id}
         className={clsxm(
-            "md:py-32",
-            "xl:px-8",
+            "py-28 md:py-32",
+            "px-10 xl:px-8",
             "md:max-w-90vw",
             "xl:max-w-2xl",
             "md:mx-auto",
