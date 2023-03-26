@@ -8,13 +8,32 @@ import "swiper/css/navigation";
 type Props = {
     children: React.ReactNode;
     className?: string;
+    slidesPerView?: number | "auto";
+    spaceBetween?: number;
 }
 
-const Carousel = ({ children, className }: Props) => (
-    <Swiper loop autoplay={{ delay: 5000, disableOnInteraction: true }} slidesPerView={1} modules={[Autoplay]} className={className} suppressHydrationWarning>
+const Carousel = ({
+    children,
+    className,
+    spaceBetween = 0,
+    slidesPerView = 1
+}: Props) => (
+    <Swiper
+        loop
+        autoplay={{ delay: 5000, disableOnInteraction: true }}
+        slidesPerView={slidesPerView}
+        modules={[Autoplay]}
+        className={className}
+        suppressHydrationWarning
+        spaceBetween={spaceBetween}
+    >
         {React.Children.map(children, (child, index: number) => {
             return (
-                <SwiperSlide key={`slide__${index}`} suppressHydrationWarning>
+                <SwiperSlide
+                    key={`slide__${index}`}
+                    suppressHydrationWarning
+                    className="w-70"
+                >
                     {React.cloneElement(child as React.ReactElement<any>)}
                 </SwiperSlide>
             )

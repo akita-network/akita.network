@@ -15,6 +15,7 @@ import HowToBuy from "@/components/sections/howtobuy";
 import Roadmap from "@/components/sections/roadmap";
 import Introduction from "@/components/sections/introduction";
 import Ecosystem from "@/components/sections/ecosystem";
+import LearningAndNews from "@/components/sections/learningandnews";
 
 const Layout = dynamic(
   () => import('@/components/layout'),
@@ -71,7 +72,8 @@ export default function Home() {
         )
         case "roadmap": return isTabletOrDesktop ? <Roadmap key={`roadmap_${index}`} {...value} /> : null;
         case "introduction": return <Introduction isTabletOrDesktop={isTabletOrDesktop} key={`introduction_${index}`} {...value} />;
-        case "ecosystem": return <Ecosystem key={`ecosystem_${index}`} {...value} />;
+        case "ecosystem": return isTabletOrDesktop ? <Ecosystem key={`ecosystem_${index}`} {...value} /> : null;
+        case "learningandnews": return <LearningAndNews isTabletOrDesktop={isTabletOrDesktop} key={`learningandnews_${index}`} {...value} />;
         default: return null;
       }
     })

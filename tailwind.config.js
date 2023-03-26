@@ -39,6 +39,7 @@ module.exports = {
     extend: {
       colors: {
         dark: "#181818",
+        "learning-and-news": "#252525",
         "cta-bg": "rgba(127, 146, 241, 0.25)",
         "cta-border": "rgba(127, 146, 241, 0.22)",
         "language-border": "rgba(127, 146, 241, 0.4)",
@@ -76,9 +77,11 @@ module.exports = {
         "3575": "3.575rem",
         "18": "4.75rem",
         "128": "30rem",
+        "70": "70% !important",
         "98": "98%"
       },
       height: {
+        "25.75": "25.75rem",
         "17": "4.125rem",
         "18": "4.75rem",
         "90": "22.5rem"
@@ -114,6 +117,9 @@ module.exports = {
       },
       lineHeight: {
         "6.5": "1.625rem"
+      },
+      margin: {
+        "1.875": "1.875rem"
       },
       keyframes: {
         marquee: {
