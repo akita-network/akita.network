@@ -1,5 +1,4 @@
 import React from 'react';
-import clsxm from '@/utils/clsxm';
 import { Fira_Sans } from 'next/font/google';
 import Badge from './badge';
 
@@ -46,16 +45,8 @@ const Token = ({
     text,
     handleSetSelected,
 }: TokenProps) => (
-    <div className={clsxm(
-        "text-white",
-        "md:w-1/2",
-        "p-8"
-    )}>
-        <h3 className={clsxm(
-            "text-h4",
-            "mb-3",
-            "text-center"
-        )}>
+    <div className="text-white md:w-1/2 p-8">
+        <h3 className="text-h4 mb-3 text-center">
             <span className={firasans.className}>{title}</span>
             {titleright}
         </h3>
@@ -66,47 +57,21 @@ const Token = ({
                     const [key, value] = link;
                     return (
                         <div
-                            className={clsxm(
-                                "flex",
-                                "font-normal",
-                                "text-lg",
-                                "leading-5",
-                            )}
+                            className="flex font-normal text-lg leading-5"
                             key={`tokenomics_link_${index}`}
                         >
-                            <p className={clsxm(
-                                "uppercase",
-                                "mr-2",
-                            )}>{key}:</p>
-                            <a className={clsxm(
-                                "underline",
-                                "whitespace-nowrap",
-                                "text-ellipsis",
-                                "overflow-hidden"
-                            )} href={value.url}>{value.text}</a>
+                            <p className="uppercase mr-2">{key}:</p>
+                            <a className="underline whitespace-nowrap text-ellipsis overflow-hidden" href={value.url}>{value.text}</a>
                         </div>
                     )
                 })}
             </div>
         )}
 
-        <p className={clsxm(
-            "opacity-70",
-            "font-light",
-            "text-preamble",
-            "mb-3"
-        )}>{preamble}</p>
-        <p className={clsxm(
-            "font-bold",
-            "text-preamble",
-            "mb-8"
-        )}>{taxes}</p>
+        <p className="opacity-70 font-light text-preamble mb-3">{preamble}</p>
+        <p className="font-bold text-preamble mb-8">{taxes}</p>
 
-        <div className={clsxm(
-            "flex",
-            "flex-col",
-            "gap-6"
-        )}>
+        <div className="flex flex-col gap-6">
             {text?.map((t, index) => (
                 <Badge
                     key={`badge_${t.text}_${index}`}
@@ -115,10 +80,7 @@ const Token = ({
                     onHover={handleSetSelected}
                 >
                     {t.text}
-                    {t.subText && <p className={clsxm(
-                        "text-xl",
-                        "leading-6"
-                    )}>{t.subText}</p>}
+                    {t.subText && <p className="text-xl leading-6">{t.subText}</p>}
                 </Badge>
             ))}
         </div>

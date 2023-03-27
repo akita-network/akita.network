@@ -1,5 +1,4 @@
 import React from "react";
-import clsxm from '@/utils/clsxm';
 import Item, { IItem } from "./item";
 import Section from "../section";
 
@@ -23,10 +22,7 @@ const About = ({
     isTabletOrDesktop
 }: AboutProps) => (
     <Section id="about">
-        <div className={clsxm(
-            "md:flex",
-            "md:justify-center",
-        )}>
+        <div className="md:flex md:justify-center">
             {!isTabletOrDesktop ? (
                 <div className="z-20">
                     <h2 className="text-white uppercase">{mobile.title}</h2>

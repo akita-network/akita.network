@@ -32,7 +32,7 @@ const Carousel = ({
                 <SwiperSlide
                     key={`slide__${index}`}
                     suppressHydrationWarning
-                    className="w-70"
+                    className={slidesPerView === "auto" ? "w-70" : ""}
                 >
                     {React.cloneElement(child as React.ReactElement<any>)}
                 </SwiperSlide>

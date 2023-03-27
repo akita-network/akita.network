@@ -12,12 +12,12 @@ const News = ({
     imageUrl
 }: INews) => {
     return (
-        <a className="h-full flex flex-col gap-2.5 flex-1 rounded-lg md:bg-learning-and-news"
+        <a className="no-underline h-full flex flex-col gap-2.5 flex-1 rounded-lg md:bg-learning-and-news"
             href={url}
             target="_blank"
         >
             <img
-                className="rounded-lg p-px w-full h-25.75 object-cover"
+                className="rounded-lg w-full h-25.75 object-cover"
                 src={`/assets/learningandnews/news/${imageUrl}`}
             />
 

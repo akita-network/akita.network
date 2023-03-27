@@ -1,4 +1,3 @@
-import clsxm from '@/utils/clsxm';
 import React from 'react';
 
 interface ISection {
@@ -12,13 +11,7 @@ const Section = ({
 }: ISection) => (
     <section
         id={id}
-        className={clsxm(
-            "py-28 md:py-32",
-            "px-10 xl:px-8",
-            "md:max-w-90vw",
-            "xl:max-w-2xl",
-            "md:mx-auto",
-        )}
+        className="py-28 md:py-32 px-10 xl:px-8 md:max-w-90vw xl:max-w-2xl md:mx-auto"
     >
         {children}
     </section>

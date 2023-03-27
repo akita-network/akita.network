@@ -38,7 +38,8 @@
                     "desktop": {
                         "title": "Harnessing the power of community",
                         "preamble": "Join our Discourse Forum to participate and propose action for the DAO. Proposals will be voted on using Snapshot.",
-                        "video": "/assets/cube.mp4"
+                        "asset": "/assets/hero/hero.jpg",
+                        "assetType": "image"
                     },
                     "mobile": {
                         "title": "Akita Network",

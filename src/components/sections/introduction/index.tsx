@@ -1,4 +1,3 @@
-import clsxm from '@/utils/clsxm';
 import { Fira_Sans } from 'next/font/google';
 import React from 'react';
 import Section from '../section';
@@ -30,32 +29,12 @@ const Introduction = ({
     const preambles = preamble.split("\n");
     return (
         <Section id="introduction">
-            <div className={clsxm(
-                "md:max-w-80vw",
-                "xl:max-w-80r",
-                "md:mx-auto",
-                "md:mb-36",
-            )}>
-                <div className={clsxm(
-                    "md:max-w-3xl",
-                )}>
-                    <h2 className={clsxm(
-                        "text-h2",
-                        "uppercase",
-                        "mb-5",
-                        "flex",
-                        "flex-col",
-                    )}>
-                        <span className={clsxm(
-                            "text-white",
-                            "font-extrabold"
-                        )}>
+            <div className="md:max-w-80vw xl:max-w-80r md:mx-auto md:mb-36">
+                <div className="md:max-w-3xl">
+                    <h2 className="text-h2 uppercas mb-5 flex flex-col">
+                        <span className="text-white font-extrabold">
                             {title}
-                            <span className={clsxm(
-                                firasans.className,
-                                "ml-5",
-                                "text-white/70"
-                            )}>{bottomTitle}</span>
+                            <span className={`${firasans.className} ml-5 text-white/70`}>{bottomTitle}</span>
                         </span>
                     </h2>
                     <div>
@@ -64,11 +43,7 @@ const Introduction = ({
                 </div>
             </div>
             <div>
-                <div className={clsxm(
-                    "md:flex",
-                    "md:flex-wrap",
-                    "md:gap-8"
-                )}>
+                <div className="md:flex md:flex-wrap md:gap-8">
                     {blobs
                         .slice(0, isTabletOrDesktop ? blobs.length : 3)
                         .map(blob => <Blob key={blob.title} {...blob} />)}

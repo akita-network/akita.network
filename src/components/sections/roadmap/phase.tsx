@@ -1,4 +1,3 @@
-import clsxm from '@/utils/clsxm';
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import React, { useEffect } from 'react';
@@ -48,28 +47,14 @@ const Phase = ({
             animate={animation}
             variants={opacityAnimation}
             ref={ref}
-            className={clsxm(
-                "mb-14",
-            )}
+            className="mb-14"
         >
-            <span className={clsxm(
-                "font-bold",
-                "text-2378xl",
-                "leading-2875",
-                "text-shadow-white"
-            )}>{`${phaseTitle} ${index}`}</span>
+            <span className="font-bold text-2378xl leading-2875 text-shadow-white">{`${phaseTitle} ${index}`}</span>
 
-            <h4 className={clsxm(
-                "text-4xl",
-                "text-white",
-                "font-bold",
-                "mb-4"
-            )}>{title}</h4>
+            <h4 className="text-4xl text-white font-bold mb-4">{title}</h4>
 
             <p
-                className={clsxm(
-                    "text-white/60"
-                )}
+                className="text-white/60"
                 dangerouslySetInnerHTML={{ __html: preamble }}
             />
         </motion.div>

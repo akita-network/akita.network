@@ -51,7 +51,9 @@ module.exports = {
         "blob-bg-start": "rgba(38, 195, 214, 0.05)",
         "blob-bg-end": "rgba(38, 195, 214, 0.01)",
         "blob-bg-hover-start": "rgba(38, 195, 214, 0.3)",
-        "blob-bg-hover-end": "rgba(38, 195, 214, 0.1)"
+        "blob-bg-hover-end": "rgba(38, 195, 214, 0.1)",
+        "claim-btn": "rgba(30, 91, 99, 0.57)",
+        "hero-bg": "background-image: linear-gradient(180deg, rgba(24, 24, 24, 0.56) 72%, #181818)"
       },
       borderWidth: {
         "0056": "0.056rem",
@@ -72,6 +74,7 @@ module.exports = {
         '80vw': '80vw',
         "90vw": '90vw',
         "95vw": '95vw',
+        "half": "50%"
       },
       width: {
         "3575": "3.575rem",

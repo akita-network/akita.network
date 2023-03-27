@@ -1,4 +1,3 @@
-import clsxm from '@/utils/clsxm';
 import React, { useState } from 'react';
 import Section from '../section';
 import Images from './images';
@@ -32,36 +31,16 @@ const Tokenomics = ({
     return (
         <Section id="tokenomics">
             {isTabletOrDesktop && (
-                <div className={clsxm(
-                    "text-center",
-                    "w-128",
-                    "mx-auto",
-                    "mb-32",
-                    "text-white",
-                )}>
-                    <h2 className={clsxm(
-                        "uppercase",
-                        "font-extrabold",
-                        "text-h3",
-                        "mb-3"
-                    )}>{desktop.title}</h2>
+                <div className="text-center w-128 mx-auto mb-32 text-white">
+                    <h2 className="uppercase font-extrabold text-h3 mb-3">{desktop.title}</h2>
                     <p
-                        className={clsxm(
-                            "opacity-70",
-                            "font-light",
-                            "text-preamble",
-                        )}
+                        className="opacity-70 font-light text-preamble"
                         dangerouslySetInnerHTML={{ __html: desktop.preamble }}
                     />
                 </div>
             )}
 
-            <div className={clsxm(
-                "flex",
-                "mb-32",
-                "xl:max-w-95%",
-                "md:mx-auto",
-            )}>
+            <div className="flex mb-32 xl:max-w-95% md:mx-auto">
                 {isTabletOrDesktop && <Images group='akita' selected={selectedAkita > -1 ? selectedAkita : -1} />}
 
                 <Token
@@ -71,11 +50,7 @@ const Tokenomics = ({
                 />
             </div>
 
-            <div className={clsxm(
-                "flex",
-                "xl:max-w-95%",
-                "md:mx-auto",
-            )}>
+            <div className="flex xl:max-w-95% md:mx-auto">
                 {isTabletOrDesktop && <Images noPadding group='hachi' selected={selectedHachi > -1 ? selectedHachi : -1} />}
 
                 <Token
