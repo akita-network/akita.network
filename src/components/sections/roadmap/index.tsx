@@ -36,7 +36,7 @@ const Roadmap = ({
     });
     return (
         <Section id="roadmap">
-            <div className="md:flex md:justify-between md:max-w-80vw xl:max-w-80r md:mx-auto md:mb-28 md:gap-8 relative">
+            <div className="md:flex md:justify-between md:max-w-80vw xl:max-w-80r md:mx-auto md:mb-28 md:gap-16 relative">
                 <div className="self-start sticky top-20">
                     <h2 className="text-h2 uppercase mb-5 flex flex-col">
                         <span className="text-white font-extrabold">{title}</span>
@@ -52,9 +52,9 @@ const Roadmap = ({
                 </div>
 
                 <div className="flex gap-8">
-                    <div ref={sectionRef} className="rounded-3xl bg-progress-bg w-5">
+                    {/* <div ref={sectionRef} className="rounded-3xl bg-progress-bg w-5">
                         <motion.div className="w-full h-full rounded-3xl bg-white origin-top" style={{ scaleY }} />
-                    </div>
+                    </div> */}
 
                     <div>
                         {phases.map((phase, index) => (
