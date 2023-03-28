@@ -1,4 +1,4 @@
-import { Fira_Sans } from 'next/font/google';
+import { Fira_Sans, Abhaya_Libre } from 'next/font/google';
 import React from 'react';
 import Section from '../section';
 import Cex from './cex';
@@ -6,6 +6,11 @@ import Exchange, { IExchanges } from './exchange';
 
 const firasans = Fira_Sans({
     weight: '400',
+    subsets: ['latin'],
+})
+
+const abhayaLibre = Abhaya_Libre({
+    weight: '700',
     subsets: ['latin'],
 })
 
@@ -42,20 +47,34 @@ const HowToBuy = ({
 }: HowToBuyProps) => {
     return (
         <Section id="howtobuy">
-            <div className="md:flex md:justify-between md:items-end xl:max-w-100r md:mx-auto md:mb-28">
-                <div className="relative md:flex md:items-center md:ml-24">
+            <div className="md:flex md:justify-between md:items-end md:max-w-95% md:mx-auto md:mb-28">
+                <div className="relative md:flex md:items-center">
                     {isTabletOrDesktop && <img className='absolute' src='/assets/howtobuy/buy.svg' alt="buy" />}
                     <div className="md:max-w-1xl md:mx-auto md:ml-16">
-                        <h2 className="text-h3 mb-5 uppercase">
-                            <span className="text-white font-bold">{title}</span>
-                            <span className={`${firasans.className} text-white/80`}>{titleright}</span>
+                        <h2 className="text-center md:text-left text-h4-base md:text-h3 mb-5 uppercase">
+                            <span className={`${isTabletOrDesktop ? "" : abhayaLibre.className} text-white md:font-bold`}>{title}</span>
+                            <span className={`${isTabletOrDesktop ? firasans.className : ""} text-white font-bold md:font-normal md:text-white/80`}>{titleright}</span>
                         </h2>
-                        <p
-                            className="text-preamble text-white/60"
-                            dangerouslySetInnerHTML={{ __html: preamble.replace("{0}", `<span class="text-white/100">${preamblehighlighted}</span>`) }}
-                        />
+                        {isTabletOrDesktop && (
+                            <p
+                                className="text-preamble text-white/60"
+                                dangerouslySetInnerHTML={{ __html: preamble.replace("{0}", `<span class="text-white/100">${preamblehighlighted}</span>`) }}
+                            />
+                        )}
                     </div>
                 </div>
+
+                {!isTabletOrDesktop && (
+                    <React.Fragment>
+                        <div className="-mx-6 mb-5">
+                            <Cex images={images} />
+                        </div>
+                        <p
+                            className="mb-5 text-center text-preamble-base text-white/60"
+                            dangerouslySetInnerHTML={{ __html: preamble.replace("{0}", `<span class="text-white/100">${preamblehighlighted}</span>`) }}
+                        />
+                    </React.Fragment>
+                )}
 
                 {isTabletOrDesktop && (
                     <a href={claimLink.url} target="_blank" className="text-white no-underline flex items-center justify-between bg-green hover:shadow-cta-secondary rounded-lg p-4">
@@ -71,15 +90,17 @@ const HowToBuy = ({
                 )}
             </div>
 
-            <div className="md:max-w-90vw xl:max-w-100r md:mx-auto mb-20">
-                <div className="md:flex md:flex-wrap md:gap-8">
-                    {exchanges.map(exchange => <Exchange key={exchange.title} {...exchange} />)}
+            <div className="-mx-6 md:mx-0 md:max-w-95% md:mx-auto md:mb-20">
+                <div className="flex flex-col md:flex-row md:flex-wrap gap-8">
+                    {exchanges.map(exchange => <Exchange isTabletOrDesktop={isTabletOrDesktop} key={exchange.title} {...exchange} />)}
                 </div>
             </div>
 
-            <div className="md:max-w-95vw md:mx-auto">
-                <Cex images={images} />
-            </div>
+            {isTabletOrDesktop && (
+                <div className="md:mx-auto">
+                    <Cex images={images} />
+                </div>
+            )}
         </Section>
     )
 }

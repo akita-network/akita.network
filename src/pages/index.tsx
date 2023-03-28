@@ -61,9 +61,7 @@ export default function Home() {
             </Carousel>
           ) : <Hero key={`herosection__${index}`} isTabletOrDesktop={isTabletOrDesktop} {...value.slides[0]} />
         )
-        case "about": return (
-          <About key={`aboutsection__${index}`} isTabletOrDesktop={isTabletOrDesktop} {...value} />
-        )
+        case "about": return isTabletOrDesktop ? <About key={`aboutsection__${index}`} isTabletOrDesktop={isTabletOrDesktop} {...value} /> : null
         case "tokenomics": return (
           <Tokenomics key={`tokenomicssection_${index}`} isTabletOrDesktop={isTabletOrDesktop} {...value} />
         )

@@ -16,12 +16,14 @@ const News = ({
             href={url}
             target="_blank"
         >
-            <img
-                className="rounded-lg w-full h-25.75 object-cover"
-                src={`/assets/learningandnews/news/${imageUrl}`}
-            />
+            <div className='rounded-lg md:h-25.75'>
+                <img
+                    className="rounded-lg md:max-h-25.75 w-full object-cover"
+                    src={`/assets/learningandnews/news/${imageUrl}`}
+                />
+            </div>
 
-            <span className="mt-3.5 md:mt-1.875 md:mb-12 md:mx-10 md:font-extrabold text-3xl text-white">{text}</span>
+            <span className="mt-3.5 md:mt-1.875 md:mb-12 md:mx-10 md:font-extrabold text-h5 md:text-3xl text-white">{text}</span>
         </a>
     )
 }

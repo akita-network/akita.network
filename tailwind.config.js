@@ -38,12 +38,12 @@ module.exports = {
     },
     extend: {
       colors: {
+        "community": "#2760F2",
         dark: "#181818",
         "learning-and-news": "#252525",
         "cta-bg": "rgba(127, 146, 241, 0.25)",
         "cta-border": "rgba(127, 146, 241, 0.22)",
         "language-border": "rgba(127, 146, 241, 0.4)",
-        "badge-bg": "hsla(0, 0%, 100%, 0.05)",
         "progress-bg": "rgba(255, 255, 255, 0.13)",
         "green": "#1B3337",
         "green-lighter": "#1C4A50",
@@ -70,6 +70,7 @@ module.exports = {
         "80r": "80rem",
         "100r": "100rem",
         "120r": "120rem",
+        "90%": "90%",
         "95%": "95%",
         '80vw': '80vw',
         "90vw": '90vw',
@@ -77,17 +78,26 @@ module.exports = {
         "half": "50%"
       },
       width: {
-        "3575": "3.575rem",
+        "18.77": "18.77rem",
+        "35.75": "3.575rem",
         "18": "4.75rem",
         "128": "30rem",
         "70": "70% !important",
         "98": "98%"
       },
       height: {
+        "2.875": "2.875rem",
+        "2.188": "2.188rem",
         "25.75": "25.75rem",
         "17": "4.125rem",
         "18": "4.75rem",
         "90": "22.5rem"
+      },
+      maxHeight: {
+        "25.75": "25.75rem",
+      },
+      minWidth: {
+        "8.125": "8.125rem",
       },
       minHeight: {
         "48": "12rem"
@@ -96,13 +106,17 @@ module.exports = {
         'max-height': "max-height"
       },
       fontSize: {
+        "0.938": "0.938rem",
         "2378xl": ["2.378rem", "2.875rem"],
         '4xl': ["2rem", "2.438rem"],
         "1375xl": '1.375rem',
+        "preamble-base": ["1.031rem", "1.25rem"],
         "preamble": ["1.375rem", "1.688rem"],
         "h2": ["4rem", "4.8rem"],
         "h3": ["3.25rem", "3.938rem"],
+        "h4-base": ["2rem", "2.375rem"],
         "h4": ["2.375rem", "2.875rem"],
+        "h5-base": ["1.313rem", "1.588rem"],
         "h5": ["1.813rem", "2.188rem"]
       },
       borderRadius: {
@@ -122,6 +136,7 @@ module.exports = {
         "6.5": "1.625rem"
       },
       margin: {
+        "0.3": "0.3rem",
         "1.875": "1.875rem"
       },
       keyframes: {

@@ -21,7 +21,7 @@ const Ecosystem = ({
     const preambles = preamble.split("\n");
     return (
         <Section id="ecosystem">
-            <div className="md:max-w-80vw xl:max-w-80r md:mx-auto md:mb-36">
+            <div className="md:max-w-80vw xl:max-w-80r md:mx-auto">
                 <div className="md:max-w-3xl">
                     <h2 className="text-h2 uppercase mb-5 flex flex-col">
                         <span className="text-white font-extrabold">

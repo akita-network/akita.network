@@ -11,7 +11,7 @@ const Section = ({
 }: ISection) => (
     <section
         id={id}
-        className="py-28 md:py-32 px-10 xl:px-8 md:max-w-90vw xl:max-w-2xl md:mx-auto"
+        className="py-16 md:py-32 px-6 xl:px-8 md:max-w-90vw xl:max-w-2xl md:mx-auto"
     >
         {children}
     </section>

@@ -15,7 +15,7 @@ const Layout = ({
 
 
   return (
-    <div className={`${montserrat.className} flex flex-col bg-dark px-4 md:px-0`}>
+    <div className={`${montserrat.className} flex flex-col bg-dark md:px-0`}>
       {children}
     </div>
   );

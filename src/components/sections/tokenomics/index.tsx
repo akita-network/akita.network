@@ -46,6 +46,7 @@ const Tokenomics = ({
                 <Token
                     selectedToken={selectedAkita}
                     handleSetSelected={(index: number) => setSelectedAkita(index)}
+                    isTabletOrDesktop={isTabletOrDesktop}
                     {...isTabletOrDesktop ? desktop.akita : mobile.akita}
                 />
             </div>
@@ -55,7 +56,7 @@ const Tokenomics = ({
 
                 <Token
                     selectedToken={selectedHachi}
-                    handleSetSelected={(index: number) => setSelectedHachi(index)}
+                    handleSetSelected={(index: number) => setSelectedHachi(index)} isTabletOrDesktop={isTabletOrDesktop}
                     {...isTabletOrDesktop ? desktop.hachi : mobile.hachi}
                 />
             </div>

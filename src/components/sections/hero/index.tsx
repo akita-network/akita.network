@@ -1,6 +1,7 @@
 import Button from '@/components/common/button';
 import { Akita } from '@/static/images/logo';
 import React from 'react';
+import { IItem } from '../about/item';
 
 interface IButton {
     text: string;
@@ -18,6 +19,12 @@ export interface IHero {
     mobile: {
         title: string;
         preamble: string;
+        preambleRight: string;
+        asset: string;
+        about: {
+            title: string;
+            items: IItem[];
+        }
     },
     buttons: IButton[]
 }
@@ -37,7 +44,7 @@ const Hero = ({
     isTabletOrDesktop
 }: HeroProps) => {
     const renderButtons = () => (
-        <div className="relative flex gap-2.5">
+        <div className="relative flex gap-5 md:gap-2.5 my-8 md:my-0">
             {buttons?.map((btn: IButton) => (
                 <Button
                     key={`button__${btn.text}`}
@@ -52,14 +59,23 @@ const Hero = ({
     return (
         <section className="h-screen relative md:flex md:items-center md:px-11 xl:px-40">
             {!isTabletOrDesktop ? (
-                <React.Fragment>
-                    <div className="z-20">
-                        <h1 className="text-white">{mobile.title}</h1>
-                        <p className="text-white">{mobile.preamble}</p>
+                <div style={{
+                    backgroundImage: `url(${mobile.asset})`,
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                    backgroundPosition: "bottom center, 50%, 50%"
+                }} className="h-full px-6 flex justify-center items-center flex-col">
+                    <div className="z-20 uppercase font-bold text-center mb-8">
+                        <h1 className="text-white text-5xl">{mobile.title}</h1>
+                        <p><span className="text-white">{mobile.preamble}</span><span className='text-community ml-0.3'>{mobile.preambleRight}</span></p>
                     </div>
                     <Akita />
                     {renderButtons()}
-                </React.Fragment>
+                    <div className="z-20 text-center">
+                        <h2 className="text-white uppercase text-2xl mb-2">{mobile.about.title}</h2>
+                        {mobile.about.items?.map(item => <p key={`about_text_${item.text}`} className="text-white/60 text-lg uppercase mb-2">{item.text}</p>)}
+                    </div>
+                </div>
             ) : (
                 <React.Fragment>
                     <div style={{

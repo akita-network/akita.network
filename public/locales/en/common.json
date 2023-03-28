@@ -43,7 +43,26 @@
                     },
                     "mobile": {
                         "title": "Akita Network",
-                        "preamble": "The power of community"
+                        "preamble": "The power of",
+                        "preambleRight": "community",
+                        "asset": "/assets/hero/bg.png",
+                        "about": {
+                            "title": "This is AKITA Network",
+                            "items": [
+                                {
+                                    "text": "$3.5B marketcap at ATH"
+                                },
+                                {
+                                    "text": "+60k investors"
+                                },
+                                {
+                                    "text": "funded into 2027"
+                                },
+                                {
+                                    "text": "community governance"
+                                }
+                            ]
+                        }
                     },
                     "buttons": [
                         {
@@ -64,43 +83,24 @@
             ]
         },
         "about": {
-            "desktop": {
-                "items": [
-                    {
-                        "title": "$3.5 B",
-                        "text": "Peak Marketcap"
-                    },
-                    {
-                        "title": "62,000 +",
-                        "text": "holders"
-                    },
-                    {
-                        "title": "Funded",
-                        "text": "into 2027"
-                    },
-                    {
-                        "title": "Community",
-                        "text": "governance"
-                    }
-                ]
-            },
-            "mobile": {
-                "title": "This is AKITA Network",
-                "items": [
-                    {
-                        "text": "$3.5B marketcap at ATH"
-                    },
-                    {
-                        "text": "+60k investors"
-                    },
-                    {
-                        "text": "funded into 2027"
-                    },
-                    {
-                        "text": "community governance"
-                    }
-                ]
-            }
+            "items": [
+                {
+                    "title": "$3.5 B",
+                    "text": "Peak Marketcap"
+                },
+                {
+                    "title": "62,000 +",
+                    "text": "holders"
+                },
+                {
+                    "title": "Funded",
+                    "text": "into 2027"
+                },
+                {
+                    "title": "Community",
+                    "text": "governance"
+                }
+            ]
         },
         "tokenomics": {
             "desktop": {
@@ -108,19 +108,21 @@
                 "preamble": "$AKITA and $HACHI are two distinct tokens with different token economics. Find full Tokenomics for both tokens <a href='https://akita-dao.gitbook.io/akita-dao/' target='_blank'>here</a>.",
                 "akita": {
                     "title": "$AKITA",
-                    "titleright": " (AKITA INU token)",
+                    "titleright": "(AKITA INU token)",
                     "preamble": "Launched in Feb. 2021, bridged to Avalanche 2022 Community owned and driven",
                     "taxes": "0% taxes or fees, no extra slippage required.",
-                    "links": {
-                        "ethereum": {
-                            "text": "0x3301Ee63Fb29F863f2333Bd4466acb46CD8323E6",
+                    "links": [
+                        {
+                            "text": "Ethereum",
+                            "linkText": "0x3301Ee63Fb29F863f2333Bd4466acb46CD8323E6",
                             "url": "https://etherscan.io/token/0x3301ee63fb29f863f2333bd4466acb46cd8323e6"
                         },
-                        "avalanche": {
-                            "text": "0xcaF5191fc480F43e4DF80106c7695ECA56E48B18",
+                        {
+                            "text": "Avalanche",
+                            "linkText": "0xcaF5191fc480F43e4DF80106c7695ECA56E48B18",
                             "url": "https://snowtrace.io/token/0xcaf5191fc480f43e4df80106c7695eca56e48b18"
                         }
-                    },
+                    ],
                     "text": [
                         {
                             "text": "Max. Supply = 100T (100,000,000,000,000) AKITA",
@@ -141,15 +143,16 @@
                 },
                 "hachi": {
                     "title": "$HACHI",
-                    "titleright": " (HACHI token)",
+                    "titleright": "(HACHI token)",
                     "preamble": "Launched in Nov. 2022, governance token of AkitaDAO",
                     "taxes": "0% taxes or fees, no extra slippage required.",
-                    "links": {
-                        "ethereum": {
-                            "text": "0x967B0c95295ead8fAef70d26A7846AeCD349AAFf",
+                    "links": [
+                        {
+                            "text": "Ethereum",
+                            "linkText": "0x967B0c95295ead8fAef70d26A7846AeCD349AAFf",
                             "url": "https://etherscan.io/token/0x967b0c95295ead8faef70d26a7846aecd349aaff"
                         }
-                    },
+                    ],
                     "text": [
                         {
                             "text": "Max. Supply = 100M (100,000,000) HACHI",
@@ -184,22 +187,27 @@
             },
             "mobile": {
                 "akita": {
-                    "title": "AKITA Tokenomics",
+                    "title": "AKITA",
+                    "titleright": "Tokenomics",
                     "preamble": "Launched in Feb. 2021, bridged to Avalanche 2022 Community owned and driven",
                     "taxes": "0% taxes or fees",
-                    "links": {
-                        "ethereum": {
-                            "text": "0x3301Ee63Fb29F863f2333Bd4466acb46CD8323E6",
+                    "links": [
+                        {
+                            "text": "Ethereum",
+                            "textRight": "contract address",
+                            "linkText": "0x3301Ee63Fb29F863f2333Bd4466acb46CD8323E6",
                             "url": "https://etherscan.io/token/0x3301ee63fb29f863f2333bd4466acb46cd8323e6"
                         },
-                        "avalanche": {
-                            "text": "0xcaF5191fc480F43e4DF80106c7695ECA56E48B18",
+                        {
+                            "text": "Avalanche",
+                            "textRight": "contract address",
+                            "linkText": "0xcaF5191fc480F43e4DF80106c7695ECA56E48B18",
                             "url": "https://snowtrace.io/token/0xcaf5191fc480f43e4df80106c7695eca56e48b18"
                         }
-                    },
+                    ],
                     "text": [
                         {
-                            "text": "Max. Supply = 100T (100,000,000,000,000) AKITA",
+                            "text": "Max Supply = 100T AKITA",
                             "color": "#2864FF"
                         },
                         {
@@ -216,18 +224,21 @@
                     ]
                 },
                 "hachi": {
-                    "title": "HACHI Tokenomics",
+                    "title": "HACHI",
+                    "titleright": "Tokenomics",
                     "preamble": "Launched in Nov. 2022, governance token of AkitaDAO",
                     "taxes": "0% taxes or fees",
-                    "links": {
-                        "ethereum": {
-                            "text": "0x967B0c95295ead8fAef70d26A7846AeCD349AAFf",
+                    "links": [
+                        {
+                            "text": "Ethereum",
+                            "textRight": "contract address",
+                            "linkText": "0x967B0c95295ead8fAef70d26A7846AeCD349AAFf",
                             "url": "https://etherscan.io/token/0x967b0c95295ead8faef70d26a7846aecd349aaff"
                         }
-                    },
+                    ],
                     "text": [
                         {
-                            "text": "Max. Supply = 100M (100,000,000) HACHI",
+                            "text": "Max. Supply = 100M HACHI",
                             "color": "#2864FF"
                         },
                         {
@@ -316,28 +327,29 @@
                 }
             ],
             "images": [
+                "2L-KEmdk_400x400.png",
                 "1653358289110777797_downlod_v_gate1.png",
                 "balancer-bal-logo.png",
-                "bitmart-logo-8D8ECBA012-seeklogo.com.png",
                 "bitmart-logo-freelogovectors.net_-400x400.png",
                 "cointiger-logo-55ECC3C55D-seeklogo.com.png",
                 "CoinW.png",
                 "EdGSwj0y_400x400.jpg",
-                "EN LOGO1.png",
+                "gcgkgjSp_400x400.jpg",
                 "GIzrLC7D_400x400.jpg",
                 "hotbit-logo-freelogovectors.net_-400x400.png",
                 "latoken-la-logo.png",
+                "lets exchange.jpg",
                 "MEXC-Global.svg",
                 "OKX_Logo.svg.png",
                 "poloniex-logo-freelogovectors.net_-400x400.png",
                 "qtl1e0ww0poba9hyb05r.png",
-                "StealthEX logo horizontal yellow.png",
-                "StealthEX logo SVG transparent.svg",
-                "StealthEX logo SVG yellow.svg",
-                "StealthEX logo transparent.png",
                 "StealthEX logo yellow.png",
-                "StealthEX mini logo.png",
+                "swapika.jpg",
+                "swapzone.jpg",
+                "sW-XVDql_400x400.jpg",
+                "TraderJoe.png",
                 "uniswap-uni-logo.png",
+                "WadfAFBu_400x400.jpg",
                 "wMvN_bnT_400x400.jpg",
                 "xt-com-logo-freelogovectors.net_-400x400.png"
             ]

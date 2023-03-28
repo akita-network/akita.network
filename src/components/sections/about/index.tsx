@@ -3,34 +3,24 @@ import Item, { IItem } from "./item";
 import Section from "../section";
 
 export interface IAbout {
-    desktop: {
-        items: IItem[];
-    };
-    mobile: {
-        title: string;
-        items: IItem[];
-    },
-}
-
-interface AboutProps extends IAbout {
-    isTabletOrDesktop: boolean;
+    items: IItem[];
 }
 
 const About = ({
-    desktop,
-    mobile,
-    isTabletOrDesktop
-}: AboutProps) => (
+    items
+}: IAbout) => (
     <Section id="about">
         <div className="md:flex md:justify-center">
-            {!isTabletOrDesktop ? (
+            {/* {!isTabletOrDesktop ? (
                 <div className="z-20">
                     <h2 className="text-white uppercase">{mobile.title}</h2>
                     {mobile.items?.map(item => <p key={`about_text_${item.text}`} className="text-white uppercase">{item.text}</p>)}
                 </div>
             ) : (
-                desktop.items?.map((item, index) => <Item paddingTop={index > 0 && index < desktop.items.length - 1} key={`about_text_${item.title}`} {...item} />)
-            )}
+                
+            )} */}
+
+            {items?.map((item, index) => <Item paddingTop={index > 0 && index < items.length - 1} key={`about_text_${item.title}`} {...item} />)}
         </div>
     </Section>
 )
