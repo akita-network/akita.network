@@ -1,3 +1,4 @@
+import { Typography, TypographyWithHtml } from '@/components/common/typography';
 import { Fira_Sans } from 'next/font/google';
 import React from 'react';
 import Section from '../section';
@@ -23,14 +24,14 @@ const Ecosystem = ({
         <Section id="ecosystem">
             <div className="md:max-w-80vw xl:max-w-80r md:mx-auto">
                 <div className="md:max-w-3xl">
-                    <h2 className="text-h2 uppercase mb-5 flex flex-col">
-                        <span className="text-white font-extrabold">
+                    <Typography variant='h2' className="uppercase mb-5 flex flex-col">
+                        <span className="font-extrabold">
                             {title}
-                            <span className={`${firasans.className} ml-5 text-white/70`}>{bottomTitle}</span>
+                            <span className={`${firasans.className} ml-5 opacity-70`}>{bottomTitle}</span>
                         </span>
-                    </h2>
+                    </Typography>
                     <div>
-                        {preambles.map(pr => <p key={pr} className="text-preamble text-white/40 mb-5" dangerouslySetInnerHTML={{ __html: pr }} />)}
+                        {preambles.map(pr => <TypographyWithHtml variant='body' key={pr} className="mb-5" withOpacity html={pr} />)}
                     </div>
                 </div>
             </div>

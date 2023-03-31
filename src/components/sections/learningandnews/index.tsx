@@ -1,4 +1,5 @@
 import Carousel from '@/components/common/carousel';
+import { Typography } from '@/components/common/typography';
 import React from 'react';
 import Section from '../section';
 import News, { INews } from './news';
@@ -23,9 +24,9 @@ const LearningAndNews = ({
                 <div className="relative md:flex md:items-center">
                     {isTabletOrDesktop && <img className='absolute' src='/assets/learningandnews/learningandnews.svg' alt="buy" />}
                     <div className="md:max-w-1xl md:mx-auto md:ml-16">
-                        <h2 className="text-h4-base md:text-h3 text-center uppercase text-left">
-                            <span className="font-bold text-white">{title}</span>
-                        </h2>
+                        <Typography variant='h3' className="text-center uppercase text-left">
+                            <span className="font-bold">{title}</span>
+                        </Typography>
                     </div>
                 </div>
             </div>

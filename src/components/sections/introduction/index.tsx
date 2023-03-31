@@ -1,9 +1,15 @@
-import { Fira_Sans } from 'next/font/google';
+import { Typography, TypographyWithHtml } from '@/components/common/typography';
+import { Fira_Sans, Abhaya_Libre } from 'next/font/google';
 import React from 'react';
 import Section from '../section';
 import Blob, { IBlob } from './blob';
 
 const firasans = Fira_Sans({
+    weight: '400',
+    subsets: ['latin'],
+})
+
+const abhayaLibre = Abhaya_Libre({
     weight: '400',
     subsets: ['latin'],
 })
@@ -31,21 +37,21 @@ const Introduction = ({
         <Section id="introduction">
             <div className="md:max-w-80vw xl:max-w-80r md:mx-auto md:mb-36">
                 <div className="md:max-w-3xl">
-                    <h2 className="text-h4-base text-h2 uppercase mb-5 flex flex-col text-center md:text-left">
-                        <span className="flex flex-col md:block text-white font-extrabold">
+                    <Typography variant='h2' className="uppercase mb-5 flex flex-col text-center md:text-left">
+                        <span className="flex flex-col md:block font-extrabold">
                             <span>{title}</span>
-                            <span className={`${firasans.className} ml-5 text-white/70`}>{bottomTitle}</span>
+                            <span className={`${isTabletOrDesktop ? firasans.className : abhayaLibre.className} md:ml-5 opacity-70`}>{bottomTitle}</span>
                         </span>
-                    </h2>
+                    </Typography>
                     {isTabletOrDesktop && (
                         <div>
-                            {preambles.map(pr => <p key={pr} className="text-preamble text-white/40 mb-5" dangerouslySetInnerHTML={{ __html: pr }} />)}
+                            {preambles.map(pr => <TypographyWithHtml variant='body' key={pr} className="mb-5" withOpacity html={pr} />)}
                         </div>
                     )}
                 </div>
             </div>
             <div>
-                <div className="flex flex-col items-center md:items-start md:flex-row md:flex-wrap gap-4 md:gap-8">
+                <div className="flex flex-col md:flex-row md:flex-wrap items-center md:items-stretch gap-4 md:gap-8">
                     {blobs
                         .slice(0, isTabletOrDesktop ? blobs.length : 3)
                         .map(blob => <Blob key={blob.title} {...blob} />)}

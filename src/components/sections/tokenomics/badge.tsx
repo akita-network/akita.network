@@ -26,7 +26,7 @@ const Badge = ({
                 className="w-1 h-full rounded-md"
                 style={{ backgroundColor: color }}
             />
-            <div className="pl-4 md:p-3 md:font-medium text-preamble-base md:text-preamble md:flex-1 md:text-center flex md:block items-center">{children}</div>
+            <div className="pl-4 md:p-3 md:font-medium text-base md:text-body md:flex-1 md:text-center flex md:justicy-center md:flex-col items-center">{children}</div>
         </motion.div>
     )
 }

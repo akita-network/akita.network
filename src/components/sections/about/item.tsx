@@ -49,8 +49,8 @@ const Item = ({
             <div className="relative">
                 <img src="/assets/global/blob.svg" alt={`blob_${title}`} />
                 <div className="absolute top-2/4 right-2/4 translate-x-1/2 -translate-y-1/2 text-center">
-                    <h2 className={`${firasans.className} text-white text-md lg:text-3xl mb-2`}>{title}</h2>
-                    <p className="text-white/80 font-extralight text-sm lg:text-xl">{text}</p>
+                    <h2 className={`${firasans.className} text-md lg:text-3xl mb-2`}>{title}</h2>
+                    <p className="opacity-80 font-extralight text-sm lg:text-xl">{text}</p>
                 </div>
             </div>
         </motion.div >

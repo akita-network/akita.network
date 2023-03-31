@@ -1,4 +1,5 @@
 import Button from '@/components/common/button';
+import { Typography, TypographyWithHtml } from '@/components/common/typography';
 import { ILink } from '@/components/header';
 import React from 'react';
 
@@ -32,10 +33,10 @@ const Exchange = ({
             />
         </div>
 
-        <div className='flex-1 md:flex-auto ml-5 md:ml-0'>
+        <div className='flex-1 md:flex-auto ml-5 md:ml-0 md:flex md:flex-col'>
             <div className='mb-4 md:mb-7'>
-                <h3 className="text-h5-base md:text-h5 text-white font-bold md:mb-5">{title}</h3>
-                {isTabletOrDesktop && <p className="text-base text-white/80 font-light" dangerouslySetInnerHTML={{ __html: preamble }} />}
+                <Typography variant='h5' className="font-bold md:mb-5">{title}</Typography>
+                {isTabletOrDesktop && <TypographyWithHtml variant='body-small' className="font-light" withOpacity html={preamble} />}
             </div>
 
             <div className="mt-auto inline-flex gap-2.5">

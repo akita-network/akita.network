@@ -1,6 +1,7 @@
 import React from 'react';
 import { Fira_Sans, Abhaya_Libre } from 'next/font/google';
 import Badge from './badge';
+import { Typography, TypographyWithHtml } from '@/components/common/typography';
 
 const firasans = Fira_Sans({
     weight: '700',
@@ -50,11 +51,11 @@ const Token = ({
     handleSetSelected,
     isTabletOrDesktop
 }: TokenProps) => (
-    <div className="text-white md:w-1/2 md:pl-8 text-center md:text-left">
-        <h3 className={`text-h4-base md:text-h4 text-center uppercase ${isTabletOrDesktop ? "mb-3" : "font-bold"}`}>
+    <div className="md:w-1/2 md:pl-8 text-center md:text-left">
+        <Typography variant='h4' className={`text-center uppercase ${isTabletOrDesktop ? "mb-3" : "font-bold"}`}>
             <span className={`${isTabletOrDesktop ? firasans.className : abhayaLibre.className} mr-2`}>{title}</span>
             {titleright}
-        </h3>
+        </Typography>
 
         {links && isTabletOrDesktop && (
             <div className="mb-3">
@@ -70,8 +71,8 @@ const Token = ({
             </div>
         )}
 
-        <p className="opacity-70 mb-1 md:mb-3 text-0.938 font-normal md:text-preamble md:font-light">{preamble}</p>
-        <p className={`font-bold text-0.938 md:text-preamble mb-4 md:mb-8`}>{taxes}</p>
+        <TypographyWithHtml variant='body' className="mb-1 md:mb-3" withOpacity html={preamble} />
+        <TypographyWithHtml variant='body' className="mb-4 md:mb-8" html={taxes} />
 
         <div className="flex flex-col gap-3 md:gap-6 mb-6 md:mb-0">
             {text?.map((t, index) => (
@@ -93,8 +94,8 @@ const Token = ({
                     className="flex flex-col font-normal text-lg leading-5 mb-4"
                     key={`tokenomics_link_${index}`}
                 >
-                    <p className="mb-2">{link.text} <span className='text-white/60'>{link.textRight}</span></p>
-                    <a target="_blank" className="text-base text-white/60 underline whitespace-nowrap text-ellipsis overflow-hidden" href={link.url}>{link.linkText}</a>
+                    <p className="mb-2">{link.text} <span className='opacity-60'>{link.textRight}</span></p>
+                    <a target="_blank" className="text-base-small md:text-base opacity-60 underline whitespace-nowrap text-ellipsis overflow-hidden" href={link.url}>{link.linkText}</a>
                 </div>
             ))
         )}

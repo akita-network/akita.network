@@ -168,7 +168,7 @@
                         },
                         {
                             "text": "Ecosystem = 35M HACHI",
-                            "subText": "(15M reserved for buyng AKITA)",
+                            "subText": "(15M reserved for buying AKITA)",
                             "color": "#7f92f1"
                         },
                         {
@@ -272,8 +272,7 @@
         "howtobuy": {
             "title": "How to",
             "titleright": " buy",
-            "preamble": "We recommend {0}, but our tokens can also be purchased on centralized exchanges.",
-            "preamblehighlighted": "decentralized exchanges",
+            "preamble": "<span class='opacity-40'>We recommend</span> <span class='opacity-100'>decentralized exchanges</span><span class='opacity-40'>, but our tokens can also be purchased on centralized exchanges.</span>",
             "claimLink": {
                 "text": "Claim your",
                 "textright": " HACHI",
@@ -327,6 +326,8 @@
                 }
             ],
             "images": [
+                "bitrue.png",
+                "bkex.png",
                 "2L-KEmdk_400x400.png",
                 "1653358289110777797_downlod_v_gate1.png",
                 "balancer-bal-logo.png",

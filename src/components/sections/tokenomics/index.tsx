@@ -1,3 +1,4 @@
+import { Typography, TypographyWithHtml } from '@/components/common/typography';
 import React, { useState } from 'react';
 import Section from '../section';
 import Images from './images';
@@ -31,11 +32,12 @@ const Tokenomics = ({
     return (
         <Section id="tokenomics">
             {isTabletOrDesktop && (
-                <div className="text-center w-128 mx-auto mb-32 text-white">
-                    <h2 className="uppercase font-extrabold text-h3 mb-3">{desktop.title}</h2>
-                    <p
-                        className="opacity-70 font-light text-preamble"
-                        dangerouslySetInnerHTML={{ __html: desktop.preamble }}
+                <div className="text-center w-128 mx-auto mb-32">
+                    <Typography variant='h3' className="uppercase font-extrabold mb-3">{desktop.title}</Typography>
+                    <TypographyWithHtml
+                        withOpacity
+                        variant='body'
+                        html={desktop.preamble}
                     />
                 </div>
             )}

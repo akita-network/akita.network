@@ -1,3 +1,4 @@
+import { Typography } from '@/components/common/typography';
 import React from 'react';
 
 export interface INews {
@@ -23,7 +24,7 @@ const News = ({
                 />
             </div>
 
-            <span className="mt-3.5 md:mt-1.875 md:mb-12 md:mx-10 md:font-extrabold text-h5 md:text-3xl text-white">{text}</span>
+            <Typography variant='h5' className="mt-3.5 md:mt-1.875 md:mb-12 md:mx-10 md:font-extrabold">{text}</Typography>
         </a>
     )
 }

@@ -91,7 +91,8 @@ module.exports = {
         "25.75": "25.75rem",
         "17": "4.125rem",
         "18": "4.75rem",
-        "90": "22.5rem"
+        "90": "22.5rem",
+        "80vh": "80vh"
       },
       maxHeight: {
         "25.75": "25.75rem",
@@ -110,14 +111,18 @@ module.exports = {
         "2378xl": ["2.378rem", "2.875rem"],
         '4xl': ["2rem", "2.438rem"],
         "1375xl": '1.375rem',
-        "preamble-base": ["1.031rem", "1.25rem"],
-        "preamble": ["1.375rem", "1.688rem"],
+        "base-small": ["0.813rem", "1rem"],
+        "body": ["1.375rem", "1.688rem"],
+        "body-small": ["1rem", "1.5rem"],
         "h2": ["4rem", "4.8rem"],
+        "h2-small": ["1.5rem", "1.813rem"],
         "h3": ["3.25rem", "3.938rem"],
-        "h4-base": ["2rem", "2.375rem"],
+        "h3-small": ["2rem", "2.438rem"],
+        "h4-small": ["2rem", "2.438rem"],
         "h4": ["2.375rem", "2.875rem"],
-        "h5-base": ["1.313rem", "1.588rem"],
-        "h5": ["1.813rem", "2.188rem"]
+        "h5": ["1.813rem", "2.188rem"],
+        "h5-small": ["1.313rem", "1.588rem"],
+        "h6": ["1.125rem", "1.625rem"]
       },
       borderRadius: {
         "rounded-md": "0.313rem",

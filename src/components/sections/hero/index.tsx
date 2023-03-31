@@ -1,4 +1,5 @@
 import Button from '@/components/common/button';
+import { Typography, TypographyWithHtml } from '@/components/common/typography';
 import { Akita } from '@/static/images/logo';
 import React from 'react';
 import { IItem } from '../about/item';
@@ -57,7 +58,7 @@ const Hero = ({
     )
 
     return (
-        <section className="h-screen relative md:flex md:items-center md:px-11 xl:px-40">
+        <section className="h-80vh md:h-screen relative md:flex md:items-center md:px-11 xl:px-40">
             {!isTabletOrDesktop ? (
                 <div style={{
                     backgroundImage: `url(${mobile.asset})`,
@@ -66,14 +67,14 @@ const Hero = ({
                     backgroundPosition: "bottom center, 50%, 50%"
                 }} className="h-full px-6 flex justify-center items-center flex-col">
                     <div className="z-20 uppercase font-bold text-center mb-8">
-                        <h1 className="text-white text-5xl">{mobile.title}</h1>
-                        <p><span className="text-white">{mobile.preamble}</span><span className='text-community ml-0.3'>{mobile.preambleRight}</span></p>
+                        <Typography variant='h1' className='md:font-bold'>{mobile.title}</Typography>
+                        <p><span>{mobile.preamble}</span><span className='text-community ml-0.3'>{mobile.preambleRight}</span></p>
                     </div>
                     <Akita />
                     {renderButtons()}
                     <div className="z-20 text-center">
-                        <h2 className="text-white uppercase text-2xl mb-2">{mobile.about.title}</h2>
-                        {mobile.about.items?.map(item => <p key={`about_text_${item.text}`} className="text-white/60 text-lg uppercase mb-2">{item.text}</p>)}
+                        <Typography variant='h2' className="font-bold uppercase mb-2">{mobile.about.title}</Typography>
+                        {mobile.about.items?.map(item => <TypographyWithHtml variant='body-small' key={`about_text_${item.text}`} withOpacity className="uppercase mb-2" html={item.text} />)}
                     </div>
                 </div>
             ) : (
@@ -82,8 +83,8 @@ const Hero = ({
                         backgroundImage: "linear-gradient(180deg, rgba(24, 24, 24, 0.56) 72%, #181818)"
                     }} className='h-screen absolute left-0 right-0 z-10' />
                     <div className="max-w-half z-20">
-                        <h1 className="text-white font-bold text-5xl">{desktop.title}</h1>
-                        <p className="text-white/80 font-extralight text-xl leading-normal mt-2 mb-6">{desktop.preamble}</p>
+                        <Typography variant='h1'>{desktop.title}</Typography>
+                        <TypographyWithHtml variant='body' html={desktop.preamble} withOpacity className="mt-2 mb-6" />
                         {renderButtons()}
                     </div>
                     <div className="bg-hero-bg">

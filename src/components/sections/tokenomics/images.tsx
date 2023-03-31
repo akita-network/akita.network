@@ -34,7 +34,7 @@ const Images = ({
     }, [selected])
 
     return (
-        <div className="text-white md:w-1/2 relative flex items-center">
+        <div className="md:w-1/2 relative flex items-center">
             <img className={`absolute ${!noPadding ? "p-8" : ""}`} src={`/assets/tokenomics/${group}/groupinitial.svg`} />
             <motion.img
                 animate={animation}

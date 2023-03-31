@@ -107,6 +107,7 @@ export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
     props: {
       ...(await serverSideTranslations(selectedLocale, [
         'common',
+        'header'
       ])),
       // Will be passed to the page component as props
     },

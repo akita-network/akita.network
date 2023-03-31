@@ -1,3 +1,4 @@
+import { Typography, TypographyWithHtml } from '@/components/common/typography';
 import React from 'react';
 
 export interface IBlob {
@@ -18,11 +19,8 @@ const Blob = ({
                 src={`/assets/introduction/${iconName}`}
             />
 
-            <span className="text-lg leading-6.5 text-white">{title}</span>
-            <p
-                dangerouslySetInnerHTML={{ __html: preamble }}
-                className="text-white/50"
-            />
+            <Typography variant='h6'>{title}</Typography>
+            <TypographyWithHtml variant="body-small" className="opacity-50" html={preamble} />
         </div>
     )
 }

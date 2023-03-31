@@ -1,6 +1,7 @@
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import React, { useEffect } from 'react';
+import { Typography, TypographyWithHtml } from "@/components/common/typography";
 
 export interface IPhase {
     title: string;
@@ -49,14 +50,11 @@ const Phase = ({
             ref={ref}
             className="mb-14"
         >
-            <span className="font-bold text-2378xl leading-2875 text-shadow-white">{`${phaseTitle} ${index}`}</span>
+            <span className="font-bold text-dark text-2378xl leading-2875 text-shadow-white">{`${phaseTitle} ${index}`}</span>
 
-            <h4 className="text-4xl text-white font-bold mb-4">{title}</h4>
+            <Typography variant="h4" className="mb-4">{title}</Typography>
 
-            <p
-                className="text-white/60"
-                dangerouslySetInnerHTML={{ __html: preamble }}
-            />
+            <TypographyWithHtml variant='body' withOpacity html={preamble} />
         </motion.div>
     )
 }
