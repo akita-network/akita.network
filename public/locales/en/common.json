@@ -293,8 +293,7 @@
                             "url": "https://coinmarketcap.com/currencies/akita-inu/markets/"
                         }
                     ],
-                    "iconName": "ce.svg",
-                    "iconBackground": "rgba(147, 76, 228, 0.32)"
+                    "iconName": "ce.svg"
                 },
                 {
                     "title": "Uniswap (Ethereum)",
@@ -309,8 +308,7 @@
                             "url": "https://app.uniswap.org/#/tokens/ethereum/0x3301ee63fb29f863f2333bd4466acb46cd8323e6"
                         }
                     ],
-                    "iconName": "uniswap.svg",
-                    "iconBackground": "rgba(255, 0, 122, 0.24)"
+                    "iconName": "uniswap.svg"
                 },
                 {
                     "title": "TraderJoe (Avalanche)",
@@ -321,8 +319,7 @@
                             "url": "https://traderjoexyz.com/avalanche/trade"
                         }
                     ],
-                    "iconName": "traderjoe.svg",
-                    "iconBackground": "rgba(242, 113, 106, 0.27)"
+                    "iconName": "traderjoe.svg"
                 }
             ],
             "images": [

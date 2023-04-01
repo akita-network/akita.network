@@ -48,7 +48,7 @@ const Roadmap = ({
 
                     <div className='relative'>
                         <img className="absolute top-1/2 left-1/2 -translate-y-2/4 -translate-x-2/4" src="/assets/roadmap/cubeshadow.svg" alt="roadmapcube" />
-                        <img className="mx-auto" src="/assets/roadmap/cube.svg" alt="roadmapcube" />
+                        <img className="mx-auto max-w-97%" src="/assets/roadmap/cube.svg" alt="roadmapcube" />
                     </div>
                 </div>
 

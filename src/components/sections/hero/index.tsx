@@ -45,7 +45,7 @@ const Hero = ({
     isTabletOrDesktop
 }: HeroProps) => {
     const renderButtons = () => (
-        <div className="relative flex gap-5 md:gap-2.5 my-8 md:my-0">
+        <div className={`relative flex gap-5 md:gap-2.5 my-8 md:my-0 ${isTabletOrDesktop ? "" : "flex-wrap justify-center"}`}>
             {buttons?.map((btn: IButton) => (
                 <Button
                     key={`button__${btn.text}`}
@@ -58,17 +58,17 @@ const Hero = ({
     )
 
     return (
-        <section className="h-80vh md:h-screen relative md:flex md:items-center md:px-11 xl:px-40">
+        <section className="h-screen md:h-screen relative md:flex md:items-center md:px-11 xl:px-40">
             {!isTabletOrDesktop ? (
                 <div style={{
                     backgroundImage: `url(${mobile.asset})`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover",
                     backgroundPosition: "bottom center, 50%, 50%"
-                }} className="h-full px-6 flex justify-center items-center flex-col">
+                }} className="h-full md:px-6 flex justify-center items-center flex-col">
                     <div className="z-20 uppercase font-bold text-center mb-8">
                         <Typography variant='h1' className='md:font-bold'>{mobile.title}</Typography>
-                        <p><span>{mobile.preamble}</span><span className='text-community ml-0.3'>{mobile.preambleRight}</span></p>
+                        <p><span>{mobile.preamble}</span><span className='text-blue ml-0.3'>{mobile.preambleRight}</span></p>
                     </div>
                     <Akita />
                     {renderButtons()}

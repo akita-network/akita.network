@@ -15,16 +15,16 @@ const LanguagePicker = ({
 }: ILanguagePickerProps) => {
     const router = useRouter();
 
-    const renderFlag = (locale?: string) => {
+    const renderFlag = (locale?: string, isSelected?: boolean) => {
         switch (locale) {
             case "en":
-                return <US className={cn} />
+                return <US className={`${cn} ${isSelected ? "" : "w-6"}`} />
             case "tr":
-                return <TR className={cn} />
+                return <TR className={`${cn} ${isSelected ? "" : "w-6"}`} />
             case "cn":
-                return <CN className={cn} />
+                return <CN className={`${cn} ${isSelected ? "" : "w-6"}`} />
             case "es":
-                return <ES className={cn} />
+                return <ES className={`${cn} ${isSelected ? "" : "w-6"}`} />
             default: return locale ? <p>{locale.toUpperCase()}</p> : null;
         }
     }
@@ -32,9 +32,9 @@ const LanguagePicker = ({
     return (
         <Fragment>
             {router.locale && (
-                <Popover className={`relative flex items-center justify-center rounded border border-language-border bg-dark/30 w-8 ${isSticky ? "md:w-12" : "md:w-16"}`}>
-                    <Popover.Button className="inline-flex items-center px-1 md:px-3 py-1 md:py-2 h-full focus:outline-none">
-                        <span>{renderFlag(router.locale)}</span>
+                <Popover className={`relative flex items-center justify-center rounded border border-language-border bg-dark/30 w-full xs:w-auto`}>
+                    <Popover.Button className={`inline-flex items-center px-1 md:py-2 h-full focus:outline-none ${isSticky ? "px-0.688 md:px-0.188" : "px-0.688"}`}>
+                        <span>{renderFlag(router.locale, true)}</span>
                     </Popover.Button>
                     <Transition
                         as={Fragment}
@@ -45,7 +45,7 @@ const LanguagePicker = ({
                         leaveFrom="opacity-100 translate-y-0"
                         leaveTo="opacity-0 translate-y-1"
                     >
-                        <Popover.Panel className="absolute left-1/2 z-20 mt-32 md:mt-48 -translate-x-1/2 transform md:px-0 lg:max-w-120r w-full">
+                        <Popover.Panel className="absolute left-1/2 z-20 mt-36 md:mt-48 -translate-x-1/2 transform md:px-0 lg:max-w-120r w-full">
                             {({ close }) => (
                                 <div className="overflow-hidden rounded shadow-lg ring-1 ring-black ring-opacity-5">
                                     <div className="relative flex flex-col items-center bg-white p-2 gap-2 lg:grid-cols-2">

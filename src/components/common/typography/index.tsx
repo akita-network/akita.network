@@ -39,7 +39,7 @@ const tags: Record<Variant, ElementType> = {
 };
 
 const sizes: Record<Variant, string> = {
-    h1: "text-5xl",
+    h1: "text-h1-small md:text-h1",
     h2: "text-h2-small md:text-h2",
     h3: "text-h3-small md:text-h3",
     h4: "text-h4-small md:text-h4",

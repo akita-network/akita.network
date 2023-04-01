@@ -51,7 +51,7 @@ const Introduction = ({
                 </div>
             </div>
             <div>
-                <div className="flex flex-col md:flex-row md:flex-wrap items-center md:items-stretch gap-4 md:gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-5 gap-4 md:gap-8">
                     {blobs
                         .slice(0, isTabletOrDesktop ? blobs.length : 3)
                         .map(blob => <Blob key={blob.title} {...blob} />)}

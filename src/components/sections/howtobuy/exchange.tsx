@@ -8,7 +8,6 @@ export interface IExchanges {
     preamble: string;
     links: ILink[],
     iconName: string;
-    iconBackground: string;
 }
 
 interface ExchangesProps extends IExchanges {
@@ -20,18 +19,12 @@ const Exchange = ({
     preamble,
     links,
     iconName,
-    iconBackground,
     isTabletOrDesktop
 }: ExchangesProps) => (
     <div className="rounded-xl bg-white/3 inline-flex items-center md:items-start md:flex-col md:flex-nowrap md:flex-1 p-4 md:p-10">
-        <div
-            style={{ backgroundColor: iconBackground }}
-            className="rounded-full flex justify-center items-center w-18 h-18 md:mb-7"
-        >
-            <img
-                src={`/assets/howtobuy/exchanges/${iconName}`}
-            />
-        </div>
+        <img
+            src={`/assets/howtobuy/exchanges/${iconName}`}
+        />
 
         <div className='flex-1 md:flex-auto ml-5 md:ml-0 md:flex md:flex-col'>
             <div className='mb-4 md:mb-7'>
@@ -39,14 +32,14 @@ const Exchange = ({
                 {isTabletOrDesktop && <TypographyWithHtml variant='body-small' className="font-light" withOpacity html={preamble} />}
             </div>
 
-            <div className="mt-auto inline-flex gap-2.5">
+            <div className="mt-auto grid grid-cols-2 xxs:grid-cols-130 grid-flow-row-dense gap-2.5 w-full">
                 {links.map(link => (
                     <Button
                         key={`exchange__${link.text}`}
                         href={link.url}
                         newWindow
                         initialFlex
-                        minWidth
+                        smaller
                     >{link.text}</Button>
                 ))}
             </div>

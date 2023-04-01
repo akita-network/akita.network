@@ -272,7 +272,7 @@
         "howtobuy": {
             "title": "How to",
             "titleright": " buy",
-            "preamble": "<span class='opacity-40'>We recommend</span> <span class='opacity-100'>decentralized exchanges</span><span class='opacity-40'>, but our tokens can also be purchased on centralized exchanges.</span>",
+            "preamble": "<span class='opacity-60'>We recommend</span> <span class='opacity-100'>decentralized exchanges</span><span class='opacity-60'>, but our tokens can also be purchased on centralized exchanges.</span>",
             "claimLink": {
                 "text": "Claim your",
                 "textright": " HACHI",

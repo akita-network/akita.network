@@ -51,8 +51,8 @@ const Token = ({
     handleSetSelected,
     isTabletOrDesktop
 }: TokenProps) => (
-    <div className="md:w-1/2 md:pl-8 text-center md:text-left">
-        <Typography variant='h4' className={`text-center uppercase ${isTabletOrDesktop ? "mb-3" : "font-bold"}`}>
+    <div className="xl:w-1/2 md:pl-8 text-center md:text-left">
+        <Typography variant='h4' className={`flex flex-wrap justify-center text-center uppercase ${isTabletOrDesktop ? "mb-3" : "font-bold"}`}>
             <span className={`${isTabletOrDesktop ? firasans.className : abhayaLibre.className} mr-2`}>{title}</span>
             {titleright}
         </Typography>
@@ -82,7 +82,7 @@ const Token = ({
                     index={index}
                     onHover={handleSetSelected}
                 >
-                    <span className='whitespace-nowrap'>{t.text}</span>
+                    <span>{t.text}</span>
                     {t.subText && <span className="text-xs md:text-xl md:leading-6 ml-2 md:ml-0">{t.subText}</span>}
                 </Badge>
             ))}

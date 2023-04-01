@@ -20,7 +20,7 @@ const Header = ({
     isSticky
 }: HeaderProps) => (
     <header className={`fixed top-0 left-0 z-50 w-screen py-3.5 transition-colors duration-1000 ${isSticky ? "bg-dark" : "bg-transparent"}`}>
-        <div className="max-w-screen-2xl mx-auto px-8 w-full flex justify-center md:justify-end gap-2.5 md:gap-3.5">
+        <div className="max-w-screen-2xl mx-auto px-8 w-full grid grid-cols-8 xs:flex xs:justify-end gap-2.5 md:gap-3.5">
             {links?.map((link) => (
                 <a key={link.iconName} href={link.url} target="_blank">
                     <img

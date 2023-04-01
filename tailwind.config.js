@@ -37,8 +37,12 @@ module.exports = {
       "50-50": "50% 50%"
     },
     extend: {
+      screens: {
+        "xxs": "398px",
+        "xs": "511px",
+      },
       colors: {
-        "community": "#2760F2",
+        "blue": "#2760F2",
         dark: "#181818",
         "learning-and-news": "#252525",
         "cta-bg": "rgba(127, 146, 241, 0.25)",
@@ -72,10 +76,12 @@ module.exports = {
         "120r": "120rem",
         "90%": "90%",
         "95%": "95%",
+        "97%": "97%",
         '80vw': '80vw',
         "90vw": '90vw',
         "95vw": '95vw',
-        "half": "50%"
+        "half": "50%",
+        "8.125": "8.125rem"
       },
       width: {
         "18.77": "18.77rem",
@@ -97,14 +103,15 @@ module.exports = {
       maxHeight: {
         "25.75": "25.75rem",
       },
-      minWidth: {
-        "8.125": "8.125rem",
-      },
       minHeight: {
         "48": "12rem"
       },
       transitionProperty: {
         'max-height': "max-height"
+      },
+      gridTemplateColumns: {
+        "46.75": "46.75px 46.75px 46.75px 46.75px 46.75px 46.75px",
+        '130': '130px 130px'
       },
       fontSize: {
         "0.938": "0.938rem",
@@ -114,6 +121,8 @@ module.exports = {
         "base-small": ["0.813rem", "1rem"],
         "body": ["1.375rem", "1.688rem"],
         "body-small": ["1rem", "1.5rem"],
+        "h1": ["3.25rem", "3.563rem"],
+        "h1-small": ["2.375rem", "2.688rem"],
         "h2": ["4rem", "4.8rem"],
         "h2-small": ["1.5rem", "1.813rem"],
         "h3": ["3.25rem", "3.938rem"],
@@ -143,6 +152,10 @@ module.exports = {
       margin: {
         "0.3": "0.3rem",
         "1.875": "1.875rem"
+      },
+      padding: {
+        "0.188": "0.188rem",
+        "0.688": "0.688rem"
       },
       keyframes: {
         marquee: {

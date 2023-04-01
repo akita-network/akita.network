@@ -30,7 +30,7 @@ const Tokenomics = ({
     const [selectedHachi, setSelectedHachi] = useState<number>(-1);
 
     return (
-        <Section id="tokenomics">
+        <Section id="tokenomics" className='pt-0 md:py-32'>
             {isTabletOrDesktop && (
                 <div className="text-center w-128 mx-auto mb-32">
                     <Typography variant='h3' className="uppercase font-extrabold mb-3">{desktop.title}</Typography>
@@ -42,7 +42,7 @@ const Tokenomics = ({
                 </div>
             )}
 
-            <div className="flex mb-32 xl:max-w-95% md:mx-auto">
+            <div className="flex mb-32 xl:max-w-95% md:mx-auto flex-col lg:flex-row">
                 {isTabletOrDesktop && <Images group='akita' selected={selectedAkita > -1 ? selectedAkita : -1} />}
 
                 <Token
@@ -53,7 +53,7 @@ const Tokenomics = ({
                 />
             </div>
 
-            <div className="flex xl:max-w-95% md:mx-auto">
+            <div className="flex mb-32 xl:max-w-95% md:mx-auto flex-col lg:flex-row">
                 {isTabletOrDesktop && <Images noPadding group='hachi' selected={selectedHachi > -1 ? selectedHachi : -1} />}
 
                 <Token
