@@ -3,7 +3,6 @@ import Head from 'next/head'
 import { GetServerSideProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import dynamic from 'next/dynamic';
-import Hero, { IHero } from '@/components/sections/hero';
 import Carousel from '@/components/common/carousel';
 import Header, { IHeader } from '@/components/header';
 import About from "@/components/sections/about";
@@ -16,6 +15,8 @@ import Roadmap from "@/components/sections/roadmap";
 import Introduction from "@/components/sections/introduction";
 import Ecosystem from "@/components/sections/ecosystem";
 import LearningAndNews from "@/components/sections/learningandnews";
+import MobileHero from "@/components/sections/hero/mobilehero";
+import DesktopHero, { IHeroItem } from "@/components/sections/hero/desktophero";
 
 const Layout = dynamic(
   () => import('@/components/layout'),
@@ -52,15 +53,13 @@ export default function Home() {
     return Object.entries(content).map((item, index) => {
       const [key, value] = item;
       switch (key) {
-        case "hero": return (
-          value.slides.length > 1 ? (
-            <Carousel key={`herosection__${index}`}>
-              {value.slides?.map((item: IHero, index: number) => (
-                <Hero isTabletOrDesktop={isTabletOrDesktop} key={`hero__${index}`} {...item} />
-              ))}
-            </Carousel>
-          ) : <Hero key={`herosection__${index}`} isTabletOrDesktop={isTabletOrDesktop} {...value.slides[0]} />
-        )
+        case "hero": return isTabletOrDesktop ? (
+          <Carousel key={`desktopherocarousel__${index}`}>
+            {value.desktop.slides?.map((item: IHeroItem, index: number) => (
+              <DesktopHero key={`desktophero__${index}`} {...item} />
+            ))}
+          </Carousel>
+        ) : <MobileHero key={`mobileherosection__${index}`} isTabletOrDesktop={isTabletOrDesktop} {...value.mobile} />
         case "about": return isTabletOrDesktop ? <About key={`aboutsection__${index}`} isTabletOrDesktop={isTabletOrDesktop} {...value} /> : null
         case "tokenomics": return (
           <Tokenomics key={`tokenomicssection_${index}`} isTabletOrDesktop={isTabletOrDesktop} {...value} />
@@ -89,7 +88,7 @@ export default function Home() {
       <Layout>
         {header && (
           <div className="relative" ref={ref}>
-            <Header {...header} isSticky={isSticky} />
+            <Header isTabletOrDesktop={isTabletOrDesktop} {...header} isSticky={isSticky} />
           </div>
         )}
 

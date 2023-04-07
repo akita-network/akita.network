@@ -33,54 +33,70 @@
     },
     "content": {
         "hero": {
-            "slides": [
-                {
-                    "desktop": {
-                        "title": "Harnessing the power of community",
-                        "preamble": "Join our Discourse Forum to participate and propose action for the DAO. Proposals will be voted on using Snapshot.",
-                        "asset": "/assets/hero/hero.jpg",
-                        "assetType": "image"
-                    },
-                    "mobile": {
-                        "title": "Akita Network",
-                        "preamble": "The power of",
-                        "preambleRight": "community",
-                        "asset": "/assets/hero/bg.png",
-                        "about": {
-                            "title": "This is AKITA Network",
-                            "items": [
-                                {
-                                    "text": "$3.5B marketcap at ATH"
-                                },
-                                {
-                                    "text": "+60k investors"
-                                },
-                                {
-                                    "text": "funded into 2027"
-                                },
-                                {
-                                    "text": "community governance"
-                                }
-                            ]
-                        }
-                    },
-                    "buttons": [
+            "desktop": {
+                "slides": [
+                    {
+                        "title": "The hachi {0} has arrived",
+                        "titleOther": "claim",
+                        "preamble": "10% of the total supply of our governance token is being airdropped. Did you claim yours?",
+                        "asset": "/assets/hero/video1.mov",
+                        "assetType": "video",
+                        "buttons": [
+                            {
+                                "text": "Buy AKITA",
+                                "link": "#howtobuy"
+                            },
+                            {
+                                "text": "Buy HACHI",
+                                "link": "#howtobuy"
+                            },
+                            {
+                                "text": "Claim HACHI",
+                                "link": "https://akitanetwork.link",
+                                "newWindow": true
+                            }
+                        ]
+                    }
+                ]
+            },
+            "mobile": {
+                "title": "Akita Network",
+                "preamble": "The power of",
+                "preambleRight": "community",
+                "asset": "/assets/hero/bg.png",
+                "about": {
+                    "title": "This is AKITA Network",
+                    "items": [
                         {
-                            "text": "Buy Akita",
-                            "link": "#howtobuy"
+                            "text": "$3.5B marketcap at ATH"
                         },
                         {
-                            "text": "Buy Hachi",
-                            "link": "#howtobuy"
+                            "text": "+60k investors"
                         },
                         {
-                            "text": "Claim Hachi",
-                            "link": "https://akitanetwork.link",
-                            "newWindow": true
+                            "text": "funded into 2027"
+                        },
+                        {
+                            "text": "community governance"
                         }
                     ]
-                }
-            ]
+                },
+                "buttons": [
+                    {
+                        "text": "Buy AKITA",
+                        "link": "#howtobuy"
+                    },
+                    {
+                        "text": "Buy HACHI",
+                        "link": "#howtobuy"
+                    },
+                    {
+                        "text": "Claim HACHI",
+                        "link": "https://akitanetwork.link",
+                        "newWindow": true
+                    }
+                ]
+            }
         },
         "about": {
             "items": [
@@ -272,7 +288,7 @@
         "howtobuy": {
             "title": "How to",
             "titleright": " buy",
-            "preamble": "<span class='opacity-40'>We recommend</span> <span class='opacity-100'>decentralized exchanges</span><span class='opacity-40'>, but our tokens can also be purchased on centralized exchanges.</span>",
+            "preamble": "<span class='opacity-50'>We recommend</span> <span class='opacity-100'>decentralized exchanges</span><span class='opacity-50'>, but our tokens can also be purchased on centralized exchanges.</span>",
             "claimLink": {
                 "text": "Claim your",
                 "textright": " HACHI",
@@ -285,12 +301,12 @@
                     "preamble": "Check out these market indexes for all CEX listings:",
                     "links": [
                         {
-                            "text": "Hachi",
-                            "url": "https://coinmarketcap.com/currencies/akita-dao/markets/"
+                            "text": "AKITA",
+                            "url": "https://coinmarketcap.com/currencies/akita-inu/markets/"
                         },
                         {
-                            "text": "Akita",
-                            "url": "https://coinmarketcap.com/currencies/akita-inu/markets/"
+                            "text": "HACHI",
+                            "url": "https://coinmarketcap.com/currencies/akita-dao/markets/"
                         }
                     ],
                     "iconName": "ce.svg"
@@ -300,12 +316,12 @@
                     "preamble": "$AKITA and $HACHI have LPs on UniV2 and V3 (1%)",
                     "links": [
                         {
-                            "text": "Hachi",
-                            "url": "https://app.uniswap.org/#/tokens/ethereum/0x967B0c95295ead8fAef70d26A7846AeCD349AAFf"
+                            "text": "AKITA",
+                            "url": "https://app.uniswap.org/#/tokens/ethereum/0x3301ee63fb29f863f2333bd4466acb46cd8323e6"
                         },
                         {
-                            "text": "Akita",
-                            "url": "https://app.uniswap.org/#/tokens/ethereum/0x3301ee63fb29f863f2333bd4466acb46cd8323e6"
+                            "text": "HACHI",
+                            "url": "https://app.uniswap.org/#/tokens/ethereum/0x967B0c95295ead8fAef70d26A7846AeCD349AAFf"
                         }
                     ],
                     "iconName": "uniswap.svg"
@@ -315,7 +331,7 @@
                     "preamble": "$AKITA <a href='https://app.multichain.org/#/router' target='_blank'>bridged</a> to the Avalanche Network in late 2021 via <a href='https://app.multichain.org/#/router' target='_blank'>Multichain</a>. LPs for trading $AKITA can be found on TraderJoe. Currently, $HACHI is not available on Avalanche.",
                     "links": [
                         {
-                            "text": "Akita",
+                            "text": "AKITA",
                             "url": "https://traderjoexyz.com/avalanche/trade"
                         }
                     ],
@@ -397,7 +413,7 @@
                 },
                 {
                     "title": "Vote on Snapshot proposals with $HACHI",
-                    "preamble": "Utilizing quadratic voting, AkitaDAO members can vote on proposals. Join the AkitaDAO group on Snapshot <a href='https://snapshot.org/#/cryptopup.eth' target='_blank'>here</a>.",
+                    "preamble": "AkitaDAO members can vote on proposals.\nJoin the AkitaDAO group on Snapshot <a href='https://snapshot.org/#/cryptopup.eth' target='_blank'>here</a>.",
                     "iconName": "snapshot.svg"
                 },
                 {

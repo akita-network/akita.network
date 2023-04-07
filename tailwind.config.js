@@ -37,6 +37,9 @@ module.exports = {
       "50-50": "50% 50%"
     },
     extend: {
+      fontFamily: {
+        'parodisme': ['Parodisme', 'sans-serif']
+      },
       screens: {
         "xxs": "398px",
         "xs": "511px",
@@ -74,6 +77,7 @@ module.exports = {
         "80r": "80rem",
         "100r": "100rem",
         "120r": "120rem",
+        "80%": "80%",
         "90%": "90%",
         "95%": "95%",
         "97%": "97%",
@@ -81,7 +85,8 @@ module.exports = {
         "90vw": '90vw',
         "95vw": '95vw',
         "half": "50%",
-        "8.125": "8.125rem"
+        "8.125": "8.125rem",
+        "screen-3xl": "127.188rem"
       },
       width: {
         "18.77": "18.77rem",
@@ -94,6 +99,7 @@ module.exports = {
       height: {
         "2.875": "2.875rem",
         "2.188": "2.188rem",
+        "19.81": "19.813rem",
         "25.75": "25.75rem",
         "17": "4.125rem",
         "18": "4.75rem",

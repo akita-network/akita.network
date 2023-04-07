@@ -17,7 +17,7 @@ const News = ({
             href={url}
             target="_blank"
         >
-            <div className='rounded-lg md:h-25.75'>
+            <div className='rounded-lg h-19.81 md:h-25.75 flex items-center'>
                 <img
                     className="rounded-lg md:max-h-25.75 w-full object-cover"
                     src={`/assets/learningandnews/news/${imageUrl}`}
