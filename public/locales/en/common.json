@@ -184,7 +184,11 @@
                         },
                         {
                             "text": "Ecosystem = 35M HACHI",
-                            "subText": "(15M reserved for buying AKITA)",
+                            "color": "#91AAB1"
+                        },
+                        {
+                            "text": "Ecosystem = 15M HACHI",
+                            "subText": "(used for buying AKITA)",
                             "color": "#7f92f1"
                         },
                         {
