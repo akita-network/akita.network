@@ -15,6 +15,7 @@ const abhayaLibre = Abhaya_Libre({
 })
 
 export interface IIntroduction {
+    component: "introduction";
     title: string;
     bottomTitle: string;
     preamble: string;

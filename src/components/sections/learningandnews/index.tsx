@@ -5,6 +5,7 @@ import Section from '../section';
 import News, { INews } from './news';
 
 export interface ILearningAndNews {
+    component: "learningandnews";
     title: string;
     news: INews[];
 }

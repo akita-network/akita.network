@@ -3,28 +3,28 @@ import Head from 'next/head'
 import { GetServerSideProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import dynamic from 'next/dynamic';
-import Carousel from '@/components/common/carousel';
 import Header, { IHeader } from '@/components/header';
-import About from "@/components/sections/about";
-import Tokenomics from "@/components/sections/tokenomics";
+import About, { IAbout } from "@/components/sections/about";
+import Tokenomics, { ITokenomics } from "@/components/sections/tokenomics";
 import { useMediaQuery } from "react-responsive";
 import { useTranslation } from "react-i18next";
 import { i18n } from "../../next-i18next.config";
-import HowToBuy from "@/components/sections/howtobuy";
-import Roadmap from "@/components/sections/roadmap";
-import Introduction from "@/components/sections/introduction";
-import Ecosystem from "@/components/sections/ecosystem";
-import LearningAndNews from "@/components/sections/learningandnews";
-import MobileHero from "@/components/sections/hero/mobilehero";
-import DesktopHero, { IHeroItem } from "@/components/sections/hero/desktophero";
+import HowToBuy, { IHowToBuy } from "@/components/sections/howtobuy";
+import Roadmap, { IRoadmap } from "@/components/sections/roadmap";
+import Introduction, { IIntroduction } from "@/components/sections/introduction";
+import Ecosystem, { IEcosystem } from "@/components/sections/ecosystem";
+import LearningAndNews, { ILearningAndNews } from "@/components/sections/learningandnews";
+import Hero, { IHero } from "@/components/sections/hero";
 
 const Layout = dynamic(
   () => import('@/components/layout'),
   { ssr: false }
 )
 
+type Component = IHero | IAbout | ITokenomics | IHowToBuy | IRoadmap | IIntroduction | IEcosystem | ILearningAndNews
+
 interface IContent {
-  [key: string]: any
+  items: Component[]
 }
 
 export default function Home() {
@@ -50,27 +50,20 @@ export default function Home() {
   }, []);
 
   const renderContent = () => {
-    return Object.entries(content).map((item, index) => {
-      const [key, value] = item;
-      switch (key) {
-        case "hero": return isTabletOrDesktop ? (
-          <Carousel key={`desktopherocarousel__${index}`}>
-            {value.desktop.slides?.map((item: IHeroItem, index: number) => (
-              <DesktopHero key={`desktophero__${index}`} {...item} />
-            ))}
-          </Carousel>
-        ) : <MobileHero key={`mobileherosection__${index}`} isTabletOrDesktop={isTabletOrDesktop} {...value.mobile} />
-        case "about": return isTabletOrDesktop ? <About key={`aboutsection__${index}`} isTabletOrDesktop={isTabletOrDesktop} {...value} /> : null
+    return content.items.map((item, index) => {
+      switch (item.component) {
+        case "hero": return <Hero key={`herosection__${index}`} isTabletOrDesktop={isTabletOrDesktop} {...item} />
+        case "about": return isTabletOrDesktop ? <About key={`aboutsection__${index}`} {...item} /> : null
         case "tokenomics": return (
-          <Tokenomics key={`tokenomicssection_${index}`} isTabletOrDesktop={isTabletOrDesktop} {...value} />
+          <Tokenomics key={`tokenomicssection_${index}`} isTabletOrDesktop={isTabletOrDesktop} {...item} />
         )
         case "howtobuy": return (
-          <HowToBuy key={`howtobuysection_${index}`} isTabletOrDesktop={isTabletOrDesktop} {...value} />
+          <HowToBuy key={`howtobuysection_${index}`} isTabletOrDesktop={isTabletOrDesktop} {...item} />
         )
-        case "roadmap": return isTabletOrDesktop ? <Roadmap key={`roadmap_${index}`} {...value} /> : null;
-        case "introduction": return <Introduction isTabletOrDesktop={isTabletOrDesktop} key={`introduction_${index}`} {...value} />;
-        case "ecosystem": return isTabletOrDesktop ? <Ecosystem key={`ecosystem_${index}`} {...value} /> : null;
-        case "learningandnews": return <LearningAndNews isTabletOrDesktop={isTabletOrDesktop} key={`learningandnews_${index}`} {...value} />;
+        case "roadmap": return isTabletOrDesktop ? <Roadmap key={`roadmap_${index}`} {...item} /> : null;
+        case "introduction": return <Introduction isTabletOrDesktop={isTabletOrDesktop} key={`introduction_${index}`} {...item} />;
+        case "ecosystem": return isTabletOrDesktop ? <Ecosystem key={`ecosystem_${index}`} {...item} /> : null;
+        case "learningandnews": return <LearningAndNews isTabletOrDesktop={isTabletOrDesktop} key={`learningandnews_${index}`} {...item} />;
         default: return null;
       }
     })
@@ -93,7 +86,7 @@ export default function Home() {
         )}
 
         <main>
-          {content && renderContent()}
+          {content && content.items?.length > 0 && renderContent()}
         </main>
       </Layout>
     </>
@@ -106,7 +99,6 @@ export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
     props: {
       ...(await serverSideTranslations(selectedLocale, [
         'common',
-        'header'
       ])),
       // Will be passed to the page component as props
     },

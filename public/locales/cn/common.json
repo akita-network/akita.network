@@ -32,528 +32,555 @@
         ]
     },
     "content": {
-        "hero": {
-            "slides": [
-                {
-                    "desktop": {
-                        "title": "Harnessing the power of community",
-                        "preamble": "Join our Discourse Forum to participate and propose action for the DAO. Proposals will be voted on using Snapshot.",
-                        "asset": "/assets/hero/hero.jpg",
-                        "assetType": "image"
-                    },
-                    "mobile": {
-                        "title": "Akita Network",
-                        "preamble": "The power of",
-                        "preambleRight": "community",
-                        "asset": "/assets/hero/bg.png",
-                        "about": {
-                            "title": "This is AKITA Network",
-                            "items": [
+        "items": [
+            {
+                "component": "hero",
+                "desktop": {
+                    "slides": [
+                        {
+                            "title": "The hachi {0} has arrived",
+                            "titleOther": "claim",
+                            "preamble": "10% of the total supply of our governance token is being airdropped. Did you claim yours?",
+                            "asset": "/assets/hero/video1.mov",
+                            "assetType": "video",
+                            "buttons": [
                                 {
-                                    "text": "$3.5B marketcap at ATH"
+                                    "text": "Buy AKITA",
+                                    "link": "#howtobuy"
                                 },
                                 {
-                                    "text": "+60k investors"
+                                    "text": "Buy HACHI",
+                                    "link": "#howtobuy"
                                 },
                                 {
-                                    "text": "funded into 2027"
-                                },
-                                {
-                                    "text": "community governance"
+                                    "text": "Claim HACHI",
+                                    "link": "https://akitanetwork.link",
+                                    "newWindow": true
                                 }
                             ]
                         }
+                    ]
+                },
+                "mobile": {
+                    "title": "Akita Network",
+                    "preamble": "The power of",
+                    "preambleRight": "community",
+                    "asset": "/assets/hero/bg.png",
+                    "about": {
+                        "title": "This is AKITA Network",
+                        "items": [
+                            {
+                                "text": "$3.5B marketcap at ATH"
+                            },
+                            {
+                                "text": "+60k investors"
+                            },
+                            {
+                                "text": "funded into 2027"
+                            },
+                            {
+                                "text": "community governance"
+                            }
+                        ]
                     },
                     "buttons": [
                         {
-                            "text": "Buy Akita",
+                            "text": "Buy AKITA",
                             "link": "#howtobuy"
                         },
                         {
-                            "text": "Buy Hachi",
+                            "text": "Buy HACHI",
                             "link": "#howtobuy"
                         },
                         {
-                            "text": "Claim Hachi",
+                            "text": "Claim HACHI",
                             "link": "https://akitanetwork.link",
                             "newWindow": true
                         }
                     ]
                 }
-            ]
-        },
-        "about": {
-            "items": [
-                {
-                    "title": "$3.5 B",
-                    "text": "Peak Marketcap"
+            },
+            {
+                "component": "about",
+                "items": [
+                    {
+                        "title": "$3.5 B",
+                        "text": "Peak Marketcap"
+                    },
+                    {
+                        "title": "62,000 +",
+                        "text": "holders"
+                    },
+                    {
+                        "title": "Funded",
+                        "text": "into 2027"
+                    },
+                    {
+                        "title": "Community",
+                        "text": "governance"
+                    }
+                ]
+            },
+            {
+                "component": "tokenomics",
+                "desktop": {
+                    "title": "Tokenomics",
+                    "preamble": "$AKITA and $HACHI are two distinct tokens with different token economics. Find full Tokenomics for both tokens <a href='https://akita-dao.gitbook.io/akita-dao/' target='_blank'>here</a>.",
+                    "akita": {
+                        "title": "$AKITA",
+                        "titleright": "(AKITA INU token)",
+                        "preamble": "Launched in Feb. 2021, bridged to Avalanche 2022 Community owned and driven",
+                        "taxes": "0% taxes or fees, no extra slippage required.",
+                        "links": [
+                            {
+                                "text": "Ethereum",
+                                "linkText": "0x3301Ee63Fb29F863f2333Bd4466acb46CD8323E6",
+                                "url": "https://etherscan.io/token/0x3301ee63fb29f863f2333bd4466acb46cd8323e6"
+                            },
+                            {
+                                "text": "Avalanche",
+                                "linkText": "0xcaF5191fc480F43e4DF80106c7695ECA56E48B18",
+                                "url": "https://snowtrace.io/token/0xcaf5191fc480f43e4df80106c7695eca56e48b18"
+                            }
+                        ],
+                        "text": [
+                            {
+                                "text": "Max. Supply = 100T (100,000,000,000,000) AKITA",
+                                "color": "#ED9682"
+                            },
+                            {
+                                "text": "Circulating Supply = 92.2T AKITA",
+                                "color": "#E099CF"
+                            },
+                            {
+                                "text": "Burned Supply = 7.8T AKITA",
+                                "color": "#7C75FF"
+                            }
+                        ],
+                        "images": [
+                            ""
+                        ]
+                    },
+                    "hachi": {
+                        "title": "$HACHI",
+                        "titleright": "(HACHI token)",
+                        "preamble": "Launched in Nov. 2022, governance token of AkitaDAO",
+                        "taxes": "0% taxes or fees, no extra slippage required.",
+                        "links": [
+                            {
+                                "text": "Ethereum",
+                                "linkText": "0x967B0c95295ead8fAef70d26A7846AeCD349AAFf",
+                                "url": "https://etherscan.io/token/0x967b0c95295ead8faef70d26a7846aecd349aaff"
+                            }
+                        ],
+                        "text": [
+                            {
+                                "text": "Max. Supply = 100M (100,000,000) HACHI",
+                                "color": "#ED9682"
+                            },
+                            {
+                                "text": "Community claim = 10M HACHI",
+                                "color": "#a7e5e2"
+                            },
+                            {
+                                "text": "Marketing = 10M HACHI",
+                                "color": "#7754be"
+                            },
+                            {
+                                "text": "Ecosystem = 35M HACHI",
+                                "color": "#91AAB1"
+                            },
+                            {
+                                "text": "Ecosystem = 15M HACHI",
+                                "subText": "(used for buying AKITA)",
+                                "color": "#7f92f1"
+                            },
+                            {
+                                "text": "Leadership = 10M HACHI",
+                                "color": "#ecd5b5"
+                            },
+                            {
+                                "text": "Liquidity = 35M HACHI",
+                                "color": "#E0B2DE"
+                            }
+                        ],
+                        "images": [
+                            ""
+                        ]
+                    }
                 },
-                {
-                    "title": "62,000 +",
-                    "text": "holders"
-                },
-                {
-                    "title": "Funded",
-                    "text": "into 2027"
-                },
-                {
-                    "title": "Community",
-                    "text": "governance"
-                }
-            ]
-        },
-        "tokenomics": {
-            "desktop": {
-                "title": "Tokenomics",
-                "preamble": "$AKITA and $HACHI are two distinct tokens with different token economics. Find full Tokenomics for both tokens <a href='https://akita-dao.gitbook.io/akita-dao/' target='_blank'>here</a>.",
-                "akita": {
-                    "title": "$AKITA",
-                    "titleright": "(AKITA INU token)",
-                    "preamble": "Launched in Feb. 2021, bridged to Avalanche 2022 Community owned and driven",
-                    "taxes": "0% taxes or fees, no extra slippage required.",
-                    "links": [
-                        {
-                            "text": "Ethereum",
-                            "linkText": "0x3301Ee63Fb29F863f2333Bd4466acb46CD8323E6",
-                            "url": "https://etherscan.io/token/0x3301ee63fb29f863f2333bd4466acb46cd8323e6"
-                        },
-                        {
-                            "text": "Avalanche",
-                            "linkText": "0xcaF5191fc480F43e4DF80106c7695ECA56E48B18",
-                            "url": "https://snowtrace.io/token/0xcaf5191fc480f43e4df80106c7695eca56e48b18"
-                        }
-                    ],
-                    "text": [
-                        {
-                            "text": "Max. Supply = 100T (100,000,000,000,000) AKITA",
-                            "color": "#ED9682"
-                        },
-                        {
-                            "text": "Circulating Supply = 92.2T AKITA",
-                            "color": "#E099CF"
-                        },
-                        {
-                            "text": "Burned Supply = 7.8T AKITA",
-                            "color": "#7C75FF"
-                        }
-                    ],
-                    "images": [
-                        ""
-                    ]
-                },
-                "hachi": {
-                    "title": "$HACHI",
-                    "titleright": "(HACHI token)",
-                    "preamble": "Launched in Nov. 2022, governance token of AkitaDAO",
-                    "taxes": "0% taxes or fees, no extra slippage required.",
-                    "links": [
-                        {
-                            "text": "Ethereum",
-                            "linkText": "0x967B0c95295ead8fAef70d26A7846AeCD349AAFf",
-                            "url": "https://etherscan.io/token/0x967b0c95295ead8faef70d26a7846aecd349aaff"
-                        }
-                    ],
-                    "text": [
-                        {
-                            "text": "Max. Supply = 100M (100,000,000) HACHI",
-                            "color": "#93A9B1"
-                        },
-                        {
-                            "text": "Community claim = 10M HACHI",
-                            "color": "#a7e5e2"
-                        },
-                        {
-                            "text": "Marketing = 10M HACHI",
-                            "color": "#7754be"
-                        },
-                        {
-                            "text": "Ecosystem = 35M HACHI",
-                            "subText": "(15M reserved for buying AKITA)",
-                            "color": "#7f92f1"
-                        },
-                        {
-                            "text": "Leadership = 10M HACHI",
-                            "color": "#ecd5b5"
-                        },
-                        {
-                            "text": "Liquidity = 35M HACHI",
-                            "color": "#E0B2DE"
-                        }
-                    ],
-                    "images": [
-                        ""
-                    ]
+                "mobile": {
+                    "akita": {
+                        "title": "AKITA",
+                        "titleright": "Tokenomics",
+                        "preamble": "Launched in Feb. 2021, bridged to Avalanche 2022 Community owned and driven",
+                        "taxes": "0% taxes or fees",
+                        "links": [
+                            {
+                                "text": "Ethereum",
+                                "textRight": "contract address",
+                                "linkText": "0x3301Ee63Fb29F863f2333Bd4466acb46CD8323E6",
+                                "url": "https://etherscan.io/token/0x3301ee63fb29f863f2333bd4466acb46cd8323e6"
+                            },
+                            {
+                                "text": "Avalanche",
+                                "textRight": "contract address",
+                                "linkText": "0xcaF5191fc480F43e4DF80106c7695ECA56E48B18",
+                                "url": "https://snowtrace.io/token/0xcaf5191fc480f43e4df80106c7695eca56e48b18"
+                            }
+                        ],
+                        "text": [
+                            {
+                                "text": "Max Supply = 100T AKITA",
+                                "color": "#2864FF"
+                            },
+                            {
+                                "text": "Circ. Supply = 92.2T AKITA",
+                                "color": "#69F0AE"
+                            },
+                            {
+                                "text": "Burned Supply = 7.8T AKITA",
+                                "color": "#69F0AE"
+                            }
+                        ],
+                        "images": [
+                            ""
+                        ]
+                    },
+                    "hachi": {
+                        "title": "HACHI",
+                        "titleright": "Tokenomics",
+                        "preamble": "Launched in Nov. 2022, governance token of AkitaDAO",
+                        "taxes": "0% taxes or fees",
+                        "links": [
+                            {
+                                "text": "Ethereum",
+                                "textRight": "contract address",
+                                "linkText": "0x967B0c95295ead8fAef70d26A7846AeCD349AAFf",
+                                "url": "https://etherscan.io/token/0x967b0c95295ead8faef70d26a7846aecd349aaff"
+                            }
+                        ],
+                        "text": [
+                            {
+                                "text": "Max. Supply = 100M HACHI",
+                                "color": "#2864FF"
+                            },
+                            {
+                                "text": "Community = 10M HACHI",
+                                "color": "#882DCF"
+                            },
+                            {
+                                "text": "Marketing  = 10M HACHI",
+                                "color": "#882DCF"
+                            },
+                            {
+                                "text": "Ecosystem = 35M HACHI",
+                                "subText": "(15M for buyng AKITA)",
+                                "color": "#882DCF"
+                            },
+                            {
+                                "text": "Leadership = 10M HACHI",
+                                "color": "#882DCF"
+                            },
+                            {
+                                "text": "Liquidity = 35M HACHI",
+                                "color": "#882DCF"
+                            }
+                        ],
+                        "images": [
+                            ""
+                        ]
+                    }
                 }
             },
-            "mobile": {
-                "akita": {
-                    "title": "AKITA",
-                    "titleright": "Tokenomics",
-                    "preamble": "Launched in Feb. 2021, bridged to Avalanche 2022 Community owned and driven",
-                    "taxes": "0% taxes or fees",
-                    "links": [
-                        {
-                            "text": "Ethereum",
-                            "textRight": "contract address",
-                            "linkText": "0x3301Ee63Fb29F863f2333Bd4466acb46CD8323E6",
-                            "url": "https://etherscan.io/token/0x3301ee63fb29f863f2333bd4466acb46cd8323e6"
-                        },
-                        {
-                            "text": "Avalanche",
-                            "textRight": "contract address",
-                            "linkText": "0xcaF5191fc480F43e4DF80106c7695ECA56E48B18",
-                            "url": "https://snowtrace.io/token/0xcaf5191fc480f43e4df80106c7695eca56e48b18"
-                        }
-                    ],
-                    "text": [
-                        {
-                            "text": "Max Supply = 100T AKITA",
-                            "color": "#2864FF"
-                        },
-                        {
-                            "text": "Circ. Supply = 92.2T AKITA",
-                            "color": "#69F0AE"
-                        },
-                        {
-                            "text": "Burned Supply = 7.8T AKITA",
-                            "color": "#69F0AE"
-                        }
-                    ],
-                    "images": [
-                        ""
-                    ]
+            {
+                "component": "howtobuy",
+                "title": "How to",
+                "titleright": " buy",
+                "preamble": "<span class='opacity-50'>We recommend</span> <span class='opacity-100'>decentralized exchanges</span><span class='opacity-50'>, but our tokens can also be purchased on centralized exchanges.</span>",
+                "claimLink": {
+                    "text": "Claim your",
+                    "textright": " HACHI",
+                    "smallText": "Click Here",
+                    "url": "https://akitanetwork.link"
                 },
-                "hachi": {
-                    "title": "HACHI",
-                    "titleright": "Tokenomics",
-                    "preamble": "Launched in Nov. 2022, governance token of AkitaDAO",
-                    "taxes": "0% taxes or fees",
-                    "links": [
-                        {
-                            "text": "Ethereum",
-                            "textRight": "contract address",
-                            "linkText": "0x967B0c95295ead8fAef70d26A7846AeCD349AAFf",
-                            "url": "https://etherscan.io/token/0x967b0c95295ead8faef70d26a7846aecd349aaff"
-                        }
-                    ],
-                    "text": [
-                        {
-                            "text": "Max. Supply = 100M HACHI",
-                            "color": "#2864FF"
-                        },
-                        {
-                            "text": "Community = 10M HACHI",
-                            "color": "#882DCF"
-                        },
-                        {
-                            "text": "Marketing  = 10M HACHI",
-                            "color": "#882DCF"
-                        },
-                        {
-                            "text": "Ecosystem = 35M HACHI",
-                            "subText": "(15M for buyng AKITA)",
-                            "color": "#882DCF"
-                        },
-                        {
-                            "text": "Leadership = 10M HACHI",
-                            "color": "#882DCF"
-                        },
-                        {
-                            "text": "Liquidity = 35M HACHI",
-                            "color": "#882DCF"
-                        }
-                    ],
-                    "images": [
-                        ""
-                    ]
-                }
+                "exchanges": [
+                    {
+                        "title": "Centralized Exchanges",
+                        "preamble": "Check out these market indexes for all CEX listings:",
+                        "links": [
+                            {
+                                "text": "AKITA",
+                                "url": "https://coinmarketcap.com/currencies/akita-inu/markets/"
+                            },
+                            {
+                                "text": "HACHI",
+                                "url": "https://coinmarketcap.com/currencies/akita-dao/markets/"
+                            }
+                        ],
+                        "iconName": "ce.svg"
+                    },
+                    {
+                        "title": "Uniswap (Ethereum)",
+                        "preamble": "$AKITA and $HACHI have LPs on UniV2 and V3 (1%)",
+                        "links": [
+                            {
+                                "text": "AKITA",
+                                "url": "https://app.uniswap.org/#/tokens/ethereum/0x3301ee63fb29f863f2333bd4466acb46cd8323e6"
+                            },
+                            {
+                                "text": "HACHI",
+                                "url": "https://app.uniswap.org/#/tokens/ethereum/0x967B0c95295ead8fAef70d26A7846AeCD349AAFf"
+                            }
+                        ],
+                        "iconName": "uniswap.svg"
+                    },
+                    {
+                        "title": "TraderJoe (Avalanche)",
+                        "preamble": "$AKITA <a href='https://app.multichain.org/#/router' target='_blank'>bridged</a> to the Avalanche Network in late 2021 via <a href='https://app.multichain.org/#/router' target='_blank'>Multichain</a>. LPs for trading $AKITA can be found on TraderJoe. Currently, $HACHI is not available on Avalanche.",
+                        "links": [
+                            {
+                                "text": "AKITA",
+                                "url": "https://traderjoexyz.com/avalanche/trade"
+                            }
+                        ],
+                        "iconName": "traderjoe.svg"
+                    }
+                ],
+                "images": [
+                    "bitrue.png",
+                    "bkex.png",
+                    "2L-KEmdk_400x400.png",
+                    "1653358289110777797_downlod_v_gate1.png",
+                    "balancer-bal-logo.png",
+                    "bitmart-logo-freelogovectors.net_-400x400.png",
+                    "cointiger-logo-55ECC3C55D-seeklogo.com.png",
+                    "CoinW.png",
+                    "EdGSwj0y_400x400.jpg",
+                    "gcgkgjSp_400x400.jpg",
+                    "GIzrLC7D_400x400.jpg",
+                    "hotbit-logo-freelogovectors.net_-400x400.png",
+                    "latoken-la-logo.png",
+                    "lets exchange.jpg",
+                    "MEXC-Global.svg",
+                    "OKX_Logo.svg.png",
+                    "poloniex-logo-freelogovectors.net_-400x400.png",
+                    "qtl1e0ww0poba9hyb05r.png",
+                    "StealthEX logo yellow.png",
+                    "swapika.jpg",
+                    "swapzone.jpg",
+                    "sW-XVDql_400x400.jpg",
+                    "TraderJoe.png",
+                    "uniswap-uni-logo.png",
+                    "WadfAFBu_400x400.jpg",
+                    "wMvN_bnT_400x400.jpg",
+                    "xt-com-logo-freelogovectors.net_-400x400.png"
+                ]
+            },
+            {
+                "component": "roadmap",
+                "title": "Akita Network",
+                "bottomtitle": "Road map",
+                "phaseTitle": "Phase",
+                "preamble": "This “roadmap” is a living document that lays out key milestones for the AKITA ecosystem. The AkitaDAO will help to steer development of this ecosystem, and milestones may require future adjustment.",
+                "phases": [
+                    {
+                        "title": "Bridge to Avalanche",
+                        "preamble": "To reach new markets and utilize the speed and efficiency of the Avalanche Network, the $AKITA token bridged in Dec. 2021 using <a href='https://app.multichain.org/#/router' target='_blank'>Multichain</a>."
+                    },
+                    {
+                        "title": "AKITA Network establishes funding stream from Gitcoin",
+                        "preamble": "An interim team made of $AKITA holders discusses new solutions with Gitcoin and establishes a Sablier Finance stream of 10T AKITA tokens that extend into Q1 2027."
+                    },
+                    {
+                        "title": "$HACHI token launch and community claim",
+                        "preamble": "10% of the total HACHI supply is gifted to all AKITA holders who qualified during the snapshot in Nov 2022. Details found <a href='https://akita-dao.gitbook.io/akita-dao/hachi-erc-20/tokenomics/community-claim-allocation' target='_blank'>here</a>."
+                    },
+                    {
+                        "title": "AkitaDAO is established",
+                        "preamble": "Utilizing <a href='https://snapshot.org/#/cryptopup.eth' target='_blank'>Snapshot</a>, members of the Akita DAO can create and vote on proposals that have been sponsored by DAO Stewards. "
+                    },
+                    {
+                        "title": "AkitaDAO guided development",
+                        "preamble": "When a proposal has successfully passed through voting by DAO members, the Akita DAO will enact upon it to further develop the AKITA ecosystem and build alternative revenue streams for the DAO treasury."
+                    }
+                ]
+            },
+            {
+                "component": "introduction",
+                "title": "Introduction to",
+                "bottomTitle": "Akita DAO",
+                "preamble": "The Akita DAO guides the development of the $AKITA ecosystem.\nMembers of the DAO utilize the $HACHI token for governance voting. Through an announced, random <a href='https://akita-dao.gitbook.io/akita-dao/hachi-erc-20/tokenomics/community-claim-allocation/eligibility' target='_blank'>snapshot</a> of $AKITA holders on Ethereum and Avalanche networks, $HACHI was gifted with a six-month claim window in order to create incentive for leadership from within the active community of $AKITA holders.\nThe AkitaDAO will help steer the future of $AKITA by leveraging its network power to develop and grow the $AKITA ecosystem.",
+                "blobs": [
+                    {
+                        "title": "Purpose of AKITA DAO",
+                        "preamble": "Akita DAO is a decentralized autonomous organization of the $AKITA community which helps guide the future of the ecosystem.",
+                        "iconName": "akita.svg"
+                    },
+                    {
+                        "title": "Craft proposals on the AKITA Discourse forum",
+                        "preamble": "Join our <a href='https://discourse.akita.network/' target='_blank'>Discourse</a> forum to stay up to date on all Akita DAO happenings, discuss current proposals, or recommend new proposals.",
+                        "iconName": "discourse.svg"
+                    },
+                    {
+                        "title": "Vote on Snapshot proposals with $HACHI",
+                        "preamble": "AkitaDAO members can vote on proposals.\nJoin the AkitaDAO group on Snapshot <a href='https://snapshot.org/#/cryptopup.eth' target='_blank'>here</a>.",
+                        "iconName": "snapshot.svg"
+                    },
+                    {
+                        "title": "Successful proposals are executed",
+                        "preamble": "The core team will implement proposals that are successfully approved by the AkitaDAO.",
+                        "iconName": "champ.svg"
+                    },
+                    {
+                        "title": "Community controlled treasury",
+                        "preamble": "Community members who hold the governance token HACHI will be able to participate in all of the decisions for the AkitaDAO treasury.",
+                        "iconName": "community.svg"
+                    }
+                ]
+            },
+            {
+                "component": "ecosystem",
+                "title": "Akita",
+                "bottomTitle": "Ecosystem",
+                "preamble": "$AKITA is a token that was born as a meme of financial freedom and possesses limitless possibility in its future utility.\nAs the Akita Network continues to develop products with the guidance of the AkitaDAO, the ecosystem will continue to grow and be tailored to its user’s needs.\nSocial and financial freedoms have already inspired the current community to seek products that fit the needs of entrepreneurs, gamers, artists, or anyone looking to take control over their own financial outcomes."
+            },
+            {
+                "component": "learningandnews",
+                "title": "Learning & news",
+                "news": [
+                    {
+                        "text": "Akita Inu Secures Millions in Funding through 2027",
+                        "url": "https://www.villagevoice.com/2022/04/29/akita-inu-secures-millions-in-funding-through-2027/",
+                        "imageUrl": "The_Village_Voice.svg"
+                    },
+                    {
+                        "text": "Swapping for AKITA on Uniswap",
+                        "url": "https://youtu.be/52Wj0-N-Gqs",
+                        "imageUrl": "akitanews6.png"
+                    },
+                    {
+                        "text": "Import AKITA into MetaMask; choose Network for AKITA",
+                        "url": "https://youtu.be/cc0pOePYO0U",
+                        "imageUrl": "akitanews11.png"
+                    },
+                    {
+                        "text": "Adding AKITA on Avalanche Network",
+                        "url": "https://youtu.be/I-ez1Gm6szE",
+                        "imageUrl": "akitanews10.png"
+                    },
+                    {
+                        "text": "Swapping for HACHI on Uniswap",
+                        "url": "https://youtu.be/BqfpEA3O92s",
+                        "imageUrl": "akitanews8.png"
+                    },
+                    {
+                        "text": "Governance with $HACHI in the Akita DAO",
+                        "url": "https://youtu.be/WyXaOmgmgvA",
+                        "imageUrl": "akitanews9.png"
+                    },
+                    {
+                        "text": "Using the Avalanche Bridge from Ethereum",
+                        "url": "https://youtu.be/jZQC7aJqXDI",
+                        "imageUrl": "akitanews10.png"
+                    },
+                    {
+                        "text": "Bridge AKITA using MultiChain (Anywswap) dApp",
+                        "url": "https://youtu.be/uRavGIPH-a0",
+                        "imageUrl": "akitanews6.png"
+                    },
+                    {
+                        "text": "Balancer LBPs and the Akita Inu Saga",
+                        "url": "https://medium.com/balancer-protocol/balancer-lbps-and-the-akita-inu-saga-15fe5cc99154",
+                        "imageUrl": "screenshot.png"
+                    },
+                    {
+                        "text": "Bankless Feature - A Web3 Prisoners Dilemma",
+                        "url": "https://newsletter.banklesshq.com/i/38997818/writer-wednesday",
+                        "imageUrl": "bankless.png"
+                    },
+                    {
+                        "text": "Meme Coins in 2023",
+                        "url": "https://www.tekedia.com/will-2023-be-the-year-of-meme-coins-toon-finance-doge-shib-and-more/",
+                        "imageUrl": "tekedia-capital-2.png"
+                    },
+                    {
+                        "text": "Binance Guide to Buying AKITA",
+                        "url": "https://www.binance.com/en/how-to-buy/akita-inu",
+                        "imageUrl": "binance.png"
+                    },
+                    {
+                        "text": "Benzinga tells you how to buy AKITA",
+                        "url": "https://www.benzinga.com/money/how-to-buy-akita-inu",
+                        "imageUrl": "benzinga.png"
+                    },
+                    {
+                        "text": "The Great Meme Wars by Hackernoon",
+                        "url": "https://hackernoon.com/shiba-inu-vs-akita-inu-the-great-memecoin-war",
+                        "imageUrl": "Hackernoon.png"
+                    },
+                    {
+                        "text": "Ethereum Founder donates AKITA",
+                        "url": "https://techcrunch.com/2021/05/12/vitalik-buterin-donates-1-billion-worth-of-meme-coins-to-india-covid-relief-fund/",
+                        "imageUrl": "TechCrunch_logo.svg"
+                    },
+                    {
+                        "text": "Akita Inu token generates public goods support for Gitcoin",
+                        "url": "https://thedefiant.io/gitcoin-alpha-round",
+                        "imageUrl": "logothedefiant.png"
+                    },
+                    {
+                        "text": "Fjord Foundry (Copper) pioneers in DeFi with AKITA",
+                        "url": "https://medium.com/@fjordfoundry/how-copper-is-supporting-vitaliks-23-trillion-akita-gitcoin-donation-bc5a40b8cd49",
+                        "imageUrl": "fjord.png"
+                    },
+                    {
+                        "text": "Bankless Newsletter: $500M of AKITA, now what?",
+                        "url": "https://newsletter.banklesshq.com/p/500m-in-meme-coinsnow-what",
+                        "imageUrl": "bankless.png"
+                    },
+                    {
+                        "text": "Ethereum Founder Vitalik Butern makes an important decision",
+                        "url": "https://stockhead.com.au/cryptocurrency/vitalik-buterin-strikes-back-at-doggy-coins-with-80m-rugpull/",
+                        "imageUrl": "akitanews11.png"
+                    },
+                    {
+                        "text": "What is a Meme Coin and what is Akita Inu token?",
+                        "url": "https://www.cryptopolitan.com/what-are-meme-coins-in-crypto/",
+                        "imageUrl": "akitanews10.png"
+                    },
+                    {
+                        "text": "Akita Inu Token - Messari",
+                        "url": "https://messari.io/asset/akita-inu",
+                        "imageUrl": "akitanews8.png"
+                    },
+                    {
+                        "text": "Meme Coins with Communities of Fans",
+                        "url": "https://www.business2community.com/cryptocurrency/best-meme-coins",
+                        "imageUrl": "vrlhieykbvpkczqbdl9a.png"
+                    },
+                    {
+                        "text": "Gitcoin and the Akita Inu Community Coordinate",
+                        "url": "https://cryptobriefing.com/gitcoin-submits-to-akita-inu-threats-over-donated-coins/",
+                        "imageUrl": "akitanews9.png"
+                    },
+                    {
+                        "text": "Understanding Doggos - Dog Meme Coins since DOGE",
+                        "url": "https://decrypt.co/resources/what-is-shiba-inu-shib-meme-coin-dogecoin-rival",
+                        "imageUrl": "decrypt-wordmark-grey-bg.png"
+                    },
+                    {
+                        "text": "Vitalik Buterin uses Wallet of Doggos for Good",
+                        "url": "https://www.theblock.co/post/104676/vitalik-buterin-donates-more-than-60m-to-charity-after-selling-meme-tokens-including-shiba-inu",
+                        "imageUrl": "the-block.png"
+                    },
+                    {
+                        "text": "Romania Business Review shows how to buy AKITA Akita Inu Token",
+                        "url": "https://business-review.eu/money/what-is-akita-inu-coin-methods-to-buy-akita-coins-232651",
+                        "imageUrl": "akitanews6.png"
+                    }
+                ]
             }
-        },
-        "howtobuy": {
-            "title": "How to",
-            "titleright": " buy",
-            "preamble": "<span class='opacity-60'>We recommend</span> <span class='opacity-100'>decentralized exchanges</span><span class='opacity-60'>, but our tokens can also be purchased on centralized exchanges.</span>",
-            "claimLink": {
-                "text": "Claim your",
-                "textright": " HACHI",
-                "smallText": "Click Here",
-                "url": "https://akitanetwork.link"
-            },
-            "exchanges": [
-                {
-                    "title": "Centralized Exchanges",
-                    "preamble": "Check out these market indexes for all CEX listings:",
-                    "links": [
-                        {
-                            "text": "Hachi",
-                            "url": "https://coinmarketcap.com/currencies/akita-dao/markets/"
-                        },
-                        {
-                            "text": "Akita",
-                            "url": "https://coinmarketcap.com/currencies/akita-inu/markets/"
-                        }
-                    ],
-                    "iconName": "ce.svg",
-                    "iconBackground": "rgba(147, 76, 228, 0.32)"
-                },
-                {
-                    "title": "Uniswap (Ethereum)",
-                    "preamble": "$AKITA and $HACHI have LPs on UniV2 and V3 (1%)",
-                    "links": [
-                        {
-                            "text": "Hachi",
-                            "url": "https://app.uniswap.org/#/tokens/ethereum/0x967B0c95295ead8fAef70d26A7846AeCD349AAFf"
-                        },
-                        {
-                            "text": "Akita",
-                            "url": "https://app.uniswap.org/#/tokens/ethereum/0x3301ee63fb29f863f2333bd4466acb46cd8323e6"
-                        }
-                    ],
-                    "iconName": "uniswap.svg",
-                    "iconBackground": "rgba(255, 0, 122, 0.24)"
-                },
-                {
-                    "title": "TraderJoe (Avalanche)",
-                    "preamble": "$AKITA <a href='https://app.multichain.org/#/router' target='_blank'>bridged</a> to the Avalanche Network in late 2021 via <a href='https://app.multichain.org/#/router' target='_blank'>Multichain</a>. LPs for trading $AKITA can be found on TraderJoe. Currently, $HACHI is not available on Avalanche.",
-                    "links": [
-                        {
-                            "text": "Akita",
-                            "url": "https://traderjoexyz.com/avalanche/trade"
-                        }
-                    ],
-                    "iconName": "traderjoe.svg",
-                    "iconBackground": "rgba(242, 113, 106, 0.27)"
-                }
-            ],
-            "images": [
-                "bitrue.png",
-                "bkex.png",
-                "2L-KEmdk_400x400.png",
-                "1653358289110777797_downlod_v_gate1.png",
-                "balancer-bal-logo.png",
-                "bitmart-logo-freelogovectors.net_-400x400.png",
-                "cointiger-logo-55ECC3C55D-seeklogo.com.png",
-                "CoinW.png",
-                "EdGSwj0y_400x400.jpg",
-                "gcgkgjSp_400x400.jpg",
-                "GIzrLC7D_400x400.jpg",
-                "hotbit-logo-freelogovectors.net_-400x400.png",
-                "latoken-la-logo.png",
-                "lets exchange.jpg",
-                "MEXC-Global.svg",
-                "OKX_Logo.svg.png",
-                "poloniex-logo-freelogovectors.net_-400x400.png",
-                "qtl1e0ww0poba9hyb05r.png",
-                "StealthEX logo yellow.png",
-                "swapika.jpg",
-                "swapzone.jpg",
-                "sW-XVDql_400x400.jpg",
-                "TraderJoe.png",
-                "uniswap-uni-logo.png",
-                "WadfAFBu_400x400.jpg",
-                "wMvN_bnT_400x400.jpg",
-                "xt-com-logo-freelogovectors.net_-400x400.png"
-            ]
-        },
-        "roadmap": {
-            "title": "Akita Network",
-            "bottomtitle": "Road map",
-            "phaseTitle": "Phase",
-            "preamble": "This “roadmap” is a living document that lays out key milestones for the AKITA ecosystem. The AkitaDAO will help to steer development of this ecosystem, and milestones may require future adjustment.",
-            "phases": [
-                {
-                    "title": "Bridge to Avalanche",
-                    "preamble": "To reach new markets and utilize the speed and efficiency of the Avalanche Network, the $AKITA token bridged in Dec. 2021 using <a href='https://app.multichain.org/#/router' target='_blank'>Multichain</a>."
-                },
-                {
-                    "title": "AKITA Network establishes funding stream from Gitcoin",
-                    "preamble": "An interim team made of $AKITA holders discusses new solutions with Gitcoin and establishes a Sablier Finance stream of 10T AKITA tokens that extend into Q1 2027."
-                },
-                {
-                    "title": "$HACHI token launch and community claim",
-                    "preamble": "10% of the total HACHI supply is gifted to all AKITA holders who qualified during the snapshot in Nov 2022. Details found <a href='https://akita-dao.gitbook.io/akita-dao/hachi-erc-20/tokenomics/community-claim-allocation' target='_blank'>here</a>."
-                },
-                {
-                    "title": "AkitaDAO is established",
-                    "preamble": "Utilizing <a href='https://snapshot.org/#/cryptopup.eth' target='_blank'>Snapshot</a>, members of the Akita DAO can create and vote on proposals that have been sponsored by DAO Stewards. "
-                },
-                {
-                    "title": "AkitaDAO guided development",
-                    "preamble": "When a proposal has successfully passed through voting by DAO members, the Akita DAO will enact upon it to further develop the AKITA ecosystem and build alternative revenue streams for the DAO treasury."
-                }
-            ]
-        },
-        "introduction": {
-            "title": "Introduction to",
-            "bottomTitle": "Akita DAO",
-            "preamble": "The Akita DAO guides the development of the $AKITA ecosystem.\nMembers of the DAO utilize the $HACHI token for governance voting. Through an announced, random <a href='https://akita-dao.gitbook.io/akita-dao/hachi-erc-20/tokenomics/community-claim-allocation/eligibility' target='_blank'>snapshot</a> of $AKITA holders on Ethereum and Avalanche networks, $HACHI was gifted with a six-month claim window in order to create incentive for leadership from within the active community of $AKITA holders.\nThe AkitaDAO will help steer the future of $AKITA by leveraging its network power to develop and grow the $AKITA ecosystem.",
-            "blobs": [
-                {
-                    "title": "Purpose of AKITA DAO",
-                    "preamble": "Akita DAO is a decentralized autonomous organization of the $AKITA community which helps guide the future of the ecosystem.",
-                    "iconName": "akita.svg"
-                },
-                {
-                    "title": "Craft proposals on the AKITA Discourse forum",
-                    "preamble": "Join our <a href='https://discourse.akita.network/' target='_blank'>Discourse</a> forum to stay up to date on all Akita DAO happenings, discuss current proposals, or recommend new proposals.",
-                    "iconName": "discourse.svg"
-                },
-                {
-                    "title": "Vote on Snapshot proposals with $HACHI",
-                    "preamble": "Utilizing quadratic voting, AkitaDAO members can vote on proposals. Join the AkitaDAO group on Snapshot <a href='https://snapshot.org/#/cryptopup.eth' target='_blank'>here</a>.",
-                    "iconName": "snapshot.svg"
-                },
-                {
-                    "title": "Successful proposals are executed",
-                    "preamble": "The core team will implement proposals that are successfully approved by the AkitaDAO.",
-                    "iconName": "champ.svg"
-                },
-                {
-                    "title": "Community controlled treasury",
-                    "preamble": "Community members who hold the governance token HACHI will be able to participate in all of the decisions for the AkitaDAO treasury.",
-                    "iconName": "community.svg"
-                }
-            ]
-        },
-        "ecosystem": {
-            "title": "Akita",
-            "bottomTitle": "Ecosystem",
-            "preamble": "$AKITA is a token that was born as a meme of financial freedom and possesses limitless possibility in its future utility.\nAs the Akita Network continues to develop products with the guidance of the AkitaDAO, the ecosystem will continue to grow and be tailored to its user’s needs.\nSocial and financial freedom have already inspired the current community to seek products that fit the needs of entrepreneurs, gamers, artists, or anyone looking to take control over their own financial outcomes."
-        },
-        "learningandnews": {
-            "title": "Learning & news",
-            "news": [
-                {
-                    "text": "Akita Inu Secures Millions in Funding through 2027",
-                    "url": "https://www.villagevoice.com/2022/04/29/akita-inu-secures-millions-in-funding-through-2027/",
-                    "imageUrl": "The_Village_Voice.svg"
-                },
-                {
-                    "text": "Swapping for AKITA on Uniswap",
-                    "url": "https://youtu.be/52Wj0-N-Gqs",
-                    "imageUrl": "akitanews6.png"
-                },
-                {
-                    "text": "Import AKITA into MetaMask; choose Network for AKITA",
-                    "url": "https://youtu.be/cc0pOePYO0U",
-                    "imageUrl": "akitanews11.png"
-                },
-                {
-                    "text": "Adding AKITA on Avalanche Network",
-                    "url": "https://youtu.be/I-ez1Gm6szE",
-                    "imageUrl": "akitanews10.png"
-                },
-                {
-                    "text": "Swapping for HACHI on Uniswap",
-                    "url": "https://youtu.be/BqfpEA3O92s",
-                    "imageUrl": "akitanews8.png"
-                },
-                {
-                    "text": "Governance with $HACHI in the Akita DAO",
-                    "url": "https://youtu.be/WyXaOmgmgvA",
-                    "imageUrl": "akitanews9.png"
-                },
-                {
-                    "text": "Using the Avalanche Bridge from Ethereum",
-                    "url": "https://youtu.be/jZQC7aJqXDI",
-                    "imageUrl": "akitanews10.png"
-                },
-                {
-                    "text": "Bridge AKITA using MultiChain (Anywswap) dApp",
-                    "url": "https://youtu.be/uRavGIPH-a0",
-                    "imageUrl": "akitanews6.png"
-                },
-                {
-                    "text": "Balancer LBPs and the Akita Inu Saga",
-                    "url": "https://medium.com/balancer-protocol/balancer-lbps-and-the-akita-inu-saga-15fe5cc99154",
-                    "imageUrl": "screenshot.png"
-                },
-                {
-                    "text": "Bankless Feature - A Web3 Prisoners Dilemma",
-                    "url": "https://newsletter.banklesshq.com/i/38997818/writer-wednesday",
-                    "imageUrl": "bankless.png"
-                },
-                {
-                    "text": "Meme Coins in 2023",
-                    "url": "https://www.tekedia.com/will-2023-be-the-year-of-meme-coins-toon-finance-doge-shib-and-more/",
-                    "imageUrl": "tekedia-capital-2.png"
-                },
-                {
-                    "text": "Binance Guide to Buying AKITA",
-                    "url": "https://www.binance.com/en/how-to-buy/akita-inu",
-                    "imageUrl": "binance.png"
-                },
-                {
-                    "text": "Benzinga tells you how to buy AKITA",
-                    "url": "https://www.benzinga.com/money/how-to-buy-akita-inu",
-                    "imageUrl": "benzinga.png"
-                },
-                {
-                    "text": "The Great Meme Wars by Hackernoon",
-                    "url": "https://hackernoon.com/shiba-inu-vs-akita-inu-the-great-memecoin-war",
-                    "imageUrl": "Hackernoon.png"
-                },
-                {
-                    "text": "Ethereum Founder donates AKITA",
-                    "url": "https://techcrunch.com/2021/05/12/vitalik-buterin-donates-1-billion-worth-of-meme-coins-to-india-covid-relief-fund/",
-                    "imageUrl": "TechCrunch_logo.svg"
-                },
-                {
-                    "text": "Akita Inu token generates public goods support for Gitcoin",
-                    "url": "https://thedefiant.io/gitcoin-alpha-round",
-                    "imageUrl": "logothedefiant.png"
-                },
-                {
-                    "text": "Fjord Foundry (Copper) pioneers in DeFi with AKITA",
-                    "url": "https://medium.com/@fjordfoundry/how-copper-is-supporting-vitaliks-23-trillion-akita-gitcoin-donation-bc5a40b8cd49",
-                    "imageUrl": "fjord.png"
-                },
-                {
-                    "text": "Bankless Newsletter: $500M of AKITA, now what?",
-                    "url": "https://newsletter.banklesshq.com/p/500m-in-meme-coinsnow-what",
-                    "imageUrl": "bankless.png"
-                },
-                {
-                    "text": "Ethereum Founder Vitalik Butern makes an important decision",
-                    "url": "https://stockhead.com.au/cryptocurrency/vitalik-buterin-strikes-back-at-doggy-coins-with-80m-rugpull/",
-                    "imageUrl": "akitanews11.png"
-                },
-                {
-                    "text": "What is a Meme Coin and what is Akita Inu token?",
-                    "url": "https://www.cryptopolitan.com/what-are-meme-coins-in-crypto/",
-                    "imageUrl": "akitanews10.png"
-                },
-                {
-                    "text": "Akita Inu Token - Messari",
-                    "url": "https://messari.io/asset/akita-inu",
-                    "imageUrl": "akitanews8.png"
-                },
-                {
-                    "text": "Meme Coins with Communities of Fans",
-                    "url": "https://www.business2community.com/cryptocurrency/best-meme-coins",
-                    "imageUrl": "vrlhieykbvpkczqbdl9a.png"
-                },
-                {
-                    "text": "Gitcoin and the Akita Inu Community Coordinate",
-                    "url": "https://cryptobriefing.com/gitcoin-submits-to-akita-inu-threats-over-donated-coins/",
-                    "imageUrl": "akitanews9.png"
-                },
-                {
-                    "text": "Understanding Doggos - Dog Meme Coins since DOGE",
-                    "url": "https://decrypt.co/resources/what-is-shiba-inu-shib-meme-coin-dogecoin-rival",
-                    "imageUrl": "decrypt-wordmark-grey-bg.png"
-                },
-                {
-                    "text": "Vitalik Buterin uses Wallet of Doggos for Good",
-                    "url": "https://www.theblock.co/post/104676/vitalik-buterin-donates-more-than-60m-to-charity-after-selling-meme-tokens-including-shiba-inu",
-                    "imageUrl": "the-block.png"
-                },
-                {
-                    "text": "Romania Business Review shows how to buy AKITA Akita Inu Token",
-                    "url": "https://business-review.eu/money/what-is-akita-inu-coin-methods-to-buy-akita-coins-232651",
-                    "imageUrl": "akitanews6.png"
-                }
-            ]
-        }
+        ]
     }
 }

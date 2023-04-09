@@ -5,6 +5,7 @@ import Images from './images';
 import Token, { IToken } from './token';
 
 export interface ITokenomics {
+    component: "tokenomics";
     desktop: {
         title: string;
         preamble: string;

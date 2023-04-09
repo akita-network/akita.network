@@ -8,7 +8,7 @@ interface IButton {
     newWindow?: boolean;
 }
 
-export interface IHeroItem {
+interface IHeroItem {
     title: string;
     titleOther: string;
     preamble: string;
@@ -17,7 +17,7 @@ export interface IHeroItem {
     buttons: IButton[];
 }
 
-export interface IHeroSlides {
+export interface IHeroDesktop {
     slides: IHeroItem[]
 }
 

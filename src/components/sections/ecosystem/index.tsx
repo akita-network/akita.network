@@ -9,6 +9,7 @@ const firasans = Fira_Sans({
 })
 
 export interface IEcosystem {
+    component: "ecosystem";
     title: string;
     bottomTitle: string;
     preamble: string;

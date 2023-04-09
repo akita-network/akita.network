@@ -10,7 +10,7 @@ interface IButton {
     newWindow?: boolean;
 }
 
-interface IMobileItem {
+export interface IHeroMobile {
     title: string;
     preamble: string;
     preambleRight: string;
@@ -29,7 +29,7 @@ const MobileHero = ({
     preamble,
     preambleRight,
     title
-}: IMobileItem) => {
+}: IHeroMobile) => {
     const renderButtons = () => (
         <div className="relative flex gap-5 md:gap-2.5 my-8 md:my-0 flex-wrap justify-center">
             {buttons?.map((btn: IButton) => (

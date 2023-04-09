@@ -10,7 +10,8 @@ const firasans = Fira_Sans({
     subsets: ['latin'],
 })
 
-interface IRoadmap {
+export interface IRoadmap {
+    component: "roadmap";
     phaseTitle: string;
     title: string;
     bottomtitle: string;

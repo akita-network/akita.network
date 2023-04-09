@@ -3,6 +3,7 @@ import Item, { IItem } from "./item";
 import Section from "../section";
 
 export interface IAbout {
+    component: "about";
     items: IItem[];
 }
 

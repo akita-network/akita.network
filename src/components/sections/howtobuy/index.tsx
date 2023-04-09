@@ -22,7 +22,8 @@ interface IClaimLink {
     url: string;
 }
 
-interface IHowToBuy {
+export interface IHowToBuy {
+    component: "howtobuy";
     title: string;
     titleright: string;
     preamble: string;
