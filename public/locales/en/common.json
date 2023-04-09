@@ -128,7 +128,7 @@
                     "preamble": "$AKITA and $HACHI are two distinct tokens with different token economics. Find full Tokenomics for both tokens <a href='https://akita-dao.gitbook.io/akita-dao/' target='_blank'>here</a>.",
                     "akita": {
                         "title": "$AKITA",
-                        "titleright": "(AKITA INU token)",
+                        "titleRight": "(AKITA INU token)",
                         "preamble": "Launched in Feb. 2021, bridged to Avalanche 2022 Community owned and driven",
                         "taxes": "0% taxes or fees, no extra slippage required.",
                         "links": [
@@ -163,7 +163,7 @@
                     },
                     "hachi": {
                         "title": "$HACHI",
-                        "titleright": "(HACHI token)",
+                        "titleRight": "(HACHI token)",
                         "preamble": "Launched in Nov. 2022, governance token of AkitaDAO",
                         "taxes": "0% taxes or fees, no extra slippage required.",
                         "links": [
@@ -212,7 +212,7 @@
                 "mobile": {
                     "akita": {
                         "title": "AKITA",
-                        "titleright": "Tokenomics",
+                        "titleRight": "Tokenomics",
                         "preamble": "Launched in Feb. 2021, bridged to Avalanche 2022 Community owned and driven",
                         "taxes": "0% taxes or fees",
                         "links": [
@@ -249,7 +249,7 @@
                     },
                     "hachi": {
                         "title": "HACHI",
-                        "titleright": "Tokenomics",
+                        "titleRight": "Tokenomics",
                         "preamble": "Launched in Nov. 2022, governance token of AkitaDAO",
                         "taxes": "0% taxes or fees",
                         "links": [
@@ -296,7 +296,7 @@
             {
                 "component": "howtobuy",
                 "title": "How to",
-                "titleright": " buy",
+                "titleRight": " buy",
                 "preamble": "<span class='opacity-50'>We recommend</span> <span class='opacity-100'>decentralized exchanges</span><span class='opacity-50'>, but our tokens can also be purchased on centralized exchanges.</span>",
                 "claimLink": {
                     "text": "Claim your",

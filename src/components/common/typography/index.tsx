@@ -58,8 +58,13 @@ export const Typography = ({ variant, children, className, as }: Props) => {
 };
 
 export const TypographyWithHtml = ({ variant, html, className, withOpacity, as }: PropsWithHtml) => {
+    const htmlTags = html.split("\n");
     const sizeClasses = sizes[variant];
     const Tag = as || tags[variant];
 
-    return <Tag className={`${sizeClasses} ${className ? className : ""} ${withOpacity ? "opacity-60 md:opacity-40" : ""}`} dangerouslySetInnerHTML={{ __html: html }} />;
+    return (
+        <React.Fragment>
+            {htmlTags.map(tag => <Tag className={`${sizeClasses} ${className ? className : ""} ${withOpacity ? "opacity-60 md:opacity-40" : ""}`} dangerouslySetInnerHTML={{ __html: tag }} />)}
+        </React.Fragment>
+    )
 };

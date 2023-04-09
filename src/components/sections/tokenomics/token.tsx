@@ -28,7 +28,7 @@ interface IText {
 
 export interface IToken {
     title: string;
-    titleright?: string;
+    titleRight?: string;
     preamble: string;
     taxes: string;
     links: ILink[];
@@ -43,7 +43,7 @@ interface TokenProps extends IToken {
 
 const Token = ({
     title,
-    titleright,
+    titleRight,
     preamble,
     taxes,
     links,
@@ -54,7 +54,7 @@ const Token = ({
     <div className="xl:w-1/2 md:pl-8 text-center md:text-left">
         <Typography variant='h4' className={`flex flex-wrap justify-center text-center uppercase ${isTabletOrDesktop ? "mb-3" : "font-bold"}`}>
             <span className={`${isTabletOrDesktop ? firasans.className : abhayaLibre.className} mr-2`}>{title}</span>
-            {titleright}
+            {titleRight}
         </Typography>
 
         {links && isTabletOrDesktop && (

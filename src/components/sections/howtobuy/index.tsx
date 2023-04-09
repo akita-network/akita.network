@@ -25,7 +25,7 @@ interface IClaimLink {
 export interface IHowToBuy {
     component: "howtobuy";
     title: string;
-    titleright: string;
+    titleRight: string;
     preamble: string;
     claimLink: IClaimLink;
     exchanges: IExchanges[]
@@ -38,7 +38,7 @@ interface HowToBuyProps extends IHowToBuy {
 
 const HowToBuy = ({
     title,
-    titleright,
+    titleRight,
     preamble,
     claimLink,
     exchanges,
@@ -53,7 +53,7 @@ const HowToBuy = ({
                     <div className="md:max-w-1xl md:mx-auto md:ml-16">
                         <Typography variant='h3' className="text-center md:text-left mb-5 uppercase">
                             <span className={`${isTabletOrDesktop ? "" : abhayaLibre.className} md:font-bold`}>{title}</span>
-                            <span className={`${isTabletOrDesktop ? firasans.className : ""} font-bold md:font-normal md:opacity-80`}>{titleright}</span>
+                            <span className={`${isTabletOrDesktop ? firasans.className : ""} font-bold md:font-normal md:opacity-80`}>{titleRight}</span>
                         </Typography>
                         {isTabletOrDesktop && (
                             <TypographyWithHtml
