@@ -1,6 +1,6 @@
 # Akita Network Website
 
-### How to add content to the web
+### How to add content to the website
 The content is found in folder `public/locales`.
 You can easely just go into each file for each language. The files are named `common.json`
 Images is added or removed in the `public/assets` folder
