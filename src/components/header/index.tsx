@@ -31,7 +31,7 @@ const Header = ({
                     <a key={link.iconName} href={link.url} target="_blank">
                         <img
                             className={`transition-[max-height] duration-300 max-h-12 ${isSticky ? "sm-max-h-12" : "md:max-h-16"}`}
-                            src={`/assets/icons/${link.iconName}.svg`}
+                            src={`/assets/icons/${link.iconName}`}
                             alt={link.iconName}
                         />
                     </a>
