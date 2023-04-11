@@ -40,7 +40,7 @@
                         {
                             "title": "The hachi {0} has arrived",
                             "titleOther": "claim",
-                            "preamble": "10% of the total supply of our governance token is being airdropped. Did you claim yours?",
+                            "preamble": "10% of the total supply of our governance tokens is being airdropped. Did you claim yours?",
                             "asset": "/assets/hero/video1.mov",
                             "assetType": "video",
                             "buttons": [
