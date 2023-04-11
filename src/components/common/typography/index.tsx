@@ -64,7 +64,7 @@ export const TypographyWithHtml = ({ variant, html, className, withOpacity, as }
 
     return (
         <React.Fragment>
-            {htmlTags.map(tag => <Tag className={`${sizeClasses} ${className ? className : ""} ${withOpacity ? "opacity-60 md:opacity-40" : ""}`} dangerouslySetInnerHTML={{ __html: tag }} />)}
+            {htmlTags.map((tag, index) => <Tag key={`${tag}_${index}`} className={`${sizeClasses} ${className ? className : ""} ${withOpacity ? "opacity-60 md:opacity-40" : ""}`} dangerouslySetInnerHTML={{ __html: tag }} />)}
         </React.Fragment>
     )
 };
