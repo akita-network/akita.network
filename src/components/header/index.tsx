@@ -1,5 +1,4 @@
 import React from 'react';
-import LanguagePicker from '../common/languagePicker';
 import { Akita } from '@/static/images/logo';
 
 export interface ILink {
@@ -26,7 +25,7 @@ const Header = ({
         <div className="max-w-screen-3xl mx-auto px-8 w-full flex items-center justify-center md:justify-between">
             {isTabletOrDesktop && <Akita />}
 
-            <div className='grid grid-cols-8 gap-2.5 md:gap-3.5'>
+            <div className='grid grid-cols-7 gap-2.5 md:gap-3.5'>
                 {links?.map((link) => (
                     <a key={link.iconName} href={link.url} target="_blank">
                         <img
@@ -36,8 +35,6 @@ const Header = ({
                         />
                     </a>
                 ))}
-
-                <LanguagePicker isSticky={isSticky} />
             </div>
         </div>
     </header>
