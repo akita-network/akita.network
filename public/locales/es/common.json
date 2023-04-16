@@ -3,31 +3,31 @@
         "links": [
             {
                 "url": "https://akita-dao.gitbook.io/",
-                "iconName": "whitepaper"
+                "iconName": "whitepaper.svg"
             },
             {
                 "url": "https://twitter.com/akita_network",
-                "iconName": "twitter"
+                "iconName": "twitter.svg"
             },
             {
                 "url": "https://t.me/akitatoken",
-                "iconName": "telegram"
+                "iconName": "telegram.svg"
             },
             {
                 "url": "https://www.facebook.com/AKITATOKEN",
-                "iconName": "facebook"
+                "iconName": "facebook.svg"
             },
             {
                 "url": "https://www.instagram.com/akita_network",
-                "iconName": "instagram"
+                "iconName": "instagram.svg"
             },
             {
                 "url": "https://snapshot.org/#/cryptopup.eth",
-                "iconName": "snapshot"
+                "iconName": "snapshot.svg"
             },
             {
                 "url": "https://discourse.akita.network",
-                "iconName": "discourse"
+                "iconName": "discourse.svg"
             }
         ]
     },
@@ -40,7 +40,7 @@
                         {
                             "title": "The hachi {0} has arrived",
                             "titleOther": "claim",
-                            "preamble": "10% of the total supply of our governance tokens is being airdropped. Did you claim yours?",
+                            "preamble": "10% of the total supply of our governance token is being airdropped. Did you claim yours?",
                             "asset": "/assets/hero/video1.mov",
                             "assetType": "video",
                             "buttons": [
@@ -64,7 +64,7 @@
                 "mobile": {
                     "title": "Akita Network",
                     "preamble": "The power of",
-                    "preambleRight": "community",
+                    "preambleRight": "community.",
                     "asset": "/assets/hero/bg.png",
                     "about": {
                         "title": "This is AKITA Network",
