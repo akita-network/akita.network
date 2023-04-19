@@ -70,6 +70,7 @@ module.exports = {
         "full-negative": "-100%"
       },
       maxWidth: {
+        "15r": "15rem",
         '1xl': '38.438rem',
         "2xl": "108rem",
         "8xl": "90rem",

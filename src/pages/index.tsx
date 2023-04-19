@@ -15,6 +15,7 @@ import Introduction, { IIntroduction } from "@/components/sections/introduction"
 import Ecosystem, { IEcosystem } from "@/components/sections/ecosystem";
 import LearningAndNews, { ILearningAndNews } from "@/components/sections/learningandnews";
 import Hero, { IHero } from "@/components/sections/hero";
+import Seo, { IMeta } from "@/components/seo";
 
 const Layout = dynamic(
   () => import('@/components/layout'),
@@ -32,6 +33,7 @@ export default function Home() {
   const [isSticky, setSticky] = useState(false);
   const ref = useRef<HTMLInputElement>(null);
   const { t } = useTranslation('common');
+  const meta = t("meta", { returnObjects: true }) as IMeta;
   const header = t("header", { returnObjects: true }) as IHeader;
   const content = t("content", { returnObjects: true }) as IContent;
 
@@ -71,12 +73,7 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>AKITA Network</title>
-        <meta name="description" content="This is the Official webpage for the Akita Inu Token, an ERC-20 token. AKITA has now been bridged to Avalanche blockchain and the community team members are building AKITA Network DAO." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      {meta && <Seo {...meta} />}
 
       <Layout>
         {header && (

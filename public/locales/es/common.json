@@ -1,4 +1,11 @@
 {
+    "meta": {
+        "pageTitle": "Home | AKITA Network",
+        "description": "This is the Official webpage for the Akita Inu Token, an ERC-20 token. AKITA has now been bridged to Avalanche blockchain and the community team members are building AKITA Network DAO.",
+        "socialTitle": "Home | AKITA Network",
+        "socialDescription": "The Akita DAO exists to produce products and useful applications that benefit holders of the AKITA token.",
+        "socialImage": "https://akita.network/assets/global/akitalogo.jpg"
+    },
     "header": {
         "links": [
             {
@@ -41,7 +48,7 @@
                             "title": "The hachi {0} has arrived",
                             "titleOther": "claim",
                             "preamble": "10% of the total supply of our governance token is being airdropped. Did you claim yours?",
-                            "asset": "/assets/hero/video1.mov",
+                            "asset": "video1.mov",
                             "assetType": "video",
                             "buttons": [
                                 {
@@ -65,7 +72,7 @@
                     "title": "Akita Network",
                     "preamble": "The power of",
                     "preambleRight": "community.",
-                    "asset": "/assets/hero/bg.png",
+                    "asset": "bg.png",
                     "about": {
                         "title": "This is AKITA Network",
                         "items": [

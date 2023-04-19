@@ -44,7 +44,7 @@ const Tokenomics = ({
             )}
 
             <div className="flex mb-32 xl:max-w-95% md:mx-auto flex-col lg:flex-row">
-                {isTabletOrDesktop && <Images group='akita' selected={selectedAkita > -1 ? selectedAkita : -1} />}
+                {isTabletOrDesktop && <Images noPadding group='akita' selected={selectedAkita > -1 ? selectedAkita : -1} />}
 
                 <Token
                     selectedToken={selectedAkita}
@@ -54,7 +54,7 @@ const Tokenomics = ({
                 />
             </div>
 
-            <div className="flex mb-32 xl:max-w-95% md:mx-auto flex-col lg:flex-row">
+            <div className="flex md:mb-32 xl:max-w-95% md:mx-auto flex-col lg:flex-row">
                 {isTabletOrDesktop && <Images noPadding group='hachi' selected={selectedHachi > -1 ? selectedHachi : -1} />}
 
                 <Token

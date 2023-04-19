@@ -46,7 +46,7 @@ const MobileHero = ({
     return (
         <section className="h-screen md:h-screen relative md:flex md:items-center md:px-11 xl:px-40">
             <div style={{
-                backgroundImage: `url(${asset})`,
+                backgroundImage: `url(${`/assets/hero/${asset}`})`,
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
                 backgroundPosition: "bottom center, 50%, 50%"

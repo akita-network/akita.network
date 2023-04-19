@@ -62,10 +62,10 @@ const DesktopHero = ({
                         loop
                         className="bg-cover bg-50-50 absolute m-auto w-full h-full -inset-full object-cover"
                     >
-                        <source src={asset} type="video/mp4" />
+                        <source src={`/assets/hero/${asset}`} type="video/mp4" />
                     </video>
                 ) : (
-                    <img src={asset} alt={title} className="bg-cover bg-50-50 absolute m-auto w-full h-full -inset-full object-cover" />
+                    <img src={`/assets/hero/${asset}`} alt={title} className="bg-cover bg-50-50 absolute m-auto w-full h-full -inset-full object-cover" />
                 )}
             </div>
         </section>
